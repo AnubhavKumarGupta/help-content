@@ -159,45 +159,49 @@ Update database connection parameters with platform-specific optimizations.
             """,
         },
 
-        "Delete Connection": {
-            "title": "Delete Database Connection",
-            "description": """
-<b>Delete Connection - Help Guide</b>
+# ----------------------------            Connection -> Delete Connection          ----------------
 
-Use this interface to safely delete database connections linked to your client account.
+"Delete Connection": {
+    "title": "Delete Database Connection",
+    "description": """
+<b>Delete Connection – Help Guide</b><br><br>
 
-<b>Finding Connections:</b>
-• <b>User Filter:</b> Select a user from the dropdown to view their connections
-• <b>Search:</b> Quickly find connections by name or attributes
-• <b>Connection Table:</b> Displays Client ID, Database Type, User ID, Test Case Count, and Creation Date
+Use this interface to safely delete database connections linked to your client account.<br><br>
 
-<b>Selecting a Connection:</b>
-• Choose a connection using the radio button in the table
-• This enables deletion and other related actions
+<b>Finding Connections:</b><br>
+• <b>User Filter:</b> Select a user from the dropdown to view their connections<br>
+• <b>Search:</b> Quickly find connections by name or attributes<br>
+• <b>Connection Table:</b> Displays Client ID, Database Type, User ID, Test Case Count, and Creation Date<br><br>
 
-<b>Deletion Process:</b>
-1. Select the connection you want to delete
-2. If test cases are linked, you will be prompted before deletion
-3. Confirm deletion to remove all linkages and connection details
+<b>Selecting a Connection:</b><br>
+• Choose a connection using the radio button in the table<br>
+• This enables deletion and other related actions<br><br>
 
-<b>Table Features:</b>
-• Sort connections using column headers
-• Organize and manage records easily
+<b>Deletion Process:</b><br>
+1. Select the connection you want to delete<br>
+2. If test cases are linked, you will be prompted before deletion<br>
+3. Confirm deletion to remove all linkages and connection details<br><br>
 
-<b>Additional Controls:</b>
-• <b>Previous:</b> Navigate to earlier records
-• <b>Filter:</b> Apply filters for refined results
-• <b>Save:</b> Store filtered or updated views
-• <b>Execute:</b> Run related test case workflows
+<b>Table Features:</b><br>
+• Sort connections using column headers<br>
+• Organize and manage records easily<br><br>
 
-<b>Best Practice:</b>
-Regularly review and remove unused connections to maintain system integrity and ensure data accuracy.
+<b>Additional Controls:</b><br>
+• <b>Previous:</b> Navigate to earlier records<br>
+• <b>Filter:</b> Apply filters for refined results<br>
+• <b>Save:</b> Store filtered or updated views<br>
+• <b>Execute:</b> Run related test case workflows<br><br>
 
-<b>Important Warnings:</b>
-• Deleted connections cannot be recovered
-• All associated test cases will be affected
-• Historical test results may lose connection context
-• Export connection settings before deletion if needed
-            """,
-        }
+<b>Best Practice:</b><br>
+Regularly review and remove unused connections to maintain system integrity and ensure data accuracy.<br><br>
+
+<b>Important Warnings:</b><br>
+• Deleted connections cannot be recovered<br>
+• All associated test cases will be affected<br>
+• Historical test results may lose connection context<br>
+• Export connection settings before deletion if needed<br>
+"""
+},
+
+        
     }

@@ -1039,46 +1039,51 @@ INFOFISCUS masks access tokens and enforces unique names for secure Databricks c
 
 # -----------------------------------      Edit Databases   ---------------------
 
+"Edit Database": {
+    "title": "Edit Database Connection Parameters",
+    "description": """
+<b>Edit Database Connection – Help Guide</b><br><br>
 
-        "Edit Database": {
-            "title": "Edit Database Connection Parameters",
-            "description": """
-<b>Modify Database-Specific Connection Settings</b>
+<b>Overview</b><br>
+The Edit Database section allows you to update and maintain your existing database connections as your data infrastructure evolves. 
+Instead of creating a new connection each time the underlying database changes (such as after new tables are added, schema is updated, 
+or credentials are refreshed), you can efficiently update the current connection configuration here—ensuring a seamless workflow and 
+avoiding unnecessary duplication.<br><br>
 
-Update database connection parameters with platform-specific optimizations.
+<b>Why Edit Database is Important</b><br>
+• <b>Avoid Unnecessary Duplication:</b> When changes happen in your source database (new tables/views, schema alterations, etc.), 
+editing your connection ensures the latest structure is reflected without having to create a new connection from scratch.<br>
+• <b>Preserve Test Case Associations:</b> Existing test cases and validation jobs linked to this connection continue to work – 
+there’s no need to reconfigure or relink them.<br>
+• <b>Streamlined Maintenance:</b> Editing an existing connection is quicker, reduces potential errors, and helps maintain a clean 
+connection list.<br>
+• <b>Data Consistency:</b> Keeping the same connection, but refreshing its metadata, ensures consistent access control, naming, and 
+configuration history.<br>
+• <b>Efficient Change Management:</b> Whether you change connection credentials, update hosts/ports, or refresh schemas, 
+Edit Database keeps transitions smooth and auditable.<br><br>
 
-<b>Database-Specific Parameters:</b>
-• <b>Connection String:</b> Platform-specific connection formats
-• <b>Driver Settings:</b> Database driver configurations
-• <b>Performance Tuning:</b> Query timeout and pooling settings
-• <b>Security Options:</b> Encryption and authentication methods
+<b>When Should You Use Edit Database?</b><br>
+• New tables or views have been added or removed in the database.<br>
+• Schema changes such as new columns, changed datatypes, or renamed tables.<br>
+• Database user credentials or authentication methods have changed.<br>
+• You need to update performance-related parameters (timeout, pooling, etc.).<br>
+• Server or database endpoints have migrated or changed (for example, after cloud migration).<br>
+• Periodic reconnection to refresh catalog information or re-validate connectivity.<br><br>
 
-<b>Supported Modifications:</b>
-• <b>Server Details:</b> Hostname, port, instance names
-• <b>Database Selection:</b> Target databases and schemas
-• <b>Authentication:</b> Credential updates and auth method changes
-• <b>Advanced Options:</b> SSL settings, connection pooling
+<b>How It Works</b><br>
+1. Select the connection you wish to edit from your list of existing connections.<br>
+2. In Edit Database, the connection details form pre-fills with current values.<br>
+3. Make the required changes, such as correcting credentials, updating host/port, or simply clicking Test and Save to automatically 
+   refresh and reload the metadata (including fetching any new tables or structure changes from the source database).<br>
+4. The system updates the connection and its metadata, ensuring all linked test cases use the newly updated schema or data without interruption.<br>
+5. Security is enforced throughout: all password and sensitive field changes are properly secured.<br>
+6. Finally, the system validates that all updates are compatible before saving – preventing accidental misconfiguration.<br><br>
 
-<b>Platform-Specific Settings:</b>
-• <b>Oracle:</b> TNS names, wallet configurations, RAC settings
-• <b>SQL Server:</b> Instance names, authentication modes, encryption
-• <b>Cloud Databases:</b> Region settings, service accounts, API keys
-• <b>Analytics Platforms:</b> Warehouse settings, compute configurations
+<b>Benefits</b><br>
+• Up-to-date on all schema/structure changes without new setup.<br>
+• Efficient troubleshooting and maintenance (no renaming or duplicated connections).
+"""
+},
 
-<b>Validation Process:</b>
-1. Modify connection parameters
-2. Test connection with new settings
-3. Validate against existing test cases
-4. Monitor performance impact
-5. Document changes for audit trail
 
-<b>Best Practices:</b>
-• Test changes in non-production environments first
-• Maintain backup of working configurations
-• Document all parameter changes
-• Monitor performance after modifications
-            """
-        }
-
-        
     }

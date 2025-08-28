@@ -120,7 +120,7 @@ Edit Database keeps transitions smooth and auditable.<br><br>
 • Up-to-date on all schema/structure changes without new setup.<br>
 • Efficient troubleshooting and maintenance (no renaming or duplicated connections).<br>
 • Centralized auditing and tracking of all configuration changes.<br>
-• Fast onboarding of evolving data architecture (especially in dynamic or agile teams).<br>
+• Fast onboarding of evolving data architecture (especially in dynamic or agile teams).
     """,
 },
 
@@ -176,42 +176,63 @@ Update database connection parameters with platform-specific optimizations.
     "description": """
 <b>Delete Connection – Help Guide</b><br><br>
 
-Use this interface to safely delete database connections linked to your client account.<br><br>
+<b>Overview</b><br>
+The Delete Connection feature enables users (especially admins) to efficiently remove obsolete, duplicate, or invalid database connections from 
+the <b>INFOFISCUS Data Validation Tool</b>. Streamlining your connection list improves clarity, reduces clutter, and helps prevent confusion 
+or errors during test case management.<br><br>
 
-<b>Finding Connections:</b><br>
-• <b>User Filter:</b> Select a user from the dropdown to view their connections<br>
-• <b>Search:</b> Quickly find connections by name or attributes<br>
-• <b>Connection Table:</b> Displays Client ID, Database Type, User ID, Test Case Count, and Creation Date<br><br>
+<b>Why Delete Connections? (Use Cases & Benefits)</b><br>
+• <b>Maintain a Clean UI:</b> Deleting old or unused connections keeps your connection list easy to navigate—avoiding visual clutter, confusion, 
+and accidental use of incorrect connections.<br>
+• <b>Remove Invalid or Expired Connections:</b> Connections with expired, rotated, or invalid credentials can be safely deleted to prevent failures 
+in future data validation tasks.<br>
+• <b>Reduce Duplicates:</b> Eliminates redundant (e.g., similarly named) connections, making it easier to find and select the correct and current 
+integration for your workflows.<br>
+• <b>Security Best Practice:</b> Removing connections that are no longer needed reduces the surface area for potential security risks.<br>
+• <b>Audit and Organization:</b> Supports better audit control, as only actively used connections remain visible and manageable.<br><br>
 
-<b>Selecting a Connection:</b><br>
-• Choose a connection using the radio button in the table<br>
-• This enables deletion and other related actions<br><br>
+<b>How to Delete a Connection – Step-by-Step Instructions</b><br>
+1. <b>Access the Delete Connection Panel:</b><br>
+   • Click on Delete Connection in the main sidebar.<br>
+   • A list view/table will load, showing all available connections with details like name, database type, user, creation date, and test case count.<br><br>
 
-<b>Deletion Process:</b><br>
-1. Select the connection you want to delete<br>
-2. If test cases are linked, you will be prompted before deletion<br>
-3. Confirm deletion to remove all linkages and connection details<br><br>
+2. <b>Admin User Filtering & Search:</b><br>
+   • If you’re an admin, you’ll see all connections, including those created by other users.<br>
+   • Use the user dropdown at the top to filter connections by a particular user—making it easy to manage connections per user.<br>
+   • Optionally, use the dedicated search bar to instantly find a connection by name, user, or database type.<br><br>
 
-<b>Table Features:</b><br>
-• Sort connections using column headers<br>
-• Organize and manage records easily<br><br>
+3. <b>Select Connection(s) to Delete:</b><br>
+   • In the list, select the radio button next to the connection you wish to delete.<br>
+   • Carefully review the details—especially if multiple connections have similar names.<br><br>
 
-<b>Additional Controls:</b><br>
-• <b>Previous:</b> Navigate to earlier records<br>
-• <b>Filter:</b> Apply filters for refined results<br>
-• <b>Save:</b> Store filtered or updated views<br>
-• <b>Execute:</b> Run related test case workflows<br><br>
+4. <b>Test Case Warning (If Applicable):</b><br>
+   • If the selected connection is currently linked to any test cases, a confirmation dialog will appear, summarizing the linked test case names or IDs.<br>
+   • The system warns: "X test case(s) are linked to this connection. Deleting it will also delete all associated test cases."<br>
+   • Review this carefully: If you delete the connection, all linked test cases will be removed as well.<br><br>
 
-<b>Best Practice:</b><br>
-Regularly review and remove unused connections to maintain system integrity and ensure data accuracy.<br><br>
+5. <b>Delete Action:</b><br>
+   • Click the Delete button.<br>
+   • If a confirmation dialog appears due to linked test cases, choose Yes to proceed (and delete both the connection and linked test cases) or Cancel to abort.<br>
+   • For connections with no test cases, deletion happens immediately after confirmation.<br><br>
 
-<b>Important Warnings:</b><br>
-• Deleted connections cannot be recovered.<br>
-• All associated test cases will be affected.<br>
-• Historical test results may lose connection context.<br>
-• Export connection settings before deletion if needed.
+6. <b>Post-Deletion Behavior:</b><br>
+   • The connection and any associated test cases (if previously warned) will be permanently removed from the system.<br>
+   • The connection list/table refreshes, removing the deleted entry.<br><br>
+
+<b>Best Practices</b><br>
+• <b>Confirm selection:</b> Always double-check the connection name and user before deletion—especially when acting as admin on other users’ connections.<br>
+• <b>Review test case associations:</b> Avoid deleting connections still supporting important validation jobs unless you are certain those test cases are no longer needed.<br>
+• <b>Routine clean-up:</b> Periodically review and delete outdated connections to maintain a tidy working environment and reduce the risk of using expired integrations.<br>
+• <b>Document deletions:</b> For environments where audit trails matter, make note of deletion actions for compliance.<br><br>
+
+<b>Security Note:</b><br>
+Only users with appropriate permissions (typically admins) can see and act upon all connections. Regular users may only delete their own. 
+All deletes are logged for accountability.<br><br>
+
+<i>Use the Delete Connection feature to keep your INFOFISCUS workspace organized, secure, and optimized for efficient, error-free data validation operations.</i>
 """
 },
+
 
         
     }

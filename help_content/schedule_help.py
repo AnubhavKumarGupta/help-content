@@ -13,7 +13,7 @@ def get_schedule_content():
 
 <b>Overview</b><br>
 The Schedule feature allows you to automate test case executions on either your local Airflow server or on Astronomer. 
-This enables flexible, repeatable, and timed data validation, analysis, and reporting—supporting complex validation workflows, monitoring, and automated alerting.<br><br>
+This enables flexible, repeatable, and timed data validation, analysis, and reporting - supporting complex validation workflows, monitoring, and automated alerting.<br><br>
 
 <b>Platforms Supported</b><br>
 • <b>Airflow Local Server:</b> Run and schedule tests directly using an Airflow instance that runs on your own machine (WSL/Ubuntu).<br>
@@ -23,10 +23,10 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 <b>Pre-requisites</b><br>
 • <b>For Airflow Local Server:</b><br>
 &nbsp;&nbsp; • Ubuntu WSL and Airflow must be installed on your system.<br>
-&nbsp;&nbsp; • If not installed, simply click the buttons provided in the UI (WSL Install, Install Ubuntu, Airflow Install) and follow prompts—they automate the setup for you.<br>
+&nbsp;&nbsp; • If not installed, simply click the buttons provided in the UI (WSL Install, Install Ubuntu, Airflow Install) and follow prompts - they automate the setup for you.<br>
 &nbsp;&nbsp; • You only need to install these components once per machine.<br><br>
 • <b>For Astronomer:</b><br>
-&nbsp;&nbsp; • Simply click the Astro Setup button before scheduling—this ensures necessary back-end setup for Astronomer integration.<br><br>
+&nbsp;&nbsp; • Simply click the Astro Setup button before scheduling - this ensures necessary back-end setup for Astronomer integration.<br><br>
 
 <b>Step-by-Step Guide</b><br>
 1. <b>Select Platform:</b><br>
@@ -84,7 +84,7 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 • <b>Airflow Server</b> and <b>Airflow Webserver</b> buttons may need to be clicked again if the application has been restarted or after logout/login.<br>
 • For Astronomer, confirm Astro Setup is complete before first scheduling action.<br><br>
 
-<i>Using the Schedule feature, you can automate and orchestrate your data validation workflows across platforms—ensuring consistent, policy-driven execution and peace of mind.</i>
+<i>Using the Schedule feature, you can automate and orchestrate your data validation workflows across platforms-ensuring consistent, policy-driven execution and peace of mind.</i>
 """
 },
 

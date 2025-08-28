@@ -3,45 +3,51 @@
 def get_database_content():
     """Database-specific help content for all supported database types"""
     return {
-        "Database": {
-            "title": "Database Platform Selection",
-            "description": """
-<b>Choose Your Database Platform</b>
 
-Select the appropriate database type to create optimized connections with platform-specific configurations.
+# ----------------- Connection -> Create Connection -> Database -----------------
 
-<b>Enterprise Databases:</b>
-• <b>Oracle:</b> Enterprise-grade relational database
-• <b>SQL Server:</b> Microsoft's flagship database platform
-• <b>PostgreSQL:</b> Advanced open-source relational database
+"Database": {
+    "title": "Database Platform Selection",
+    "description": """
+<b> Choose Your Database Platform – Help Guide</b><br><br>
 
-<b>Cloud Platforms:</b>
-• <b>Snowflake:</b> Cloud data warehouse platform
-• <b>Google BigQuery:</b> Serverless data warehouse
-• <b>Amazon RedShift:</b> AWS cloud data warehouse
-• <b>Azure Synapse:</b> Microsoft's analytics platform
+Select the appropriate database type to create optimized connections with 
+platform-specific configurations in the <b>INFOFISCUS Data Validation Tool</b>.<br><br>
 
-<b>Modern Platforms:</b>
-• <b>Databricks:</b> Unified analytics platform
-• <b>StarRocks:</b> High-performance analytical database
-• <b>MySQL:</b> Popular open-source database
+<b> Enterprise Databases:</b><br>
+• <b>Oracle:</b> Enterprise-grade relational database<br>
+• <b>SQL Server:</b> Microsoft’s flagship database platform<br>
+• <b>PostgreSQL:</b> Advanced open-source relational database<br><br>
 
-<b>Platform-Specific Features:</b>
-Each database type has customized:
-• Connection parameter validation
-• Performance optimization settings
-• Security configuration options
-• Data type mapping for test cases
+<b> Cloud Platforms:</b><br>
+• <b>Snowflake:</b> Cloud data warehouse platform<br>
+• <b>Google BigQuery:</b> Serverless data warehouse<br>
+• <b>Amazon RedShift:</b> AWS cloud data warehouse<br>
+• <b>Azure Synapse:</b> Microsoft’s analytics platform<br><br>
 
-<b>Selection Guide:</b>
-• <b>On-Premise:</b> Oracle, SQL Server, PostgreSQL, MySQL
-• <b>Cloud-Native:</b> BigQuery, RedShift, Synapse
-• <b>Analytics:</b> Snowflake, Databricks, StarRocks
-• <b>Hybrid:</b> PostgreSQL, SQL Server (cloud versions available)
+<b> Modern Platforms:</b><br>
+• <b>Databricks:</b> Unified analytics platform<br>
+• <b>StarRocks:</b> High-performance analytical database<br>
+• <b>MySQL:</b> Popular open-source database<br><br>
 
-Click on your specific database type to see detailed connection setup instructions and requirements.
-            """
-        },
+<b> Platform-Specific Features:</b><br>
+Each database type includes customized:<br>
+• Connection parameter validation<br>
+• Performance optimization settings<br>
+• Security configuration options<br>
+• Data type mapping for test cases<br><br>
+
+<b> Selection Guide:</b><br>
+• <b>On-Premise:</b> Oracle, SQL Server, PostgreSQL, MySQL<br>
+• <b>Cloud-Native:</b> BigQuery, RedShift, Synapse<br>
+• <b>Analytics-Focused:</b> Snowflake, Databricks, StarRocks<br>
+• <b>Hybrid:</b> PostgreSQL, SQL Server (cloud versions available)<br><br>
+
+<i> Click on your specific database type to see detailed 
+connection setup instructions and requirements.</i>
+"""
+},
+
 
 # ---------------------------------         Oracle       --------------------------------
 
@@ -470,64 +476,71 @@ database platform for real-time data validation, reporting, and analytics within
 <b>INFOFISCUS Data Validation Tool</b>. StarRocks is designed for high-performance analytical workloads 
 and interactive query scenarios.<br><br>
 
-<b>How to Navigate</b><br>
-• Click <b>Connection</b> on the sidebar.<br>
-• Double-click <b>Create Connection</b>.<br>
-• Double-click <b>Database</b>.<br>
-• Select <b>StarRocks</b> from the list of databases.<br><br>
+<b>How to Navigate:</b><br>
+1. Click <b>Connection</b> on the sidebar.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
+4. Select <b>StarRocks</b> from the list of databases.<br><br>
 
-<b>Required Fields</b><br>
-<table border="1" cellspacing="0" cellpadding="5">
-<tr><th>Field</th><th>Description</th><th>Required</th></tr>
-<tr><td>Connection Name</td><td>Unique, descriptive name for your connection.</td><td>Yes</td></tr>
-<tr><td>Username</td><td>StarRocks user account for authentication.</td><td>Yes</td></tr>
-<tr><td>Password</td><td>Password associated with the username.</td><td>Yes</td></tr>
-<tr><td>Host</td><td>StarRocks Frontend (FE) hostname or IP (e.g., starrocks-fe.example.com). 
-Note: distinct from MySQL/PostgreSQL hosts.</td><td>Yes</td></tr>
-<tr><td>Port</td><td>Query port used to connect to StarRocks FE. Default is 9030 
-(different from MySQL's 3306).</td><td>Yes</td></tr>
-<tr><td>Database</td><td>Name of the database to connect to in StarRocks.</td><td>Yes</td></tr>
+<b>Required Fields (UI Reference):</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique, descriptive name for your connection.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">StarRocks user account for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">Password associated with the username.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">StarRocks Frontend (FE) hostname or IP (e.g., starrocks-fe.example.com). Note: distinct from MySQL/PostgreSQL hosts.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">Query port used to connect to StarRocks FE. Default is 9030 (different from MySQL's 3306).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Name of the database to connect to in StarRocks.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 </table><br>
 
-<b>Step-by-Step Instructions</b><br>
-1. Enter a unique <b>Connection Name</b> (e.g., <i>Analytics_StarRocks_Prod</i>).<br>
-2. Fill in <b>Username</b> and <b>Password</b>.<br>
-3. Provide the correct <b>Host</b> for the StarRocks FE server and specify <b>Port 9030</b>.<br>
-4. Specify the <b>Database</b> name.<br>
-5. Click <b>Test</b> to verify connectivity and credentials.<br>
-6. If successful, click <b>Save</b> to register the connection.<br><br>
+<b>Step-by-Step Instructions:</b><br>
+1. <b>Enter Connection Name:</b> Example → Analytics_StarRocks_Prod.<br>
+2. <b>Fill Credentials:</b> Enter Username and Password.<br>
+3. <b>Provide Host & Port:</b> Enter correct FE host and Port 9030.<br>
+4. <b>Specify Database:</b> Enter the StarRocks database name.<br>
+5. <b>Test Connection:</b> Click <b>Test</b> to verify.<br>
+6. <b>Save:</b> Once successful, click <b>Save</b> to register the connection.<br><br>
 
-<b>Important Notes</b><br>
+<b>Important Notes:</b><br>
 • The host must point to a StarRocks Frontend (FE) node, not backend or other services.<br>
 • The port is typically 9030, do not use MySQL default port 3306 or PostgreSQL's 5432.<br>
 • Make sure your network/firewall allows communication over port 9030 to the FE host.<br><br>
 
-<b>Best Practices</b><br>
+<b>Best Practices:</b><br>
 • Use descriptive, unique connection names per environment or project.<br>
 • Keep credentials secure and change passwords regularly.<br>
 • Assign minimal required permissions to the user.<br>
 • Document all connection details for auditing purposes.<br><br>
 
-<b>Troubleshooting Tips</b><br>
-• Confirm the Host and Port values correspond to a reachable FE node.<br>
-• Check username and password correctness.<br>
-• Verify that the specified Database exists and is accessible to the user.<br>
-• Look out for firewall or network restrictions blocking port 9030.<br><br>
+<b>Troubleshooting Tips:</b><br>
+• <b>Host/Port Errors:</b> Confirm values correspond to a reachable FE node.<br>
+• <b>Authentication Issues:</b> Check username and password correctness.<br>
+• <b>Database Access Errors:</b> Verify that the specified database exists and is accessible.<br>
+• <b>Network Restrictions:</b> Check firewall or network blocking port 9030.<br><br>
 
-<b>Example</b><br>
-<table border="1" cellspacing="0" cellpadding="5">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Analytics_StarRocks_Prod</td></tr>
-<tr><td>Username</td><td>starrocks_user</td></tr>
-<tr><td>Password</td><td>****</td></tr>
-<tr><td>Host</td><td>starrocks-fe.example.com</td></tr>
-<tr><td>Port</td><td>9030</td></tr>
-<tr><td>Database</td><td>analytics_db</td></tr>
+<b>Example:</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Analytics_StarRocks_Prod</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">starrocks_user</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">starrocks-fe.example.com</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">9030</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">analytics_db</td></tr>
 </table><br>
 
-<b>Security Reminder</b><br>
+<b>Security Reminder:</b><br>
 INFOFISCUS masks passwords and enforces unique naming for connections. 
-Use secure credential management and restrict user privileges as per best practices.
+Use secure credential management and restrict user privileges as per best practices.<br><br>
+
+<i>Use this help section to set up, test, and manage StarRocks connections efficiently and securely.</i>
 """
 },
 
@@ -805,6 +818,7 @@ and advanced S3-integrated workflows at enterprise scale.</i>
     """
 },
 
+
 # ----------------------------------------    Azure Synapse  --------------------------------
 
 "Azure Synapse": {
@@ -947,6 +961,7 @@ for secure, enterprise-scale data validation workflows.</i>
 """
 },
 
+
 # ---------------------------------------     Databricks     ------------------------------------
 
 "Databricks": {
@@ -1064,4 +1079,6 @@ Update database connection parameters with platform-specific optimizations.
 • Monitor performance after modifications
             """
         }
+
+        
     }

@@ -288,7 +288,7 @@ The INFOFISCUS Data Validation Tool masks your password on entry and enforces un
 # ----------------------------------        PostgreSQL         ---------------------------------
 
         "PostgreSQL": {
-            "title": "🐘 PostgreSQL Database Connection",
+            "title": "PostgreSQL Database Connection",
             "description": """
 <b>PostgreSQL Database Connection - Help Guide</b><br><br>
 
@@ -369,47 +369,92 @@ The INFOFISCUS Data Validation Tool masks your password on entry and enforces un
 
 # ----------------------------------         Snowflake        -----------------------------------
 
-
         "Snowflake": {
             "title": "Snowflake Data Warehouse Connection",
             "description": """
-<b>Connect to Snowflake Cloud Data Warehouse</b>
+<b>Snowflake Database Connection - Help Guide</b><br><br>
 
-Set up secure connections to Snowflake for cloud-scale data validation.
+<b>Overview</b><br>
+The Snowflake Database Connection module enables secure integration with 
+<b>Snowflake’s cloud data platform</b> for large-scale data validation, analytics, 
+and reporting within the INFOFISCUS Data Validation Tool.<br><br>
 
-<b>Snowflake Connection Requirements:</b>
-• <b>Account:</b> Snowflake account identifier
-• <b>Username:</b> Snowflake user account
-• <b>Password:</b> User password or key-pair authentication
-• <b>Warehouse:</b> Compute warehouse name
-• <b>Database:</b> Target database name
-• <b>Schema:</b> Default schema (optional)
+<b>How to Navigate:</b><br>
+1. Click <b>Connection</b> on the sidebar.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
+4. Select <b>Snowflake</b> from the list of available databases.<br><br>
 
-<b>Connection Configuration:</b>
-<code>snowflake://username:password@account/database/schema?warehouse=warehouse_name</code>
+<b>Required Fields:</b><br>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
+<tr><td>Connection Name</td><td>A unique name for this Snowflake connection. Each new connection must have a distinct name; duplicates are not allowed.</td><td>Yes</td></tr>
+<tr><td>Username</td><td>Snowflake account username for authentication.</td><td>Yes</td></tr>
+<tr><td>Password</td><td>Account password. Click “Show Password” to view as you type.</td><td>Yes</td></tr>
+<tr><td>Account ID</td><td>The unique Snowflake account identifier (e.g., ab12345.us-east-1).</td><td>Yes</td></tr>
+<tr><td>Warehouse</td><td>Name of the compute warehouse to use for query execution.</td><td>Yes</td></tr>
+<tr><td>Database</td><td>Target Snowflake database name.</td><td>Yes</td></tr>
+<tr><td>Schema</td><td>Database schema to access tables within Snowflake.</td><td>Yes</td></tr>
+<tr><td>Role</td><td>Role to use for permissions and access control.</td><td>No</td></tr>
+</table><br>
 
-<b>Cloud-Native Features:</b>
-• <b>Auto-Scaling:</b> Automatic compute scaling for large validations
-• <b>Zero-Copy Cloning:</b> Efficient data environment replication
-• <b>Time Travel:</b> Historical data validation capabilities
-• <b>Secure Views:</b> Row-level and column-level security
+<b>Step-by-Step Instructions:</b><br>
+1. <b>Enter a Unique Connection Name</b><br>
+&nbsp;&nbsp;• Every connection requires a distinct name (e.g., Analytics_Snowflake_Prod_2025 or Sales_SF_Dev).<br>
+&nbsp;&nbsp;• If a name already exists, you will be prompted to enter a different, unique name.<br><br>
 
-<b>Performance Advantages:</b>
-• <b>Columnar Storage:</b> Optimized analytical query performance
-• <b>Automatic Clustering:</b> Self-optimizing data organization
-• <b>Result Caching:</b> Intelligent query result caching
-• <b>Elastic Scaling:</b> On-demand compute resource allocation
+2. <b>Fill Out Credentials</b><br>
+&nbsp;&nbsp;• Provide Username, Password, Account ID, Warehouse, Database, Schema, and Role (if required).<br><br>
 
-<b>Enterprise Security:</b>
-• End-to-end encryption at rest and in transit
-• Multi-factor authentication support
-• Network policy and IP whitelisting
-• Comprehensive access control and auditing
+3. <b>Test the Connection</b><br>
+&nbsp;&nbsp;• Click <b>Test</b> to verify connectivity and credentials.<br>
+&nbsp;&nbsp;• If testing fails, review your inputs or consult your Snowflake administrator.<br><br>
 
-<b>Advanced Analytics:</b>
-Snowflake's cloud architecture enables massive-scale data validation with features like semi-structured data analysis, machine learning functions, and real-time data streaming validation.
+4. <b>Save the Connection</b><br>
+&nbsp;&nbsp;• Once the test is successful, click <b>Save</b> to register your connection.<br><br>
+
+<b>Best Practices:</b><br>
+• Always use descriptive and unique connection names for each entry.<br>
+• Do not reuse connection names between different environments (production, development, QA).<br>
+• Choose a warehouse appropriate to your workload and data volume.<br>
+• Use individual roles to ensure proper access control and auditing.<br>
+• Never share passwords or credentials; keep them secure.<br>
+• Regularly update passwords and review permissions as organizational policies evolve.<br><br>
+
+<b>Troubleshooting Tips:</b><br>
+• <b>Duplicate Connection Name:</b> Edit the connection name to ensure uniqueness.<br>
+• <b>Authentication Errors:</b> Verify username/password, account ID, and ensure the user has the required role and privileges.<br>
+• <b>Warehouse or Database Issues:</b> Ensure the specified warehouse and database exist and your user has access rights.<br>
+• <b>Network Errors:</b> Ensure access to Snowflake over the Internet (required for cloud connectivity); check with IT if issues persist.<br><br>
+
+<b>Example:</b><br>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>Field</th><th>Example Value</th></tr>
+<tr><td>Connection Name</td><td>Analytics_Snowflake_Prod2025</td></tr>
+<tr><td>Username</td><td>analytics_user</td></tr>
+<tr><td>Password</td><td>****</td></tr>
+<tr><td>Account ID</td><td>ab12345.us-east-1</td></tr>
+<tr><td>Warehouse</td><td>ANALYTICS_WH</td></tr>
+<tr><td>Database</td><td>SALES_DB</td></tr>
+<tr><td>Schema</td><td>PUBLIC</td></tr>
+<tr><td>Role</td><td>ANALYST</td></tr>
+</table><br>
+
+<b>Advanced Tips:</b><br>
+• For advanced authentication (key pair, MFA, SSO), refer to Snowflake’s official documentation or consult your admin.<br>
+• Optimize warehouse size and scaling for performance and cost efficiency.<br>
+• Use the appropriate role for least-privilege access and audit compliance.<br>
+• Explore features like Time Travel (query previous data states), Secure Views, and Zero-Copy Cloning for advanced analytics and compliance.<br><br>
+
+<b>Security Reminder:</b><br>
+The INFOFISCUS Data Validation Tool masks your password on entry and enforces unique connection naming for every new database configuration, following enterprise security best practices.<br>
+Warehouse and role selection help control cost and security.<br><br>
+
+<i>Utilize this help section to efficiently and securely set up, test, and manage Snowflake database connections for scalable cloud analytics.</i>
             """
         },
+
+
 
 # ---------------------------    Starrocks  ---------------------------- 
 
@@ -500,93 +545,265 @@ BigQuery enables validation of petabyte-scale datasets with machine learning int
             """
         },
 
-        "Amazon RedShift": {
-            "title": "Amazon RedShift Connection",
+
+
+
+# ---------------------------------------   Amazon Redshift   ---------------------------
+
+        "Amazon Redshift": {
+            "title": "Amazon Redshift Connection",
             "description": """
-<b>Connect to Amazon RedShift Data Warehouse</b>
+<b>Amazon Redshift Database Connection - Help Guide</b><br><br>
 
-Configure connections to AWS RedShift for enterprise-scale data validation.
+<b>Overview</b><br>
+The Amazon Redshift connection module enables secure integration with 
+<b>AWS’s cloud data warehouse</b> for high-performance analytics, reporting, 
+and data validation in the INFOFISCUS Data Validation Tool.<br><br>
+Connections can be:<br>
+• <b>Standard (without TARGET):</b> Direct Redshift connection.<br>
+• <b>With TARGET:</b> Includes Amazon S3 credentials for import/export and external data operations.<br><br>
 
-<b>RedShift Connection Parameters:</b>
-• <b>Host:</b> RedShift cluster endpoint
-• <b>Port:</b> Usually 5439 (default RedShift port)
-• <b>Database:</b> Target database name
-• <b>Username:</b> RedShift database user
-• <b>Password:</b> User password or IAM authentication
+<b>How to Navigate:</b><br>
+1. Click <b>Connection</b> on the sidebar.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
+4. Select <b>Amazon Redshift</b> from the list.<br><br>
 
-<b>Connection String Format:</b>
-<code>redshift://username:password@hostname:port/database</code>
+<b>Required Fields:</b><br>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th colspan="3">Standard Redshift Connection (Without TARGET)</th></tr>
+<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
+<tr><td>Connection Name</td><td>Unique connection name (duplicates not allowed).</td><td>Yes</td></tr>
+<tr><td>Username</td><td>Redshift cluster user for authentication.</td><td>Yes</td></tr>
+<tr><td>Password</td><td>User account password (masked in tool).</td><td>Yes</td></tr>
+<tr><td>Host</td><td>Redshift cluster endpoint (e.g., redshift-cluster.company.com).</td><td>Yes</td></tr>
+<tr><td>Port</td><td>Redshift port (default: 5439).</td><td>Yes</td></tr>
+<tr><td>Database</td><td>Target Redshift database name.</td><td>Yes</td></tr>
+<tr><td>Schema</td><td>Schema to access tables within Redshift.</td><td>Yes</td></tr>
+</table><br>
 
-<b>Authentication Options:</b>
-• <b>Password Authentication:</b> Traditional username/password
-• <b>IAM Authentication:</b> AWS Identity and Access Management
-• <b>SSO Integration:</b> Single sign-on with corporate identity providers
-• <b>Federated Authentication:</b> Integration with external identity systems
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th colspan="3">Redshift Connection With TARGET (S3 Integration)</th></tr>
+<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
+<tr><td>Bucket Name</td><td>S3 bucket for reads/writes (UNLOAD, COPY, data import/export).</td><td>Yes (if target)</td></tr>
+<tr><td>Region Name</td><td>AWS region of S3 bucket (e.g., us-east-1).</td><td>Yes (if target)</td></tr>
+<tr><td>Folder Path</td><td>S3 folder for files (e.g., exports/2025/).</td><td>Yes (if target)</td></tr>
+<tr><td>Access Key Id</td><td>AWS IAM access key with S3 permissions.</td><td>Yes (if target)</td></tr>
+<tr><td>Secret Access Key</td><td>Secret key corresponding to the access key ID.</td><td>Yes (if target)</td></tr>
+<tr><td>Endpoint Url</td><td>Custom endpoint (for VPC/private S3).</td><td>No</td></tr>
+</table><br>
 
-<b>RedShift Features:</b>
-• <b>Columnar Storage:</b> Optimized for analytical workloads
-• <b>Massively Parallel:</b> Distributed query processing
-• <b>Automatic Compression:</b> Intelligent data compression
-• <b>Workload Management:</b> Query prioritization and resource allocation
+<b>Step-by-Step Instructions:</b><br>
+<b>Without TARGET:</b><br>
+1. Enter a unique <b>Connection Name</b>.<br>
+2. Fill Username, Password, Host, Port, Database, Schema.<br>
+3. Click <b>Test</b> to validate.<br>
+4. If successful, click <b>Save</b>.<br><br>
 
-<b>Performance Optimization:</b>
-• <b>Distribution Keys:</b> Optimize data distribution across nodes
-• <b>Sort Keys:</b> Improve query performance with sorted data
-• <b>Vacuum Operations:</b> Maintain table performance
-• <b>Query Optimization:</b> Advanced query planning and execution
+<b>With TARGET:</b><br>
+1. Enable the <b>TARGET</b> option.<br>
+2. Provide S3 details (Bucket, Region, Folder, Keys, Endpoint if needed).<br>
+3. Click <b>Test</b> – validates both Redshift and S3 credentials.<br>
+4. Click <b>Save</b> to register.<br><br>
 
-<b>AWS Integration:</b>
-• Seamless integration with S3, Glue, and other AWS services
-• CloudWatch monitoring and alerting
-• AWS Security Token Service (STS) support
-• VPC security and network isolation
+<b>Why and When to Use TARGET:</b><br>
+<b>What are Target Credentials?</b><br>
+Target credentials provide access to S3 for reading/writing data. 
+They are required for:<br>
+• Exporting query results to S3 (<code>UNLOAD</code>)<br>
+• Importing large files from S3 into Redshift (<code>COPY</code>)<br>
+• Using Redshift Spectrum for external S3-based tables<br><br>
 
-<b>Validation Capabilities:</b>
-RedShift supports large-scale data validation with petabyte capacity, complex analytical queries, and integration with AWS data ecosystem.
+<b>When to Enable TARGET:</b><br>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>Scenario</th><th>Enable TARGET?</th><th>Reason</th></tr>
+<tr><td>Run data checks on Redshift tables only</td><td>No</td><td>All data remains inside Redshift.</td></tr>
+<tr><td>Export query results to S3</td><td>Yes</td><td>S3 access required to store results.</td></tr>
+<tr><td>Import datasets (CSV/Parquet) from S3</td><td>Yes</td><td>Redshift needs credentials to read S3 files.</td></tr>
+<tr><td>Use Redshift Spectrum external tables</td><td>Yes</td><td>Data resides on S3.</td></tr>
+</table><br>
+
+<b>Example Configurations:</b><br>
+<b>Without TARGET:</b><br>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>Field</th><th>Example Value</th></tr>
+<tr><td>Connection Name</td><td>Prod_RS_Sales_2025</td></tr>
+<tr><td>Username</td><td>sales_admin</td></tr>
+<tr><td>Password</td><td>****</td></tr>
+<tr><td>Host</td><td>rs-cluster.company.com</td></tr>
+<tr><td>Port</td><td>5439</td></tr>
+<tr><td>Database</td><td>SALES_DB</td></tr>
+<tr><td>Schema</td><td>public</td></tr>
+</table><br>
+
+<b>With TARGET:</b><br>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>Field</th><th>Example Value</th></tr>
+<tr><td>Connection Name</td><td>Prod_RS_Export_Target2025</td></tr>
+<tr><td>Username</td><td>export_user</td></tr>
+<tr><td>Password</td><td>****</td></tr>
+<tr><td>Host</td><td>rs-cluster.company.com</td></tr>
+<tr><td>Port</td><td>5439</td></tr>
+<tr><td>Database</td><td>EXPORTS_DB</td></tr>
+<tr><td>Schema</td><td>export_schema</td></tr>
+<tr><td>Bucket Name</td><td>rs-data-exports</td></tr>
+<tr><td>Region Name</td><td>us-east-1</td></tr>
+<tr><td>Folder Path</td><td>exports/yearly/2025</td></tr>
+<tr><td>Access Key Id</td><td>AKIAxxxxxxxxxxxxxxx</td></tr>
+<tr><td>Secret Access Key</td><td>wJalrxUtnFEMI/.../EXAMPLEKEY</td></tr>
+<tr><td>Endpoint Url</td><td>https://s3.us-east-1.amazonaws.com (optional)</td></tr>
+</table><br>
+
+<b>Best Practices:</b><br>
+• Always use descriptive, unique names for each connection.<br>
+• Store AWS keys securely, rotate them regularly.<br>
+• Grant S3 access only to needed buckets/folders (least privilege).<br>
+• Use IAM roles instead of static keys when possible.<br><br>
+
+<b>Troubleshooting Tips:</b><br>
+• <b>Duplicate Connection Name:</b> Edit the name to ensure uniqueness.<br>
+• <b>Credential Issues:</b> Verify Redshift + S3 credentials and privileges.<br>
+• <b>Network Errors:</b> Check firewall and endpoint access.<br>
+• <b>S3 Permission Errors:</b> Ensure correct bucket/folder access rights.<br><br>
+
+<b>Security Reminder:</b><br>
+The INFOFISCUS Data Validation Tool masks Redshift and AWS credentials. 
+Unique connection naming is enforced for safety. Keys are never stored in plain text. 
+Follow enterprise security guidelines, use IAM roles when possible, and rotate credentials regularly.<br><br>
+
+<i>Use this guide to confidently configure both direct Redshift connections 
+and advanced S3-integrated workflows at enterprise scale.</i>
             """
         },
+
+
+
+# ----------------------------------------    Azure Synapse  --------------------------------
 
         "Azure Synapse": {
             "title": "Azure Synapse Analytics Connection",
             "description": """
-<b>Connect to Azure Synapse Analytics</b>
+<b>Azure Synapse Analytics Database Connection - Help Guide</b><br><br>
 
-Set up connections to Microsoft's cloud analytics platform for comprehensive data validation.
+<b>Overview</b><br>
+The Azure Synapse Analytics connection module allows seamless, secure integration 
+with <b>Microsoft’s cloud analytics platform</b> for enterprise-scale data validation, 
+analytics, and reporting in the INFOFISCUS Data Validation Tool.<br><br>
+Connections can be configured as:<br>
+• <b>Standard (without TARGET):</b> Direct Synapse connection.<br>
+• <b>With TARGET:</b> Extended with Azure Blob Storage credentials for data export/import.<br><br>
 
-<b>Synapse Connection Requirements:</b>
-• <b>Server Name:</b> Synapse workspace SQL endpoint
-• <b>Database:</b> SQL pool or database name
-• <b>Authentication:</b> SQL authentication or Azure AD
-• <b>Port:</b> Usually 1433 (default SQL port)
+<b>How to Navigate:</b><br>
+1. Click <b>Connection</b> in the sidebar.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
+4. Select <b>Azure Synapse</b>.<br><br>
 
-<b>Authentication Methods:</b>
-• <b>SQL Authentication:</b> Username and password
-• <b>Azure Active Directory:</b> Integrated authentication
-• <b>Managed Identity:</b> Azure managed service identity
-• <b>Service Principal:</b> Application-based authentication
+<b>Required Fields:</b><br>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th colspan="3">Standard Synapse Connection (Without TARGET)</th></tr>
+<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
+<tr><td>Connection Name</td><td>Unique identifier for this connection. Duplicates not allowed.</td><td>Yes</td></tr>
+<tr><td>Username</td><td>Synapse database user for authentication.</td><td>Yes</td></tr>
+<tr><td>Password</td><td>Account password (masked in tool).</td><td>Yes</td></tr>
+<tr><td>Server</td><td>Synapse workspace SQL endpoint address.</td><td>Yes</td></tr>
+<tr><td>Database</td><td>Target database name in Synapse.</td><td>Yes</td></tr>
+<tr><td>Schema</td><td>Database schema to use within Synapse.</td><td>Yes</td></tr>
+</table><br>
 
-<b>Synapse Architecture:</b>
-• <b>SQL Pools:</b> Dedicated compute resources for data warehousing
-• <b>Spark Pools:</b> Apache Spark for big data processing
-• <b>Serverless SQL:</b> On-demand query processing
-• <b>Data Integration:</b> Built-in ETL and data movement capabilities
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th colspan="3">Synapse Connection With TARGET (Blob Storage Integration)</th></tr>
+<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
+<tr><td>Bucket Name</td><td>Azure Blob container name for exports/imports.</td><td>Yes (if target)</td></tr>
+<tr><td>Folder Path</td><td>Path inside the container for your files (e.g., exports/2025/).</td><td>Yes (if target)</td></tr>
+<tr><td>Account Key</td><td>Storage account key for Blob access.</td><td>Yes (if target)</td></tr>
+<tr><td>Account Url</td><td>Blob Storage endpoint (e.g., https://account.blob.core.windows.net).</td><td>Yes (if target)</td></tr>
+</table><br>
 
-<b>Performance Features:</b>
-• <b>Adaptive Caching:</b> Intelligent result caching
-• <b>Workload Management:</b> Resource allocation and query prioritization
-• <b>Columnar Storage:</b> Optimized analytical performance
-• <b>Parallel Processing:</b> Distributed query execution
+<b>Step-by-Step Instructions:</b><br>
+<b>Without TARGET:</b><br>
+1. Enter a unique <b>Connection Name</b> (e.g., Prod_Synapse_Analytics2025).<br>
+2. Fill Username, Password, Server, Database, Schema.<br>
+3. Click <b>Test</b> to validate.<br>
+4. Click <b>Save</b> if successful.<br><br>
 
-<b>Azure Integration:</b>
-• Seamless connectivity with Azure Data Lake
-• Power BI integration for visualization
-• Azure Machine Learning integration
-• Azure Security Center compliance
+<b>With TARGET:</b><br>
+1. Enable the <b>TARGET</b> option.<br>
+2. Provide Blob Storage details (Bucket, Folder Path, Account Key, Account URL).<br>
+3. Click <b>Test</b> – validates Synapse + Blob credentials.<br>
+4. Click <b>Save</b> to register.<br><br>
 
-<b>Advanced Analytics:</b>
-Synapse enables enterprise-scale validation with integrated analytics, machine learning capabilities, and comprehensive data integration across the Azure ecosystem.
+<b>Why and When to Use TARGET:</b><br>
+<b>What are Target Credentials?</b><br>
+Target credentials allow Synapse to exchange data with Azure Blob containers.<br>
+They are required for:<br>
+• Exporting query results to Blob (UNLOAD/EXPORT)<br>
+• Importing files (CSV/Parquet) from Blob into Synapse<br>
+• Using ETL or pipelines that read/write Blob files<br><br>
+
+<b>When to Enable TARGET:</b><br>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>Scenario</th><th>Enable TARGET?</th><th>Reason</th></tr>
+<tr><td>Query Synapse tables only</td><td>No</td><td>All work happens inside Synapse.</td></tr>
+<tr><td>Export results to Blob</td><td>Yes</td><td>Blob credentials required for export.</td></tr>
+<tr><td>Import datasets from Blob</td><td>Yes</td><td>Needed to load files into Synapse.</td></tr>
+<tr><td>Integrate ETL pipelines with Blob</td><td>Yes</td><td>Blob access is mandatory.</td></tr>
+</table><br>
+
+<b>Example Configurations:</b><br>
+<b>Without TARGET:</b><br>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>Field</th><th>Example Value</th></tr>
+<tr><td>Connection Name</td><td>Prod_Synapse_Analytics2025</td></tr>
+<tr><td>Username</td><td>synapse_user</td></tr>
+<tr><td>Password</td><td>****</td></tr>
+<tr><td>Server</td><td>synapse-workspace.sql.net</td></tr>
+<tr><td>Database</td><td>SALES_DB</td></tr>
+<tr><td>Schema</td><td>dbo</td></tr>
+</table><br>
+
+<b>With TARGET:</b><br>
+<table border="1" cellpadding="4" cellspacing="0">
+<tr><th>Field</th><th>Example Value</th></tr>
+<tr><td>Connection Name</td><td>Prod_Synapse_Export_Target2025</td></tr>
+<tr><td>Username</td><td>export_user</td></tr>
+<tr><td>Password</td><td>****</td></tr>
+<tr><td>Server</td><td>synapse-workspace.sql.net</td></tr>
+<tr><td>Database</td><td>EXPORTS_DB</td></tr>
+<tr><td>Schema</td><td>export_schema</td></tr>
+<tr><td>Bucket Name</td><td>synapse-data-exports</td></tr>
+<tr><td>Folder Path</td><td>exports/annual/2025</td></tr>
+<tr><td>Account Key</td><td>q5vLgEXAMPLEKEY==</td></tr>
+<tr><td>Account Url</td><td>https://myaccount.blob.core.windows.net</td></tr>
+</table><br>
+
+<b>Best Practices:</b><br>
+• Use descriptive, unique names for each connection.<br>
+• Keep Account Keys safe; rotate them often.<br>
+• Apply least-privilege access for Blob Storage.<br>
+• Use different containers/folders for each project.<br>
+• Only enable TARGET when Blob integration is required.<br><br>
+
+<b>Troubleshooting Tips:</b><br>
+• <b>Duplicate Name:</b> Change the connection name.<br>
+• <b>Credential Errors:</b> Check Synapse + Blob credentials.<br>
+• <b>Network/Server Errors:</b> Verify server endpoint.<br>
+• <b>Blob Access Errors:</b> Ensure container + folder exist.<br><br>
+
+<b>Security Reminder:</b><br>
+INFOFISCUS masks Synapse and Blob credentials. 
+Unique names are enforced. 
+Always protect keys, apply least-privilege, and rotate credentials regularly.<br><br>
+
+<i>Use this guide to confidently configure Synapse connections with or without 
+Azure Blob integration for secure, scalable data validation workflows.</i>
             """
         },
+
+
+# ---------------------------------------     Databricks     ------------------------------------
+
+
 
         "Databricks": {
             "title": "Databricks Platform Connection",
@@ -632,6 +849,10 @@ Configure connections to Databricks for advanced data validation and analytics.
 Databricks enables sophisticated validation workflows with machine learning integration, real-time streaming validation, and advanced statistical analysis capabilities.
             """
         },
+
+
+# -----------------------------------      Edit Databases   ---------------------
+
 
         "Edit Database": {
             "title": "Edit Database Connection Parameters",

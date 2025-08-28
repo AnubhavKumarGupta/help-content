@@ -3,6 +3,8 @@
 def get_schedule_content():
     """Schedule and jobs related help content - adjusted with UI references"""
     return {
+
+# -----------------------------------------      Schedule     -----------------------------------        
         "Schedule": {
             "title": "📅 Schedule",
             "description": """
@@ -45,6 +47,9 @@ You can configure platforms, test cases, execution frequency, and time zones.<br
             """
         },
 
+
+# ------------------------------------          Show Scheduled Jobs          -------------------------- 
+
         "Show Scheduled Jobs": {
             "title": "📋 Show Scheduled Jobs",
             "description": """
@@ -78,6 +83,10 @@ It allows you to review, edit, delete, or generate reports for scheduled jobs.<b
 <i>This section gives you full visibility and control over your scheduled tasks.</i>
             """
         },
+
+
+# ------------------------------------           Show Schedule               ---------------------------
+
 
         "Edit Schedule": {
             "title": "✏️ Edit Schedule",

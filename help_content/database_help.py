@@ -85,8 +85,7 @@ This module enables seamless and secure integration with <b>Oracle Databases</b>
 <b>Best Practices:</b><br>
 • Always use descriptive, unique connection names.<br>
 • Do not reuse connection names across environments.<br>
-• Use individual credentials for accountability.<br>
-• Keep passwords secure and update them regularly.<br><br>
+• Use individual credentials for accountability.<br> <br>
 
 <b>Troubleshooting Tips:</b><br>
 • <b>Duplicate Name:</b> Change the connection name.<br>
@@ -366,7 +365,7 @@ The INFOFISCUS Data Validation Tool masks your password on entry and enforces un
 # ----------------------------------        Snowflake     -----------------------------------
 
 "Snowflake": {
-    "title": "Snowflake Data Warehouse Connection",
+    "title": "Snowflake Database Connection",
     "description": """
 <b>Snowflake Database Connection - Help Guide</b><br><br>
 
@@ -460,45 +459,77 @@ Warehouse and role selection help control cost and security.<br><br>
 
 # ----------------------------------        Starrocks     ------------------------------------ 
 
-        "StarRocks": {
-            "title": "StarRocks Database Connection",
-            "description": """
-<b>Connect to StarRocks Analytical Database</b>
+"StarRocks": {
+    "title": "StarRocks Database Connection",
+    "description": """
+<b>StarRocks Database Connection – Help Guide</b><br><br>
 
-Configure connections to StarRocks for high-performance analytical data validation.
+<b>Overview</b><br>
+The StarRocks connection module enables fast, secure integration with the StarRocks analytical 
+database platform for real-time data validation, reporting, and analytics within the 
+<b>INFOFISCUS Data Validation Tool</b>. StarRocks is designed for high-performance analytical workloads 
+and interactive query scenarios.<br><br>
 
-<b>StarRocks Connection Parameters:</b>
-• <b>Host:</b> StarRocks Frontend (FE) server address
-• <b>Port:</b> Usually 9030 (default query port)
-• <b>Database:</b> Target database name
-• <b>Username:</b> StarRocks user account
-• <b>Password:</b> User authentication password
+<b>How to Navigate</b><br>
+• Click <b>Connection</b> on the sidebar.<br>
+• Double-click <b>Create Connection</b>.<br>
+• Double-click <b>Database</b>.<br>
+• Select <b>StarRocks</b> from the list of databases.<br><br>
 
-<b>Connection String Format:</b>
-<code>starrocks://username:password@hostname:port/database</code>
+<b>Required Fields</b><br>
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>Field</th><th>Description</th><th>Required</th></tr>
+<tr><td>Connection Name</td><td>Unique, descriptive name for your connection.</td><td>Yes</td></tr>
+<tr><td>Username</td><td>StarRocks user account for authentication.</td><td>Yes</td></tr>
+<tr><td>Password</td><td>Password associated with the username.</td><td>Yes</td></tr>
+<tr><td>Host</td><td>StarRocks Frontend (FE) hostname or IP (e.g., starrocks-fe.example.com). 
+Note: distinct from MySQL/PostgreSQL hosts.</td><td>Yes</td></tr>
+<tr><td>Port</td><td>Query port used to connect to StarRocks FE. Default is 9030 
+(different from MySQL's 3306).</td><td>Yes</td></tr>
+<tr><td>Database</td><td>Name of the database to connect to in StarRocks.</td><td>Yes</td></tr>
+</table><br>
 
-<b>StarRocks Features:</b>
-• <b>Vectorized Execution:</b> High-performance query processing
-• <b>Columnar Storage:</b> Optimized for analytical workloads
-• <b>Real-time Analytics:</b> Sub-second query response times
-• <b>Auto Materialization:</b> Intelligent materialized view management
+<b>Step-by-Step Instructions</b><br>
+1. Enter a unique <b>Connection Name</b> (e.g., <i>Analytics_StarRocks_Prod</i>).<br>
+2. Fill in <b>Username</b> and <b>Password</b>.<br>
+3. Provide the correct <b>Host</b> for the StarRocks FE server and specify <b>Port 9030</b>.<br>
+4. Specify the <b>Database</b> name.<br>
+5. Click <b>Test</b> to verify connectivity and credentials.<br>
+6. If successful, click <b>Save</b> to register the connection.<br><br>
 
-<b>Performance Capabilities:</b>
-• <b>MPP Architecture:</b> Massively parallel processing
-• <b>Intelligent Indexing:</b> Automatic index optimization
-• <b>Cost-Based Optimizer:</b> Advanced query optimization
-• <b>Stream Processing:</b> Real-time data ingestion and validation
+<b>Important Notes</b><br>
+• The host must point to a StarRocks Frontend (FE) node, not backend or other services.<br>
+• The port is typically 9030, do not use MySQL default port 3306 or PostgreSQL's 5432.<br>
+• Make sure your network/firewall allows communication over port 9030 to the FE host.<br><br>
 
-<b>Data Types Support:</b>
-• Complex data types (JSON, Array, Map)
-• Time series data optimization
-• Geospatial data validation
-• Large object handling
+<b>Best Practices</b><br>
+• Use descriptive, unique connection names per environment or project.<br>
+• Keep credentials secure and change passwords regularly.<br>
+• Assign minimal required permissions to the user.<br>
+• Document all connection details for auditing purposes.<br><br>
 
-<b>Validation Features:</b>
-StarRocks excels at large-scale analytical validation with features optimized for big data scenarios, real-time streaming validation, and complex analytical queries.
-            """
-        },
+<b>Troubleshooting Tips</b><br>
+• Confirm the Host and Port values correspond to a reachable FE node.<br>
+• Check username and password correctness.<br>
+• Verify that the specified Database exists and is accessible to the user.<br>
+• Look out for firewall or network restrictions blocking port 9030.<br><br>
+
+<b>Example</b><br>
+<table border="1" cellspacing="0" cellpadding="5">
+<tr><th>Field</th><th>Example Value</th></tr>
+<tr><td>Connection Name</td><td>Analytics_StarRocks_Prod</td></tr>
+<tr><td>Username</td><td>starrocks_user</td></tr>
+<tr><td>Password</td><td>****</td></tr>
+<tr><td>Host</td><td>starrocks-fe.example.com</td></tr>
+<tr><td>Port</td><td>9030</td></tr>
+<tr><td>Database</td><td>analytics_db</td></tr>
+</table><br>
+
+<b>Security Reminder</b><br>
+INFOFISCUS masks passwords and enforces unique naming for connections. 
+Use secure credential management and restrict user privileges as per best practices.
+"""
+},
 
 
 # --------------------------------------    Google BigQuery  -----------------------
@@ -627,7 +658,7 @@ with or without Google Cloud Storage integration.</i>
 # ---------------------------------------   Amazon Redshift   ---------------------------
 
 "Amazon RedShift": {
-    "title": "Amazon Redshift Connection",
+    "title": "Amazon Redshift Database Connection",
     "description": """
 <b>Amazon Redshift Database Connection - Help Guide</b><br><br>
 
@@ -919,9 +950,9 @@ for secure, enterprise-scale data validation workflows.</i>
 # ---------------------------------------     Databricks     ------------------------------------
 
 "Databricks": {
-            "title": "Databricks Database Connection",
+            "title": "Databricks Connection",
             "description": """
-<b>Databricks Database Connection - Help Guide</b><br><br>
+<b>Databricks Connection - Help Guide</b><br><br>
 
 This module enables seamless and secure integration with <b>Databricks' Unified Data and AI Platform</b> for 
 <b>data validation, analytics, and reporting</b> within the INFOFISCUS Data Validation Tool.<br><br>

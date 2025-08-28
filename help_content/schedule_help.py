@@ -109,6 +109,7 @@ This option allows modification of an already created schedule.<br><br>
             """
         },
 
+
         "Delete Schedule": {
             "title": "🗑 Delete Schedule",
             "description": """
@@ -126,6 +127,7 @@ Use this option to permanently remove schedules from the system.<br><br>
 • Ensure you export a report if data is required before deletion.<br>
             """
         },
+
 
         "Generate Report": {
             "title": "📊 Generate Report",

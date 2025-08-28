@@ -1042,46 +1042,82 @@ INFOFISCUS masks access tokens and enforces unique names for secure Databricks c
 "Edit Database": {
     "title": "Edit Database Connection Parameters",
     "description": """
-<b>Edit Database Connection – Help Guide</b><br><br>
+<b>Edit Database – Help Guide</b><br><br>
 
 <b>Overview</b><br>
-The Edit Database section allows you to update and maintain your existing database connections as your data infrastructure evolves. 
-Instead of creating a new connection each time the underlying database changes (such as after new tables are added, schema is updated, 
-or credentials are refreshed), you can efficiently update the current connection configuration here—ensuring a seamless workflow and 
-avoiding unnecessary duplication.<br><br>
+The Edit Database feature allows you to modify, update, or test the connection configuration for any supported database platform after initial setup. 
+This ensures your data connections are always current, reflecting changes in credentials, database structure, or server information—without the need to create entirely new connections.<br><br>
 
-<b>Why Edit Database is Important</b><br>
-• <b>Avoid Unnecessary Duplication:</b> When changes happen in your source database (new tables/views, schema alterations, etc.), 
-editing your connection ensures the latest structure is reflected without having to create a new connection from scratch.<br>
-• <b>Preserve Test Case Associations:</b> Existing test cases and validation jobs linked to this connection continue to work – 
-there’s no need to reconfigure or relink them.<br>
-• <b>Streamlined Maintenance:</b> Editing an existing connection is quicker, reduces potential errors, and helps maintain a clean 
-connection list.<br>
-• <b>Data Consistency:</b> Keeping the same connection, but refreshing its metadata, ensures consistent access control, naming, and 
-configuration history.<br>
-• <b>Efficient Change Management:</b> Whether you change connection credentials, update hosts/ports, or refresh schemas, 
-Edit Database keeps transitions smooth and auditable.<br><br>
+<b>How Edit Database Works</b><br>
 
-<b>When Should You Use Edit Database?</b><br>
-• New tables or views have been added or removed in the database.<br>
-• Schema changes such as new columns, changed datatypes, or renamed tables.<br>
-• Database user credentials or authentication methods have changed.<br>
-• You need to update performance-related parameters (timeout, pooling, etc.).<br>
-• Server or database endpoints have migrated or changed (for example, after cloud migration).<br>
-• Periodic reconnection to refresh catalog information or re-validate connectivity.<br><br>
+<b>Database Selection</b><br>
+At the top of the Edit Database section, you’ll find a dropdown menu labeled <b>Select Database</b>.<br>
+Click this dropdown to view a list of all supported database types (such as Oracle, SQL Server, MySQL, StarRocks, PostgreSQL, Snowflake, Google BigQuery, Amazon RedShift, Azure Synapse, Databricks, etc.).<br>
+Select the target database platform you want to edit. The form below will adapt to the chosen database, showing only relevant fields and options.<br><br>
 
-<b>How It Works</b><br>
-1. Select the connection you wish to edit from your list of existing connections.<br>
-2. In Edit Database, the connection details form pre-fills with current values.<br>
-3. Make the required changes, such as correcting credentials, updating host/port, or simply clicking Test and Save to automatically 
-   refresh and reload the metadata (including fetching any new tables or structure changes from the source database).<br>
-4. The system updates the connection and its metadata, ensuring all linked test cases use the newly updated schema or data without interruption.<br>
-5. Security is enforced throughout: all password and sensitive field changes are properly secured.<br>
-6. Finally, the system validates that all updates are compatible before saving – preventing accidental misconfiguration.<br><br>
+<b>Selecting the Connection to Edit</b><br>
+Under the database platform heading (e.g., Snowflake), you’ll see a labeled field such as <b>Connection Name</b> with a dropdown menu (Select Connection).<br>
+Click this dropdown to view all the existing connections you have previously created for that specific database type.<br>
+Choose the desired connection to load its current configuration.<br><br>
 
-<b>Benefits</b><br>
-• Up-to-date on all schema/structure changes without new setup.<br>
-• Efficient troubleshooting and maintenance (no renaming or duplicated connections).
+<b>Review and Edit Connection Details</b><br>
+After selecting a connection, all configuration fields (such as Username, Password, Host, Port, Account ID, Warehouse, Database, Schema, Role—depending on your selected database type) will populate with existing stored values.<br>
+Carefully review current details.<br>
+Make any necessary changes:<br>
+• Update credentials if passwords, usernames, or key files have rotated or expired.<br>
+• Edit connection properties (host, port, database, relevant GCS/S3 or warehouse settings) in response to infrastructure changes, migrations, or upgrades.<br>
+• If you do not wish to change anything, you can simply refresh and validate the connection as-is.<br><br>
+
+<b>Test and Save</b><br>
+Once all required changes are made, or if you simply want to refresh/revalidate the connection to sync new metadata (e.g., after new tables are added in the source database), click the <b>Test and Save</b> button at the bottom.<br>
+The system will:<br>
+• Attempt to establish a connection with the new or existing settings.<br>
+• Validate credentials, host reachability, permissions, and (if applicable) pull updated schema or object information.<br>
+• If any problems are detected, you will be prompted to revise and fix the inputs.<br><br>
+
+<b>Update Other Connections</b><br>
+To edit another database type or different connection:<br>
+• Return to the <b>Select Database</b> dropdown and choose another platform.<br>
+• Repeat the process—select the connection, review/edit credentials/settings, and use Test and Save.<br>
+This ensures all your data connections remain current as your environment and access needs change.<br><br>
+
+<b>Use Cases and Benefits</b><br>
+• <b>Schema Changes:</b> If new tables, columns, or changes in structure have been made in your data source, updating preserves all test case mapping and avoids duplication.<br>
+• <b>Credential Updates:</b> Handle password rotations, updated access keys or authentication parameters securely.<br>
+• <b>Infrastructure Migration:</b> Migrate connections seamlessly if servers or cloud endpoints change, keeping all test cases and results intact.<br>
+• <b>Centralized Management:</b> Avoids proliferation of redundant connections, supporting streamlined maintenance and auditability.<br>
+• <b>Non-Disruptive Updates:</b> Edits are applied in-place, keeping associated test cases linked and valid.<br><br>
+
+<b>Detailed Steps</b><br>
+1. Access Edit Database: Click Edit Database in the sidebar menu.<br>
+2. Database Platform Selection: Use the top dropdown to select from available database platforms.<br>
+3. Select Existing Connection: In the Connection Name dropdown (now contextually under your chosen platform), select the specific connection you wish to modify.<br>
+4. Edit or Review Parameters: All current connection details are loaded into editable form fields. Update any field as required, such as:<br>
+&nbsp;&nbsp;&nbsp;• Username or password (for changed credentials)<br>
+&nbsp;&nbsp;&nbsp;• Host or port (for infrastructure changes)<br>
+&nbsp;&nbsp;&nbsp;• Special platform fields (like Warehouse, Account ID, Role for Snowflake)<br>
+&nbsp;&nbsp;&nbsp;• Any other relevant settings for your platform<br>
+5. Credential Security: Password fields are masked. Use <b>Show Password</b> if you need to reveal input. JSON/key uploads (if present) should be chosen with care and removed once no longer needed.<br>
+6. Test and Save: Click <b>Test and Save</b> to validate.<br>
+&nbsp;&nbsp;&nbsp;• If successful, the connection updates and any linked tests or jobs will immediately use the new configuration.<br>
+&nbsp;&nbsp;&nbsp;• If there are errors, the form will display messages—correct and retry as needed.<br>
+7. Repeat for Other Connections/Platforms: Easily switch databases from the dropdown and repeat the process as your environment evolves.<br><br>
+
+<b>Best Practices</b><br>
+• Always use Test and Save to ensure new settings work before deploying to production workflows.<br>
+• Update connections routinely after planned changes in your data environment.<br>
+• Use clear, unique connection names and document changes for audit purposes.<br>
+• Remove obsolete connections to maintain security hygiene.<br><br>
+
+<b>Security & Audit</b><br>
+• All modifications (who, what, when) are logged for security and compliance.<br>
+• Passwords and key files are handled with enterprise-grade encryption and never stored in plain text.<br>
+• Only authorized users can perform connection edits.<br><br>
+
+<b>Need Help?</b><br>
+If errors persist, double-check all parameters with your DBA or cloud admin. For system issues, contact INFOFISCUS support with the error details and screenshot.<br><br>
+
+<i>Edit Database lets you keep every data integration up-to-date, secure, and connected—supporting agile data operations without the complexity of rebuilding connections or workflows.</i>
 """
 },
 

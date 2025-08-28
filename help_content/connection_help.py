@@ -73,51 +73,61 @@ Choose your database type from the Database submenu to see platform-specific set
             """,
         },
 
-        "Edit Connection": {
-            "title": "Edit Database Connection",
-            "description": """
-<b>Modify Existing Database Connections</b>
+# ----------------------            Edit Connection              --------------------------  
 
-Update connection parameters while preserving test case associations and historical data.
 
-<b>Editable Parameters:</b>
-• <b>Connection Details:</b> Server, port, database name
-• <b>Credentials:</b> Username and password updates
-• <b>Advanced Settings:</b> Timeouts, encryption, pooling
-• <b>Connection Name:</b> Descriptive identifier
+"Edit Connection": {
+    "title": "Edit Database Connection",
+    "description": """
+<b>Edit Database Connection – Help Guide</b><br><br>
 
-<b>Important Considerations:</b>
-• <b>Test Case Impact:</b> Existing test cases will use updated connection
-• <b>Historical Data:</b> Previous test results remain unchanged
-• <b>Validation Required:</b> Connection testing recommended after changes
-• <b>Backup Recommended:</b> Export connection settings before major changes
+<b>Overview</b><br>
+The Edit Database section allows you to update and maintain your existing database connections as your data infrastructure evolves. 
+Instead of creating a new connection each time the underlying database changes (such as after new tables are added, schema is updated, 
+or credentials are refreshed), you can efficiently update the current connection configuration here—ensuring a seamless workflow and 
+avoiding unnecessary duplication.<br><br>
 
-<b>Common Edit Scenarios:</b>
-• <b>Password Changes:</b> Update expired or rotated passwords
-• <b>Server Migration:</b> Update server addresses after migrations
-• <b>Performance Tuning:</b> Adjust timeout and pooling settings
-• <b>Security Updates:</b> Enable encryption or change auth methods
+<b>Why Edit Database is Important</b><br>
+• <b>Avoid Unnecessary Duplication:</b> When changes happen in your source database (new tables/views, schema alterations, etc.), 
+editing your connection ensures the latest structure is reflected without having to create a new connection from scratch.<br>
+• <b>Preserve Test Case Associations:</b> Existing test cases and validation jobs linked to this connection continue to work – 
+there’s no need to reconfigure or relink them.<br>
+• <b>Streamlined Maintenance:</b> Editing an existing connection is quicker, reduces potential errors, and helps maintain a clean 
+connection list.<br>
+• <b>Data Consistency:</b> Keeping the same connection, but refreshing its metadata, ensures consistent access control, naming, and 
+configuration history.<br>
+• <b>Efficient Change Management:</b> Whether you change connection credentials, update hosts/ports, or refresh schemas, 
+Edit Database keeps transitions smooth and auditable.<br><br>
 
-<b>Edit Process:</b>
-1. Select existing connection from the list
-2. Modify required parameters
-3. Test updated connection settings
-4. Save changes and verify functionality
-5. Update any affected test cases if needed
+<b>When Should You Use Edit Database?</b><br>
+• New tables or views have been added or removed in the database.<br>
+• Schema changes such as new columns, changed datatypes, or renamed tables.<br>
+• Database user credentials or authentication methods have changed.<br>
+• You need to update performance-related parameters (timeout, pooling, etc.).<br>
+• Server or database endpoints have migrated or changed (for example, after cloud migration).<br>
+• Periodic reconnection to refresh catalog information or re-validate connectivity.<br><br>
 
-<b>Security During Edits:</b>
-• Password changes are immediately encrypted
-• Previous passwords are securely overwritten
-• All modifications are logged for audit purposes
-• Access restricted to authorized users only
+<b>How It Works</b><br>
+1. Select the connection you wish to edit from your list of existing connections.<br>
+2. In Edit Database, the connection details form pre-fills with current values.<br>
+3. Make the required changes, such as correcting credentials, updating host/port, or simply clicking Test and Save to automatically 
+   refresh and reload the metadata (including fetching any new tables or structure changes from the source database).<br>
+4. The system updates the connection and its metadata, ensuring all linked test cases use the newly updated schema or data without interruption.<br>
+5. Security is enforced throughout: all password and sensitive field changes are properly secured, and a modification audit trail is recorded.<br>
+6. Finally, the system validates that all updates are compatible before saving – preventing accidental misconfiguration.<br><br>
 
-<b>Testing After Changes:</b>
-• Automatic connection validation available
-• Test existing test cases with updated connection
-• Performance impact assessment tools
-• Rollback capability if issues detected
-            """,
-        },
+<b>Benefits</b><br>
+• Up-to-date on all schema/structure changes without new setup.<br>
+• Efficient troubleshooting and maintenance (no renaming or duplicated connections).<br>
+• Centralized auditing and tracking of all configuration changes.<br>
+• Fast onboarding of evolving data architecture (especially in dynamic or agile teams).<br>
+    """,
+},
+
+
+
+
+
 
         "Edit Database": {
             "title": "Edit Database Connection Parameters",
@@ -196,10 +206,10 @@ Use this interface to safely delete database connections linked to your client a
 Regularly review and remove unused connections to maintain system integrity and ensure data accuracy.<br><br>
 
 <b>Important Warnings:</b><br>
-• Deleted connections cannot be recovered<br>
-• All associated test cases will be affected<br>
-• Historical test results may lose connection context<br>
-• Export connection settings before deletion if needed<br>
+• Deleted connections cannot be recovered.<br>
+• All associated test cases will be affected.<br>
+• Historical test results may lose connection context.<br>
+• Export connection settings before deletion if needed.
 """
 },
 

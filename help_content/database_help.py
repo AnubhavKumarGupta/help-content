@@ -626,7 +626,7 @@ with or without Google Cloud Storage integration.</i>
 
 # ---------------------------------------   Amazon Redshift   ---------------------------
 
-"Amazon Redshift": {
+"Amazon RedShift": {
     "title": "Amazon Redshift Connection",
     "description": """
 <b>Amazon Redshift Database Connection - Help Guide</b><br><br>

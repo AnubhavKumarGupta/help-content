@@ -43,9 +43,9 @@ Click on your specific database type to see detailed connection setup instructio
             """
         },
 
-# -----------------------------------    Oracle Connection     --------------------------------
+# ---------------------------------         Oracle       --------------------------------
 
-        "Oracle": {
+"Oracle": {
             "title": "Oracle Database Connection",
             "description": """
 <b>Oracle Database Connection - Help Guide</b><br><br>
@@ -85,8 +85,7 @@ This module enables seamless and secure integration with <b>Oracle Databases</b>
 <b>Best Practices:</b><br>
 • Always use descriptive, unique connection names.<br>
 • Do not reuse connection names across environments.<br>
-• Use individual credentials for accountability.<br>
-• Keep passwords secure and update them regularly.<br><br>
+• Use individual credentials for accountability.<br> <br>
 
 <b>Troubleshooting Tips:</b><br>
 • <b>Duplicate Name:</b> Change the connection name.<br>
@@ -122,17 +121,15 @@ INFOFISCUS masks passwords and enforces unique names for secure Oracle configura
         },
 
 
-# ----------------------------------        SQL Server        ------------------------------
+# ----------------------------------      SQL Server      ------------------------------
 
-        "SQL Server": {
-            "title": "SQL Server Database Connection",
-            "description": """
-<b>SQL Server Database Connection - Help Guide </b><br><br>
+"SQL Server": {
+    "title": "SQL Server Database Connection",
+    "description": """
+<b>SQL Server Database Connection - Help Guide</b><br><br>
 
-<b>Overview</b><br>
-The SQL Server Database Connection module enables seamless and secure integration with 
-<b>Microsoft SQL Server</b> databases for data validation, reporting, and analytics within the 
-INFOFISCUS Data Validation Tool.<br><br>
+This module enables seamless and secure integration with <b>Microsoft SQL Server</b> databases for 
+<b>data validation, reporting, and analytics</b> within the INFOFISCUS Data Validation Tool.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
@@ -140,82 +137,76 @@ INFOFISCUS Data Validation Tool.<br><br>
 3. Double-click <b>Database</b>.<br>
 4. Select <b>SQL Server</b> from the list of available databases.<br><br>
 
-<b>Required Fields:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Connection Name</td><td>A unique name for this SQL Server connection. Each new connection must have a distinct name; duplicates are not allowed.</td><td>Yes</td></tr>
-<tr><td>Username</td><td>SQL Server account username for authentication.</td><td>Yes</td></tr>
-<tr><td>Password</td><td>Account password. Click “Show Password” to view as you type.</td><td>Yes</td></tr>
-<tr><td>Server</td><td>Hostname, IP address, or named instance of the SQL Server (e.g., sql.company.com).</td><td>Yes</td></tr>
-<tr><td>Database</td><td>Name of the target SQL Server database.</td><td>Yes</td></tr>
-<tr><td>Schema</td><td>Database schema to access tables within your SQL Server database.</td><td>Yes</td></tr>
-<tr><td>Port</td><td>SQL Server port (default: 1433).</td><td>Yes</td></tr>
+<b>Required Fields (UI Reference):</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique name for this SQL Server connection. Duplicate names are not allowed.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">SQL Server account username for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">Account password (hidden, with option to show).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Server</td><td style="padding:6px; border:1px solid #334155;">Hostname, IP address, or named instance of SQL Server (e.g., sql.company.com).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Target SQL Server database name.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">Schema to access SQL Server tables.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">SQL Server port (default: 1433).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>
-1. <b>Enter a Unique Connection Name</b><br>
-&nbsp;&nbsp;• Every connection requires a distinct name (e.g., Finance_SQL_Prod_2025 or HR_SQL_Dev).<br>
-&nbsp;&nbsp;• If a name already exists, you will be prompted to enter a different, unique name.<br><br>
-
-2. <b>Fill Out Credentials</b><br>
-&nbsp;&nbsp;• Provide Username, Password, Server, Database, Schema, and Port.<br><br>
-
-3. <b>Test the Connection</b><br>
-&nbsp;&nbsp;• Click <b>Test</b> to verify connectivity and credentials.<br>
-&nbsp;&nbsp;• If testing fails, review your inputs or consult your database administrator.<br><br>
-
-4. <b>Save the Connection</b><br>
-&nbsp;&nbsp;• Once the test is successful, click <b>Save</b> to register your connection.<br><br>
+1. <b>Enter Connection Name:</b> Example → Finance_SQL_Prod_2025.<br>
+2. <b>Fill Credentials:</b> Enter Username, Password, Server, Database, Schema, Port.<br>
+3. <b>Test Connection:</b> Click <b>Test</b> to verify. If it fails, check inputs or contact DBA.<br>
+4. <b>Save:</b> Once successful, click <b>Save</b> to register the connection.<br><br>
 
 <b>Best Practices:</b><br>
-• Always use descriptive and unique connection names for each entry.<br>
-• Do not reuse connection names between different environments or databases.<br>
-• Use individual user credentials to ensure accountability and easy troubleshooting.<br>
-• Never share passwords or credentials; keep them secure.<br>
-• Regularly update passwords and review permissions as organizational policies evolve.<br><br>
+• Always use descriptive, unique connection names.<br>
+• Do not reuse connection names across environments.<br>
+• Use individual credentials for accountability.<br>
+• Keep passwords secure and update them regularly.<br><br>
 
 <b>Troubleshooting Tips:</b><br>
-• <b>Duplicate Connection Name:</b> Edit the connection name to ensure uniqueness.<br>
-• <b>Authentication Errors:</b> Verify username, password, and ensure the account has sufficient privileges.<br>
-• <b>Network Errors:</b> Confirm server and port details with your IT or database administrator.<br>
-• <b>Schema Issues:</b> Ensure schema exists and the user has access rights.<br><br>
+• <b>Duplicate Name:</b> Change the connection name.<br>
+• <b>Auth Errors:</b> Verify credentials and privileges.<br>
+• <b>Network Issues:</b> Confirm server/port with IT.<br>
+• <b>Schema Issues:</b> Ensure schema exists and you have access.<br><br>
 
 <b>Example:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>SQL_HR_Production2025</td></tr>
-<tr><td>Username</td><td>hr_user</td></tr>
-<tr><td>Password</td><td>****</td></tr>
-<tr><td>Server</td><td>sqlserver01.company.com</td></tr>
-<tr><td>Database</td><td>HR</td></tr>
-<tr><td>Schema</td><td>dbo</td></tr>
-<tr><td>Port</td><td>1433</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">SQL_HR_Production2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">hr_user</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Server</td><td style="padding:6px; border:1px solid #334155;">sqlserver01.company.com</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">HR</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">dbo</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">1433</td></tr>
 </table><br>
 
 <b>Advanced Tips:</b><br>
-• For advanced configurations, such as Windows Authentication, named instances, SSL/TLS, or high-availability setups (AlwaysOn), consult your DBA or official SQL Server documentation.<br>
-• If multiple schemas need to be accessed, set up separate connections or request necessary privileges.<br><br>
+• Use Windows Authentication, SSL/TLS, or AlwaysOn setups if required.<br>
+• For multiple schemas, create separate connections.<br><br>
 
 <b>Security Reminder:</b><br>
-The INFOFISCUS Data Validation Tool masks your password on entry and enforces unique connection naming for every new database configuration, following enterprise security best practices.<br><br>
+INFOFISCUS masks passwords and enforces unique names for secure SQL Server configurations.<br><br>
 
-<i>Utilize this help section to successfully set up, test, and manage SQL Server database connections efficiently and securely.</i>
-            """
-        },
-
-
-# ----------------------------------          MySQL           ----------------------------- 
+<i>Use this help section to set up, test, and manage SQL Server connections efficiently and securely.</i>
+    """
+},
 
 
-        "MySQL": {
-            "title": "MySQL Database Connection",
-            "description": """
+# ----------------------------------        MySQL         --------------------------------
+
+"MySQL": {
+    "title": "MySQL Database Connection",
+    "description": """
 <b>MySQL Database Connection - Help Guide</b><br><br>
 
-<b>Overview</b><br>
-The MySQL Database Connection module allows secure integration with 
-<b>MySQL databases</b> for data validation, reporting, and analytics using the 
-INFOFISCUS Data Validation Tool.<br><br>
+This module allows secure integration with <b>MySQL databases</b> for 
+<b>data validation, reporting, and analytics</b> using the INFOFISCUS Data Validation Tool.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
@@ -223,73 +214,70 @@ INFOFISCUS Data Validation Tool.<br><br>
 3. Double-click <b>Database</b>.<br>
 4. Select <b>MySQL</b> from the list of available databases.<br><br>
 
-<b>Required Fields:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Connection Name</td><td>A unique name for this MySQL connection. Each new connection must have a distinct name; duplicates are not allowed.</td><td>Yes</td></tr>
-<tr><td>Username</td><td>MySQL database account username for authentication.</td><td>Yes</td></tr>
-<tr><td>Password</td><td>Account password. Click “Show Password” to view as you type.</td><td>Yes</td></tr>
-<tr><td>Host</td><td>Hostname or IP address of the MySQL server (e.g., mysql.example.com).</td><td>Yes</td></tr>
-<tr><td>Port</td><td>MySQL server port (default: 3306).</td><td>Yes</td></tr>
-<tr><td>Database</td><td>Name of the target MySQL database.</td><td>Yes</td></tr>
+<b>Required Fields (UI Reference):</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique name for this MySQL connection. Duplicate names are not allowed.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">MySQL account username for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">Account password (hidden, with option to show).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">Hostname or IP address of the MySQL server (e.g., mysql.example.com).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">MySQL server port (default: 3306).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Target MySQL database name.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>
-1. <b>Enter a Unique Connection Name</b><br>
-&nbsp;&nbsp;• Every connection requires a distinct name (e.g., Sales_MySQL_Prod_2025 or Dev_MySQL_Test).<br>
-&nbsp;&nbsp;• If a name already exists, you will be prompted to enter a different, unique name.<br><br>
-
-2. <b>Fill Out Credentials</b><br>
-&nbsp;&nbsp;• Provide Username, Password, Host, Port, and Database.<br><br>
-
-3. <b>Test the Connection</b><br>
-&nbsp;&nbsp;• Click <b>Test</b> to verify connectivity and credentials.<br>
-&nbsp;&nbsp;• If testing fails, review your inputs or consult your database administrator.<br><br>
-
-4. <b>Save the Connection</b><br>
-&nbsp;&nbsp;• Once the test is successful, click <b>Save</b> to register your connection.<br><br>
+1. <b>Enter Connection Name:</b> Example → Sales_MySQL_Prod_2025.<br>
+2. <b>Fill Credentials:</b> Enter Username, Password, Host, Port, Database.<br>
+3. <b>Test Connection:</b> Click <b>Test</b> to verify. If it fails, check inputs or contact DBA.<br>
+4. <b>Save:</b> Once successful, click <b>Save</b> to register the connection.<br><br>
 
 <b>Best Practices:</b><br>
-• Always use descriptive and unique connection names for each entry.<br>
-• Do not reuse connection names between different environments or databases.<br>
-• Use individual user credentials to ensure accountability.<br>
-• Never share passwords or credentials; keep them secure.<br>
-• Regularly update passwords and review permissions as organizational policies evolve.<br><br>
+• Always use descriptive, unique connection names.<br>
+• Do not reuse connection names across environments.<br>
+• Use individual credentials for accountability.<br>
+• Keep passwords secure and update them regularly.<br><br>
 
 <b>Troubleshooting Tips:</b><br>
-• <b>Duplicate Connection Name:</b> Edit the connection name to ensure uniqueness.<br>
-• <b>Authentication Errors:</b> Verify username, password, and ensure the account has sufficient privileges.<br>
-• <b>Network Errors:</b> Confirm host and port details with your IT or database administrator.<br>
-• <b>Database Access Issues:</b> Ensure the specified database exists and the user has access rights.<br><br>
+• <b>Duplicate Name:</b> Change the connection name.<br>
+• <b>Auth Errors:</b> Verify credentials and privileges.<br>
+• <b>Network Issues:</b> Confirm host/port with IT.<br>
+• <b>Database Access Issues:</b> Ensure the database exists and you have access.<br><br>
 
 <b>Example:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Sales_MySQL_Prod2025</td></tr>
-<tr><td>Username</td><td>sales_user</td></tr>
-<tr><td>Password</td><td>****</td></tr>
-<tr><td>Host</td><td>mysql-db.company.com</td></tr>
-<tr><td>Port</td><td>3306</td></tr>
-<tr><td>Database</td><td>SALES</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Sales_MySQL_Prod2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">sales_user</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">mysql-db.company.com</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">3306</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">SALES</td></tr>
 </table><br>
 
 <b>Advanced Tips:</b><br>
-• For advanced configurations such as SSL setup, custom ports, or specific storage engines, consult your DBA or official MySQL documentation.<br>
-• If connections to multiple databases or with different privileges are needed, set up separate connections with unique names.<br><br>
+• Use SSL, custom ports, or storage engines if required.<br>
+• For multiple databases or privileges, create separate connections.<br><br>
 
 <b>Security Reminder:</b><br>
-The INFOFISCUS Data Validation Tool masks your password on entry and enforces unique connection naming for every new database configuration, following enterprise security best practices.<br><br>
+INFOFISCUS masks passwords and enforces unique names for secure MySQL configurations.<br><br>
 
-<i>Utilize this help section to successfully set up, test, and manage MySQL database connections efficiently and securely.</i>
-            """
-        },
+<i>Use this help section to set up, test, and manage MySQL connections efficiently and securely.</i>
+    """
+},
 
 
-# ----------------------------------        PostgreSQL         ---------------------------------
+# ----------------------------------        PostgreSQL    ---------------------------------
 
-        "PostgreSQL": {
-            "title": "PostgreSQL Database Connection",
-            "description": """
+"PostgreSQL": {
+    "title": "PostgreSQL Database Connection",
+    "description": """
 <b>PostgreSQL Database Connection - Help Guide</b><br><br>
 
 <b>Overview</b><br>
@@ -304,15 +292,19 @@ INFOFISCUS Data Validation Tool.<br><br>
 4. Select <b>PostgreSQL</b> from the list of available databases.<br><br>
 
 <b>Required Fields:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Connection Name</td><td>A unique name for this PostgreSQL connection. Each new connection must have a distinct name; duplicates are not allowed.</td><td>Yes</td></tr>
-<tr><td>Username</td><td>PostgreSQL database account username for authentication.</td><td>Yes</td></tr>
-<tr><td>Password</td><td>Account password. Click “Show Password” to view as you type.</td><td>Yes</td></tr>
-<tr><td>Host</td><td>Hostname or IP address of the PostgreSQL server (e.g., postgres.example.com).</td><td>Yes</td></tr>
-<tr><td>Port</td><td>PostgreSQL server port (default: 5432).</td><td>Yes</td></tr>
-<tr><td>Database</td><td>Name of the target PostgreSQL database.</td><td>Yes</td></tr>
-<tr><td>Schema</td><td>Database schema to access tables within your PostgreSQL database.</td><td>Yes</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-top:8px;">
+<tr style="background-color:#1e293b; color:#38bdf8;">
+  <th style="padding:6px; border:1px solid #334155;">Field Name</th>
+  <th style="padding:6px; border:1px solid #334155;">Description</th>
+  <th style="padding:6px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">A unique name for this PostgreSQL connection. Each new connection must have a distinct name; duplicates are not allowed.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">PostgreSQL database account username for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">Account password. Click “Show Password” to view as you type.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">Hostname or IP address of the PostgreSQL server (e.g., postgres.example.com).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">PostgreSQL server port (default: 5432).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Name of the target PostgreSQL database.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">Database schema to access tables within your PostgreSQL database.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>
@@ -344,15 +336,18 @@ INFOFISCUS Data Validation Tool.<br><br>
 • <b>Database or Schema Issues:</b> Ensure the specified database and schema exist, and the user has access rights.<br><br>
 
 <b>Example:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Analytics_PG_Prod2025</td></tr>
-<tr><td>Username</td><td>analytics_user</td></tr>
-<tr><td>Password</td><td>****</td></tr>
-<tr><td>Host</td><td>postgres-db.company.com</td></tr>
-<tr><td>Port</td><td>5432</td></tr>
-<tr><td>Database</td><td>ANALYTICS</td></tr>
-<tr><td>Schema</td><td>public</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-top:8px;">
+<tr style="background-color:#1e293b; color:#38bdf8;">
+  <th style="padding:6px; border:1px solid #334155;">Field</th>
+  <th style="padding:6px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Analytics_PG_Prod2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">analytics_user</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">postgres-db.company.com</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">5432</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">ANALYTICS</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">public</td></tr>
 </table><br>
 
 <b>Advanced Tips:</b><br>
@@ -363,15 +358,15 @@ INFOFISCUS Data Validation Tool.<br><br>
 The INFOFISCUS Data Validation Tool masks your password on entry and enforces unique connection naming for every new database configuration in accordance with enterprise security best practices.<br><br>
 
 <i>Utilize this help section to efficiently and securely set up, test, and manage PostgreSQL database connections.</i>
-            """
-        },
+"""
+},
 
 
-# ----------------------------------         Snowflake        -----------------------------------
+# ----------------------------------        Snowflake     -----------------------------------
 
-        "Snowflake": {
-            "title": "Snowflake Data Warehouse Connection",
-            "description": """
+"Snowflake": {
+    "title": "Snowflake Database Connection",
+    "description": """
 <b>Snowflake Database Connection - Help Guide</b><br><br>
 
 <b>Overview</b><br>
@@ -386,16 +381,20 @@ and reporting within the INFOFISCUS Data Validation Tool.<br><br>
 4. Select <b>Snowflake</b> from the list of available databases.<br><br>
 
 <b>Required Fields:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Connection Name</td><td>A unique name for this Snowflake connection. Each new connection must have a distinct name; duplicates are not allowed.</td><td>Yes</td></tr>
-<tr><td>Username</td><td>Snowflake account username for authentication.</td><td>Yes</td></tr>
-<tr><td>Password</td><td>Account password. Click “Show Password” to view as you type.</td><td>Yes</td></tr>
-<tr><td>Account ID</td><td>The unique Snowflake account identifier (e.g., ab12345.us-east-1).</td><td>Yes</td></tr>
-<tr><td>Warehouse</td><td>Name of the compute warehouse to use for query execution.</td><td>Yes</td></tr>
-<tr><td>Database</td><td>Target Snowflake database name.</td><td>Yes</td></tr>
-<tr><td>Schema</td><td>Database schema to access tables within Snowflake.</td><td>Yes</td></tr>
-<tr><td>Role</td><td>Role to use for permissions and access control.</td><td>No</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-top:10px;">
+<tr style="background-color:#1e293b; color:#38bdf8; text-align:left;">
+  <th style="padding:6px; border:1px solid #334155;">Field Name</th>
+  <th style="padding:6px; border:1px solid #334155;">Description</th>
+  <th style="padding:6px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">A unique name for this Snowflake connection. Each new connection must have a distinct name; duplicates are not allowed.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">Snowflake account username for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">Account password. Click “Show Password” to view as you type.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Account ID</td><td style="padding:6px; border:1px solid #334155;">The unique Snowflake account identifier (e.g., ab12345.us-east-1).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Warehouse</td><td style="padding:6px; border:1px solid #334155;">Name of the compute warehouse to use for query execution.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Target Snowflake database name.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">Database schema to access tables within Snowflake.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Role</td><td style="padding:6px; border:1px solid #334155;">Role to use for permissions and access control.</td><td style="padding:6px; border:1px solid #334155;">No</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>
@@ -428,16 +427,19 @@ and reporting within the INFOFISCUS Data Validation Tool.<br><br>
 • <b>Network Errors:</b> Ensure access to Snowflake over the Internet (required for cloud connectivity); check with IT if issues persist.<br><br>
 
 <b>Example:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Analytics_Snowflake_Prod2025</td></tr>
-<tr><td>Username</td><td>analytics_user</td></tr>
-<tr><td>Password</td><td>****</td></tr>
-<tr><td>Account ID</td><td>ab12345.us-east-1</td></tr>
-<tr><td>Warehouse</td><td>ANALYTICS_WH</td></tr>
-<tr><td>Database</td><td>SALES_DB</td></tr>
-<tr><td>Schema</td><td>PUBLIC</td></tr>
-<tr><td>Role</td><td>ANALYST</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-top:10px;">
+<tr style="background-color:#1e293b; color:#38bdf8; text-align:left;">
+  <th style="padding:6px; border:1px solid #334155;">Field</th>
+  <th style="padding:6px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Analytics_Snowflake_Prod2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">analytics_user</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Account ID</td><td style="padding:6px; border:1px solid #334155;">ab12345.us-east-1</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Warehouse</td><td style="padding:6px; border:1px solid #334155;">ANALYTICS_WH</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">SALES_DB</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">PUBLIC</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Role</td><td style="padding:6px; border:1px solid #334155;">ANALYST</td></tr>
 </table><br>
 
 <b>Advanced Tips:</b><br>
@@ -451,60 +453,97 @@ The INFOFISCUS Data Validation Tool masks your password on entry and enforces un
 Warehouse and role selection help control cost and security.<br><br>
 
 <i>Utilize this help section to efficiently and securely set up, test, and manage Snowflake database connections for scalable cloud analytics.</i>
-            """
-        },
+    """
+},
 
 
+# ----------------------------------        Starrocks     ------------------------------------ 
 
-# ---------------------------    Starrocks  ---------------------------- 
+"StarRocks": {
+    "title": "StarRocks Database Connection",
+    "description": """
+<b>StarRocks Database Connection – Help Guide</b><br><br>
+
+<b>Overview</b><br>
+The StarRocks connection module enables fast, secure integration with the StarRocks analytical 
+database platform for real-time data validation, reporting, and analytics within the 
+<b>INFOFISCUS Data Validation Tool</b>. StarRocks is designed for high-performance analytical workloads 
+and interactive query scenarios.<br><br>
+
+<b>How to Navigate:</b><br>
+1. Click <b>Connection</b> on the sidebar.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
+4. Select <b>StarRocks</b> from the list of databases.<br><br>
+
+<b>Required Fields (UI Reference):</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique, descriptive name for your connection.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">StarRocks user account for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">Password associated with the username.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">StarRocks Frontend (FE) hostname or IP (e.g., starrocks-fe.example.com). Note: distinct from MySQL/PostgreSQL hosts.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">Query port used to connect to StarRocks FE. Default is 9030 (different from MySQL's 3306).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Name of the database to connect to in StarRocks.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+</table><br>
+
+<b>Step-by-Step Instructions:</b><br>
+1. <b>Enter Connection Name:</b> Example → Analytics_StarRocks_Prod.<br>
+2. <b>Fill Credentials:</b> Enter Username and Password.<br>
+3. <b>Provide Host & Port:</b> Enter correct FE host and Port 9030.<br>
+4. <b>Specify Database:</b> Enter the StarRocks database name.<br>
+5. <b>Test Connection:</b> Click <b>Test</b> to verify.<br>
+6. <b>Save:</b> Once successful, click <b>Save</b> to register the connection.<br><br>
+
+<b>Important Notes:</b><br>
+• The host must point to a StarRocks Frontend (FE) node, not backend or other services.<br>
+• The port is typically 9030, do not use MySQL default port 3306 or PostgreSQL's 5432.<br>
+• Make sure your network/firewall allows communication over port 9030 to the FE host.<br><br>
+
+<b>Best Practices:</b><br>
+• Use descriptive, unique connection names per environment or project.<br>
+• Keep credentials secure and change passwords regularly.<br>
+• Assign minimal required permissions to the user.<br>
+• Document all connection details for auditing purposes.<br><br>
+
+<b>Troubleshooting Tips:</b><br>
+• <b>Host/Port Errors:</b> Confirm values correspond to a reachable FE node.<br>
+• <b>Authentication Issues:</b> Check username and password correctness.<br>
+• <b>Database Access Errors:</b> Verify that the specified database exists and is accessible.<br>
+• <b>Network Restrictions:</b> Check firewall or network blocking port 9030.<br><br>
+
+<b>Example:</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Analytics_StarRocks_Prod</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">starrocks_user</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">starrocks-fe.example.com</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">9030</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">analytics_db</td></tr>
+</table><br>
+
+<b>Security Reminder:</b><br>
+INFOFISCUS masks passwords and enforces unique naming for connections. 
+Use secure credential management and restrict user privileges as per best practices.<br><br>
+
+<i>Use this help section to set up, test, and manage StarRocks connections efficiently and securely.</i>
+"""
+},
 
 
-        "StarRocks": {
-            "title": "StarRocks Database Connection",
-            "description": """
-<b>Connect to StarRocks Analytical Database</b>
+# --------------------------------------    Google BigQuery  -----------------------
 
-Configure connections to StarRocks for high-performance analytical data validation.
-
-<b>StarRocks Connection Parameters:</b>
-• <b>Host:</b> StarRocks Frontend (FE) server address
-• <b>Port:</b> Usually 9030 (default query port)
-• <b>Database:</b> Target database name
-• <b>Username:</b> StarRocks user account
-• <b>Password:</b> User authentication password
-
-<b>Connection String Format:</b>
-<code>starrocks://username:password@hostname:port/database</code>
-
-<b>StarRocks Features:</b>
-• <b>Vectorized Execution:</b> High-performance query processing
-• <b>Columnar Storage:</b> Optimized for analytical workloads
-• <b>Real-time Analytics:</b> Sub-second query response times
-• <b>Auto Materialization:</b> Intelligent materialized view management
-
-<b>Performance Capabilities:</b>
-• <b>MPP Architecture:</b> Massively parallel processing
-• <b>Intelligent Indexing:</b> Automatic index optimization
-• <b>Cost-Based Optimizer:</b> Advanced query optimization
-• <b>Stream Processing:</b> Real-time data ingestion and validation
-
-<b>Data Types Support:</b>
-• Complex data types (JSON, Array, Map)
-• Time series data optimization
-• Geospatial data validation
-• Large object handling
-
-<b>Validation Features:</b>
-StarRocks excels at large-scale analytical validation with features optimized for big data scenarios, real-time streaming validation, and complex analytical queries.
-            """
-        },
-
-
-# ----------------------------------    Google BigQuery  -----------------------
-
-        "Google BigQuery": {
-            "title": "Google BigQuery Database Connection",
-            "description": """
+"Google BigQuery": {
+    "title": "Google BigQuery Database Connection",
+    "description": """
 <b>Google BigQuery Database Connection – Help Guide</b><br><br>
 
 <b>Overview</b><br>
@@ -522,24 +561,30 @@ for staging and file-based workflows.<br><br>
 3. Double-click <b>Database</b>.<br>
 4. Select <b>Google BigQuery</b>.<br><br>
 
-<b>Required Fields:</b><br>
-
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th colspan="3">Standard Connection (Without TARGET)</th></tr>
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Connection Name</td><td>Unique identifier for this connection. Duplicates not allowed.</td><td>Yes</td></tr>
-<tr><td>BigQuery Credentials</td><td>Upload Google Service Account JSON key file via Browse.</td><td>Yes</td></tr>
-<tr><td>Google Cloud Project Id</td><td>Your GCP project ID (e.g., my-gcp-project).</td><td>Yes</td></tr>
-<tr><td>Dataset Id</td><td>BigQuery dataset name (e.g., sales_data).</td><td>Yes</td></tr>
+<b>Required Fields – Standard Connection (Without TARGET):</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique identifier for this connection. Duplicates not allowed.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">BigQuery Credentials</td><td style="padding:6px; border:1px solid #334155;">Upload Google Service Account JSON key file via Browse.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Google Cloud Project Id</td><td style="padding:6px; border:1px solid #334155;">Your GCP project ID (e.g., my-gcp-project).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Dataset Id</td><td style="padding:6px; border:1px solid #334155;">BigQuery dataset name (e.g., sales_data).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 </table><br>
 
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th colspan="3">Target Connection (With TARGET Enabled – GCS Integration)</th></tr>
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Bucket Name</td><td>GCS bucket used for staging/exporting data files.</td><td>Yes (if target)</td></tr>
-<tr><td>Folder Path</td><td>GCS folder path (e.g., exports/2025/).</td><td>Yes (if target)</td></tr>
-<tr><td>Service Account Json</td><td>JSON key file with permissions to access GCS.</td><td>Yes (if target)</td></tr>
-<tr><td>Endpoint Url</td><td>Optional custom/private GCS endpoint URL.</td><td>No</td></tr>
+<b>Required Fields – Target Connection (With TARGET Enabled – GCS Integration):</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Bucket Name</td><td style="padding:6px; border:1px solid #334155;">GCS bucket used for staging/exporting data files.</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Folder Path</td><td style="padding:6px; border:1px solid #334155;">GCS folder path (e.g., exports/2025/).</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Service Account Json</td><td style="padding:6px; border:1px solid #334155;">JSON key file with permissions to access GCS.</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Endpoint Url</td><td style="padding:6px; border:1px solid #334155;">Optional custom/private GCS endpoint URL.</td><td style="padding:6px; border:1px solid #334155;">No</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>
@@ -552,12 +597,16 @@ for staging and file-based workflows.<br><br>
 6. Click <b>Save</b> after successful validation.<br><br>
 
 <b>When to Use TARGET Option:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Scenario</th><th>Enable TARGET?</th><th>Reason</th></tr>
-<tr><td>Query BigQuery tables only</td><td>No</td><td>All work happens directly in BigQuery.</td></tr>
-<tr><td>Export data to GCS</td><td>Yes</td><td>Bucket access required for export.</td></tr>
-<tr><td>Import files from GCS into BigQuery</td><td>Yes</td><td>Needed for COPY/External Table operations.</td></tr>
-<tr><td>ETL workflows involving GCS staging</td><td>Yes</td><td>File-based pipelines require GCS access.</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Scenario</th>
+<th style="padding:8px; border:1px solid #334155;">Enable TARGET?</th>
+<th style="padding:8px; border:1px solid #334155;">Reason</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Query BigQuery tables only</td><td style="padding:6px; border:1px solid #334155;">No</td><td style="padding:6px; border:1px solid #334155;">All work happens directly in BigQuery.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Export data to GCS</td><td style="padding:6px; border:1px solid #334155;">Yes</td><td style="padding:6px; border:1px solid #334155;">Bucket access required for export.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Import files from GCS into BigQuery</td><td style="padding:6px; border:1px solid #334155;">Yes</td><td style="padding:6px; border:1px solid #334155;">Needed for COPY/External Table operations.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">ETL workflows involving GCS staging</td><td style="padding:6px; border:1px solid #334155;">Yes</td><td style="padding:6px; border:1px solid #334155;">File-based pipelines require GCS access.</td></tr>
 </table><br>
 
 <b>Best Practices:</b><br>
@@ -572,28 +621,32 @@ for staging and file-based workflows.<br><br>
 • <b>Bucket Access Issues:</b> Confirm bucket existence and proper IAM roles.<br>
 • <b>Endpoint URL:</b> Use only if custom GCS endpoint is required.<br><br>
 
-<b>Example Configurations:</b><br>
-
-<b>Without TARGET:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Prod_GBQ_Sales_2025</td></tr>
-<tr><td>BigQuery Credentials</td><td>service-account.json</td></tr>
-<tr><td>Google Cloud Project Id</td><td>sales-gcp-prod</td></tr>
-<tr><td>Dataset Id</td><td>sales_data</td></tr>
+<b>Example Configuration – Without TARGET:</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Prod_GBQ_Sales_2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">BigQuery Credentials</td><td style="padding:6px; border:1px solid #334155;">service-account.json</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Google Cloud Project Id</td><td style="padding:6px; border:1px solid #334155;">sales-gcp-prod</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Dataset Id</td><td style="padding:6px; border:1px solid #334155;">sales_data</td></tr>
 </table><br>
 
-<b>With TARGET:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Prod_GBQ_Target_2025</td></tr>
-<tr><td>BigQuery Credentials</td><td>service-account.json</td></tr>
-<tr><td>Google Cloud Project Id</td><td>sales-gcp-prod</td></tr>
-<tr><td>Dataset Id</td><td>sales_data</td></tr>
-<tr><td>Bucket Name</td><td>gbq-data-exports</td></tr>
-<tr><td>Folder Path</td><td>exports/yearly/2025</td></tr>
-<tr><td>Service Account Json</td><td>gcs-service-account.json</td></tr>
-<tr><td>Endpoint Url</td><td>https://storage.googleapis.com</td></tr>
+<b>Example Configuration – With TARGET:</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Prod_GBQ_Target_2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">BigQuery Credentials</td><td style="padding:6px; border:1px solid #334155;">service-account.json</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Google Cloud Project Id</td><td style="padding:6px; border:1px solid #334155;">sales-gcp-prod</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Dataset Id</td><td style="padding:6px; border:1px solid #334155;">sales_data</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Bucket Name</td><td style="padding:6px; border:1px solid #334155;">gbq-data-exports</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Folder Path</td><td style="padding:6px; border:1px solid #334155;">exports/yearly/2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Service Account Json</td><td style="padding:6px; border:1px solid #334155;">gcs-service-account.json</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Endpoint Url</td><td style="padding:6px; border:1px solid #334155;">https://storage.googleapis.com</td></tr>
 </table><br>
 
 <b>Security Reminder:</b><br>
@@ -605,20 +658,20 @@ Always follow enterprise credential management policies:<br>
 
 <i>Use this guide to configure secure and scalable Google BigQuery connections 
 with or without Google Cloud Storage integration.</i>
-            """
-        },
+"""
+},
 
 
 # ---------------------------------------   Amazon Redshift   ---------------------------
 
-        "Amazon Redshift": {
-            "title": "Amazon Redshift Connection",
-            "description": """
+"Amazon RedShift": {
+    "title": "Amazon Redshift Database Connection",
+    "description": """
 <b>Amazon Redshift Database Connection - Help Guide</b><br><br>
 
 <b>Overview</b><br>
 The Amazon Redshift connection module enables secure integration with 
-<b>AWS’s cloud data warehouse</b> for high-performance analytics, reporting, 
+<b>AWS's cloud data warehouse</b> for high-performance analytics, reporting, 
 and data validation in the INFOFISCUS Data Validation Tool.<br><br>
 Connections can be:<br>
 • <b>Standard (without TARGET):</b> Direct Redshift connection.<br>
@@ -631,27 +684,39 @@ Connections can be:<br>
 4. Select <b>Amazon Redshift</b> from the list.<br><br>
 
 <b>Required Fields:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th colspan="3">Standard Redshift Connection (Without TARGET)</th></tr>
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Connection Name</td><td>Unique connection name (duplicates not allowed).</td><td>Yes</td></tr>
-<tr><td>Username</td><td>Redshift cluster user for authentication.</td><td>Yes</td></tr>
-<tr><td>Password</td><td>User account password (masked in tool).</td><td>Yes</td></tr>
-<tr><td>Host</td><td>Redshift cluster endpoint (e.g., redshift-cluster.company.com).</td><td>Yes</td></tr>
-<tr><td>Port</td><td>Redshift port (default: 5439).</td><td>Yes</td></tr>
-<tr><td>Database</td><td>Target Redshift database name.</td><td>Yes</td></tr>
-<tr><td>Schema</td><td>Schema to access tables within Redshift.</td><td>Yes</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;" colspan="3">Standard Redshift Connection (Without TARGET)</th>
+</tr>
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique connection name (duplicates not allowed).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">Redshift cluster user for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">User account password (masked in tool).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">Redshift cluster endpoint (e.g., redshift-cluster.company.com).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">Redshift port (default: 5439).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Target Redshift database name.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">Schema to access tables within Redshift.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 </table><br>
 
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th colspan="3">Redshift Connection With TARGET (S3 Integration)</th></tr>
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Bucket Name</td><td>S3 bucket for reads/writes (UNLOAD, COPY, data import/export).</td><td>Yes (if target)</td></tr>
-<tr><td>Region Name</td><td>AWS region of S3 bucket (e.g., us-east-1).</td><td>Yes (if target)</td></tr>
-<tr><td>Folder Path</td><td>S3 folder for files (e.g., exports/2025/).</td><td>Yes (if target)</td></tr>
-<tr><td>Access Key Id</td><td>AWS IAM access key with S3 permissions.</td><td>Yes (if target)</td></tr>
-<tr><td>Secret Access Key</td><td>Secret key corresponding to the access key ID.</td><td>Yes (if target)</td></tr>
-<tr><td>Endpoint Url</td><td>Custom endpoint (for VPC/private S3).</td><td>No</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;" colspan="3">Redshift Connection With TARGET (S3 Integration)</th>
+</tr>
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Bucket Name</td><td style="padding:6px; border:1px solid #334155;">S3 bucket for reads/writes (UNLOAD, COPY, data import/export).</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Region Name</td><td style="padding:6px; border:1px solid #334155;">AWS region of S3 bucket (e.g., us-east-1).</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Folder Path</td><td style="padding:6px; border:1px solid #334155;">S3 folder for files (e.g., exports/2025/).</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Access Key Id</td><td style="padding:6px; border:1px solid #334155;">AWS IAM access key with S3 permissions.</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Secret Access Key</td><td style="padding:6px; border:1px solid #334155;">Secret key corresponding to the access key ID.</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Endpoint Url</td><td style="padding:6px; border:1px solid #334155;">Custom endpoint (for VPC/private S3).</td><td style="padding:6px; border:1px solid #334155;">No</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>
@@ -676,43 +741,53 @@ They are required for:<br>
 • Using Redshift Spectrum for external S3-based tables<br><br>
 
 <b>When to Enable TARGET:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Scenario</th><th>Enable TARGET?</th><th>Reason</th></tr>
-<tr><td>Run data checks on Redshift tables only</td><td>No</td><td>All data remains inside Redshift.</td></tr>
-<tr><td>Export query results to S3</td><td>Yes</td><td>S3 access required to store results.</td></tr>
-<tr><td>Import datasets (CSV/Parquet) from S3</td><td>Yes</td><td>Redshift needs credentials to read S3 files.</td></tr>
-<tr><td>Use Redshift Spectrum external tables</td><td>Yes</td><td>Data resides on S3.</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Scenario</th>
+<th style="padding:8px; border:1px solid #334155;">Enable TARGET?</th>
+<th style="padding:8px; border:1px solid #334155;">Reason</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Run data checks on Redshift tables only</td><td style="padding:6px; border:1px solid #334155;">No</td><td style="padding:6px; border:1px solid #334155;">All data remains inside Redshift.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Export query results to S3</td><td style="padding:6px; border:1px solid #334155;">Yes</td><td style="padding:6px; border:1px solid #334155;">S3 access required to store results.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Import datasets (CSV/Parquet) from S3</td><td style="padding:6px; border:1px solid #334155;">Yes</td><td style="padding:6px; border:1px solid #334155;">Redshift needs credentials to read S3 files.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Use Redshift Spectrum external tables</td><td style="padding:6px; border:1px solid #334155;">Yes</td><td style="padding:6px; border:1px solid #334155;">Data resides on S3.</td></tr>
 </table><br>
 
 <b>Example Configurations:</b><br>
 <b>Without TARGET:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Prod_RS_Sales_2025</td></tr>
-<tr><td>Username</td><td>sales_admin</td></tr>
-<tr><td>Password</td><td>****</td></tr>
-<tr><td>Host</td><td>rs-cluster.company.com</td></tr>
-<tr><td>Port</td><td>5439</td></tr>
-<tr><td>Database</td><td>SALES_DB</td></tr>
-<tr><td>Schema</td><td>public</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Prod_RS_Sales_2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">sales_admin</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">rs-cluster.company.com</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">5439</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">SALES_DB</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">public</td></tr>
 </table><br>
 
 <b>With TARGET:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Prod_RS_Export_Target2025</td></tr>
-<tr><td>Username</td><td>export_user</td></tr>
-<tr><td>Password</td><td>****</td></tr>
-<tr><td>Host</td><td>rs-cluster.company.com</td></tr>
-<tr><td>Port</td><td>5439</td></tr>
-<tr><td>Database</td><td>EXPORTS_DB</td></tr>
-<tr><td>Schema</td><td>export_schema</td></tr>
-<tr><td>Bucket Name</td><td>rs-data-exports</td></tr>
-<tr><td>Region Name</td><td>us-east-1</td></tr>
-<tr><td>Folder Path</td><td>exports/yearly/2025</td></tr>
-<tr><td>Access Key Id</td><td>AKIAxxxxxxxxxxxxxxx</td></tr>
-<tr><td>Secret Access Key</td><td>wJalrxUtnFEMI/.../EXAMPLEKEY</td></tr>
-<tr><td>Endpoint Url</td><td>https://s3.us-east-1.amazonaws.com (optional)</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Prod_RS_Export_Target2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">export_user</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">rs-cluster.company.com</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">5439</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">EXPORTS_DB</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">export_schema</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Bucket Name</td><td style="padding:6px; border:1px solid #334155;">rs-data-exports</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Region Name</td><td style="padding:6px; border:1px solid #334155;">us-east-1</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Folder Path</td><td style="padding:6px; border:1px solid #334155;">exports/yearly/2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Access Key Id</td><td style="padding:6px; border:1px solid #334155;">AKIAxxxxxxxxxxxxxxx</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Secret Access Key</td><td style="padding:6px; border:1px solid #334155;">wJalrxUtnFEMI/.../EXAMPLEKEY</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Endpoint Url</td><td style="padding:6px; border:1px solid #334155;">https://s3.us-east-1.amazonaws.com (optional)</td></tr>
 </table><br>
 
 <b>Best Practices:</b><br>
@@ -734,24 +809,23 @@ Follow enterprise security guidelines, use IAM roles when possible, and rotate c
 
 <i>Use this guide to confidently configure both direct Redshift connections 
 and advanced S3-integrated workflows at enterprise scale.</i>
-            """
-        },
-
+    """
+},
 
 # ----------------------------------------    Azure Synapse  --------------------------------
 
-        "Azure Synapse": {
-            "title": "Azure Synapse Analytics Connection",
-            "description": """
-<b>Azure Synapse Analytics Database Connection - Help Guide</b><br><br>
+"Azure Synapse": {
+    "title": "Azure Synapse Analytics Connection",
+    "description": """
+<b>Azure Synapse Analytics Connection – Help Guide</b><br><br>
 
 <b>Overview</b><br>
-The Azure Synapse Analytics connection module allows seamless, secure integration 
-with <b>Microsoft’s cloud analytics platform</b> for enterprise-scale data validation, 
-analytics, and reporting in the INFOFISCUS Data Validation Tool.<br><br>
-Connections can be configured as:<br>
-• <b>Standard (without TARGET):</b> Direct Synapse connection.<br>
-• <b>With TARGET:</b> Extended with Azure Blob Storage credentials for data export/import.<br><br>
+The Azure Synapse Analytics connection module enables secure and seamless integration with 
+<b>Microsoft's cloud-scale analytics platform</b> for data validation, transformation, and reporting 
+within the INFOFISCUS Data Validation Tool.<br><br>
+Connections can be configured in two ways:<br>
+• <b>Standard (Without TARGET):</b> Direct Synapse connection.<br>
+• <b>With TARGET:</b> Extended with Azure Blob Storage credentials for file-based data exchange.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> in the sidebar.<br>
@@ -759,178 +833,198 @@ Connections can be configured as:<br>
 3. Double-click <b>Database</b>.<br>
 4. Select <b>Azure Synapse</b>.<br><br>
 
-<b>Required Fields:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th colspan="3">Standard Synapse Connection (Without TARGET)</th></tr>
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Connection Name</td><td>Unique identifier for this connection. Duplicates not allowed.</td><td>Yes</td></tr>
-<tr><td>Username</td><td>Synapse database user for authentication.</td><td>Yes</td></tr>
-<tr><td>Password</td><td>Account password (masked in tool).</td><td>Yes</td></tr>
-<tr><td>Server</td><td>Synapse workspace SQL endpoint address.</td><td>Yes</td></tr>
-<tr><td>Database</td><td>Target database name in Synapse.</td><td>Yes</td></tr>
-<tr><td>Schema</td><td>Database schema to use within Synapse.</td><td>Yes</td></tr>
+<b>Required Fields</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;" colspan="3">Standard Synapse Connection (Without TARGET)</th>
+</tr>
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique identifier for this connection. Duplicates are not allowed.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">Synapse database login for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">Account password (masked in tool).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Server</td><td style="padding:6px; border:1px solid #334155;">Synapse workspace SQL endpoint address.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Name of the database in Synapse to connect to.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">Default schema to be used within the database.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 </table><br>
 
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th colspan="3">Synapse Connection With TARGET (Blob Storage Integration)</th></tr>
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Bucket Name</td><td>Azure Blob container name for exports/imports.</td><td>Yes (if target)</td></tr>
-<tr><td>Folder Path</td><td>Path inside the container for your files (e.g., exports/2025/).</td><td>Yes (if target)</td></tr>
-<tr><td>Account Key</td><td>Storage account key for Blob access.</td><td>Yes (if target)</td></tr>
-<tr><td>Account Url</td><td>Blob Storage endpoint (e.g., https://account.blob.core.windows.net).</td><td>Yes (if target)</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;" colspan="3">Synapse Connection With TARGET (Blob Storage Integration)</th>
+</tr>
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Bucket Name</td><td style="padding:6px; border:1px solid #334155;">Azure Blob container name for import/export operations.</td><td style="padding:6px; border:1px solid #334155;">Yes (if TARGET)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Folder Path</td><td style="padding:6px; border:1px solid #334155;">Path within the container (e.g., exports/2025/).</td><td style="padding:6px; border:1px solid #334155;">Yes (if TARGET)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Account Key</td><td style="padding:6px; border:1px solid #334155;">Azure Storage account access key.</td><td style="padding:6px; border:1px solid #334155;">Yes (if TARGET)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Account URL</td><td style="padding:6px; border:1px solid #334155;">Blob Storage endpoint URL (e.g., https://account.blob.core.windows.net).</td><td style="padding:6px; border:1px solid #334155;">Yes (if TARGET)</td></tr>
 </table><br>
 
-<b>Step-by-Step Instructions:</b><br>
+<b>Step-by-Step Instructions</b><br>
 <b>Without TARGET:</b><br>
-1. Enter a unique <b>Connection Name</b> (e.g., Prod_Synapse_Analytics2025).<br>
-2. Fill Username, Password, Server, Database, Schema.<br>
-3. Click <b>Test</b> to validate.<br>
-4. Click <b>Save</b> if successful.<br><br>
+1. Enter a unique <b>Connection Name</b>.<br>
+2. Fill Username, Password, Server, Database, and Schema.<br>
+3. Click <b>Test</b> to validate the connection.<br>
+4. If successful, click <b>Save</b>.<br><br>
 
 <b>With TARGET:</b><br>
 1. Enable the <b>TARGET</b> option.<br>
-2. Provide Blob Storage details (Bucket, Folder Path, Account Key, Account URL).<br>
-3. Click <b>Test</b> – validates Synapse + Blob credentials.<br>
-4. Click <b>Save</b> to register.<br><br>
+2. Provide Blob Storage details (Bucket Name, Folder Path, Account Key, Account URL).<br>
+3. Click <b>Test</b> – validates both Synapse and Blob credentials.<br>
+4. If successful, click <b>Save</b>.<br><br>
 
-<b>Why and When to Use TARGET:</b><br>
-<b>What are Target Credentials?</b><br>
-Target credentials allow Synapse to exchange data with Azure Blob containers.<br>
-They are required for:<br>
-• Exporting query results to Blob (UNLOAD/EXPORT)<br>
-• Importing files (CSV/Parquet) from Blob into Synapse<br>
-• Using ETL or pipelines that read/write Blob files<br><br>
+<b>Why and When to Use TARGET</b><br>
+Target credentials allow Synapse to read from and write to Azure Blob Storage. They are required when:<br>
+• Exporting query results to Blob containers.<br>
+• Importing datasets (CSV, Parquet) from Blob into Synapse.<br>
+• Integrating ETL pipelines that exchange files with Blob.<br><br>
 
-<b>When to Enable TARGET:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Scenario</th><th>Enable TARGET?</th><th>Reason</th></tr>
-<tr><td>Query Synapse tables only</td><td>No</td><td>All work happens inside Synapse.</td></tr>
-<tr><td>Export results to Blob</td><td>Yes</td><td>Blob credentials required for export.</td></tr>
-<tr><td>Import datasets from Blob</td><td>Yes</td><td>Needed to load files into Synapse.</td></tr>
-<tr><td>Integrate ETL pipelines with Blob</td><td>Yes</td><td>Blob access is mandatory.</td></tr>
+<b>Enable TARGET only when:</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Scenario</th>
+<th style="padding:8px; border:1px solid #334155;">Enable TARGET?</th>
+<th style="padding:8px; border:1px solid #334155;">Reason</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Query Synapse tables only</td><td style="padding:6px; border:1px solid #334155;">No</td><td style="padding:6px; border:1px solid #334155;">All queries remain within Synapse.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Export query results to Blob</td><td style="padding:6px; border:1px solid #334155;">Yes</td><td style="padding:6px; border:1px solid #334155;">Blob credentials required for export.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Import files from Blob</td><td style="padding:6px; border:1px solid #334155;">Yes</td><td style="padding:6px; border:1px solid #334155;">Needed to load external datasets.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">ETL pipelines with Blob</td><td style="padding:6px; border:1px solid #334155;">Yes</td><td style="padding:6px; border:1px solid #334155;">Blob access is mandatory.</td></tr>
 </table><br>
 
-<b>Example Configurations:</b><br>
+<b>Example Configurations</b><br>
 <b>Without TARGET:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Prod_Synapse_Analytics2025</td></tr>
-<tr><td>Username</td><td>synapse_user</td></tr>
-<tr><td>Password</td><td>****</td></tr>
-<tr><td>Server</td><td>synapse-workspace.sql.net</td></tr>
-<tr><td>Database</td><td>SALES_DB</td></tr>
-<tr><td>Schema</td><td>dbo</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Prod_Synapse_Analytics2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">synapse_user</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Server</td><td style="padding:6px; border:1px solid #334155;">synapse-workspace.sql.net</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">SALES_DB</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">dbo</td></tr>
 </table><br>
 
 <b>With TARGET:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Prod_Synapse_Export_Target2025</td></tr>
-<tr><td>Username</td><td>export_user</td></tr>
-<tr><td>Password</td><td>****</td></tr>
-<tr><td>Server</td><td>synapse-workspace.sql.net</td></tr>
-<tr><td>Database</td><td>EXPORTS_DB</td></tr>
-<tr><td>Schema</td><td>export_schema</td></tr>
-<tr><td>Bucket Name</td><td>synapse-data-exports</td></tr>
-<tr><td>Folder Path</td><td>exports/annual/2025</td></tr>
-<tr><td>Account Key</td><td>q5vLgEXAMPLEKEY==</td></tr>
-<tr><td>Account Url</td><td>https://myaccount.blob.core.windows.net</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Prod_Synapse_Export_Target2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">export_user</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Server</td><td style="padding:6px; border:1px solid #334155;">synapse-workspace.sql.net</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">EXPORTS_DB</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">export_schema</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Bucket Name</td><td style="padding:6px; border:1px solid #334155;">synapse-data-exports</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Folder Path</td><td style="padding:6px; border:1px solid #334155;">exports/annual/2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Account Key</td><td style="padding:6px; border:1px solid #334155;">q5vLgEXAMPLEKEY==</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Account URL</td><td style="padding:6px; border:1px solid #334155;">https://myaccount.blob.core.windows.net</td></tr>
 </table><br>
 
-<b>Best Practices:</b><br>
+<b>Best Practices</b><br>
 • Use descriptive, unique names for each connection.<br>
-• Keep Account Keys safe; rotate them often.<br>
-• Apply least-privilege access for Blob Storage.<br>
-• Use different containers/folders for each project.<br>
+• Rotate Account Keys periodically and keep them secure.<br>
+• Apply least-privilege access for Blob containers.<br>
+• Maintain separate containers/folders for projects.<br>
 • Only enable TARGET when Blob integration is required.<br><br>
 
-<b>Troubleshooting Tips:</b><br>
-• <b>Duplicate Name:</b> Change the connection name.<br>
-• <b>Credential Errors:</b> Check Synapse + Blob credentials.<br>
-• <b>Network/Server Errors:</b> Verify server endpoint.<br>
-• <b>Blob Access Errors:</b> Ensure container + folder exist.<br><br>
+<b>Troubleshooting Tips</b><br>
+• <b>Duplicate Name:</b> Choose a unique Connection Name.<br>
+• <b>Authentication Errors:</b> Verify Synapse credentials.<br>
+• <b>Network/Server Issues:</b> Confirm SQL endpoint address.<br>
+• <b>Blob Access Failures:</b> Ensure container/folder exist and credentials are correct.<br><br>
 
-<b>Security Reminder:</b><br>
+<b>Security Reminder</b><br>
 INFOFISCUS masks Synapse and Blob credentials. 
-Unique names are enforced. 
-Always protect keys, apply least-privilege, and rotate credentials regularly.<br><br>
+Unique connection names are enforced. 
+Always protect sensitive keys, use least-privilege principles, and rotate credentials regularly.<br><br>
 
-<i>Use this guide to confidently configure Synapse connections with or without 
-Azure Blob integration for secure, scalable data validation workflows.</i>
-            """
-        },
-
+<i>Use this guide to configure Azure Synapse connections with or without Blob integration 
+for secure, enterprise-scale data validation workflows.</i>
+"""
+},
 
 # ---------------------------------------     Databricks     ------------------------------------
 
-        "Databricks": {
-            "title": "Databricks Database Connection",
+"Databricks": {
+            "title": "Databricks Connection",
             "description": """
-<b>Databricks Database Connection – Help Guide</b><br><br>
+<b>Databricks Connection - Help Guide</b><br><br>
 
-<b>Overview</b><br>
-The Databricks connection module allows secure access to 
-<b>Databricks’ Unified Analytics Platform</b> for advanced data validation, 
-analytics, and reporting in the INFOFISCUS Data Validation Tool.<br>
-You can connect to <b>SQL Warehouses</b> or <b>Clusters</b> 
-using personal access credentials for scalable, cloud-based data processing.<br><br>
+This module enables seamless and secure integration with <b>Databricks' Unified Data and AI Platform</b> for 
+<b>data validation, analytics, and reporting</b> within the INFOFISCUS Data Validation Tool.<br><br>
 
 <b>How to Navigate:</b><br>
-1. Click <b>Connection</b> in the sidebar.<br>
+1. Click <b>Connection</b> on the sidebar.<br>
 2. Double-click <b>Create Connection</b>.<br>
 3. Double-click <b>Database</b>.<br>
-4. Select <b>Databricks</b>.<br><br>
+4. Select <b>Databricks</b> from the list of available databases.<br><br>
 
-<b>Required Fields:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field Name</th><th>Description</th><th>Required</th></tr>
-<tr><td>Connection Name</td><td>Unique identifier for this connection. Duplicates not allowed.</td><td>Yes</td></tr>
-<tr><td>Server Hostname</td><td>Databricks workspace URL (e.g., adb-12345.6.azuredatabricks.net).</td><td>Yes</td></tr>
-<tr><td>Access Token</td><td>Databricks personal access token for authentication.</td><td>Yes</td></tr>
-<tr><td>HTTP Path</td><td>HTTP path for SQL warehouse or cluster (visible in Databricks UI).</td><td>Yes</td></tr>
-<tr><td>Catalog</td><td>Databricks Unity Catalog name (for table and schema management).</td><td>Yes</td></tr>
-<tr><td>Database/Schema</td><td>Database or schema within the selected catalog.</td><td>Yes</td></tr>
+<b>Required Fields (UI Reference):</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique name for this connection. Duplicate names are not allowed.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Server Hostname</td><td style="padding:6px; border:1px solid #334155;">Databricks workspace hostname (e.g., adb-12345.6.azuredatabricks.net).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Access Token</td><td style="padding:6px; border:1px solid #334155;">Personal access token generated from Databricks (hidden, with option to show).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">HTTP Path</td><td style="padding:6px; border:1px solid #334155;">Path for the target SQL Warehouse or Cluster from Databricks UI.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Catalog</td><td style="padding:6px; border:1px solid #334155;">Unity Catalog name to organize schemas and databases.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database/Schema</td><td style="padding:6px; border:1px solid #334155;">Schema name under the catalog where target tables exist.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>
-1. Enter a unique <b>Connection Name</b> (e.g., Prod_DBX_Validation2025).<br>
-2. Fill in <b>Server Hostname, Access Token, HTTP Path, Catalog, Database/Schema</b> from your Databricks workspace.<br>
-3. Click <b>Test</b> to validate credentials.<br>
-4. Click <b>Save</b> after a successful test.<br><br>
+1. <b>Enter Connection Name:</b> Example → DBX_Prod_Analytics2025.<br>
+2. <b>Fill Connection Details:</b> Enter Server Hostname, Access Token, HTTP Path, Catalog, Database/Schema.<br>
+3. <b>Test Connection:</b> Click <b>Test</b> to verify. If it fails, check inputs or contact Databricks admin.<br>
+4. <b>Save:</b> Once successful, click <b>Save</b> to register the connection.<br><br>
 
 <b>Best Practices:</b><br>
-• Use distinct, descriptive names per environment (Dev, QA, Prod).<br>
-• Keep your <b>access token</b> safe and rotate it regularly.<br>
-• Always use correct <b>catalog</b> and <b>schema</b> names as defined in Databricks.<br>
-• Apply least-privilege permissions when generating tokens.<br><br>
+• Always use descriptive, unique connection names.<br>
+• Do not reuse connection names across environments.<br>
+• Store access tokens securely and rotate them regularly.<br>
+• Apply least privilege when generating tokens.<br><br>
 
 <b>Troubleshooting Tips:</b><br>
 • <b>Duplicate Name:</b> Change the connection name.<br>
-• <b>Invalid Token:</b> Ensure the token is valid and not expired/revoked.<br>
-• <b>HTTP Path Errors:</b> Confirm it matches your SQL warehouse or cluster.<br>
-• <b>Catalog/Schema Issues:</b> Verify existence and permissions.<br>
-• <b>Server Hostname:</b> Ensure workspace URL is correctly formatted.<br><br>
+• <b>Auth Errors:</b> Verify access token and regenerate if needed.<br>
+• <b>Network Issues:</b> Confirm server hostname and HTTP path.<br>
+• <b>Catalog/Schema Issues:</b> Ensure they exist and you have proper permissions.<br><br>
 
-<b>Example Configuration:</b><br>
-<table border="1" cellpadding="4" cellspacing="0">
-<tr><th>Field</th><th>Example Value</th></tr>
-<tr><td>Connection Name</td><td>Prod_DBX_Analytics2025</td></tr>
-<tr><td>Server Hostname</td><td>adb-12345.6.azuredatabricks.net</td></tr>
-<tr><td>Access Token</td><td>dapi123456789abcdefghijklmnopqrstu</td></tr>
-<tr><td>HTTP Path</td><td>/sql/1.0/warehouses/abcd1234</td></tr>
-<tr><td>Catalog</td><td>main</td></tr>
-<tr><td>Database/Schema</td><td>analytics</td></tr>
+<b>Example:</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">DBX_Prod_Analytics2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Server Hostname</td><td style="padding:6px; border:1px solid #334155;">adb-12345.6.azuredatabricks.net</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Access Token</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">HTTP Path</td><td style="padding:6px; border:1px solid #334155;">/sql/1.0/warehouses/abcd1234</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Catalog</td><td style="padding:6px; border:1px solid #334155;">main</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database/Schema</td><td style="padding:6px; border:1px solid #334155;">analytics</td></tr>
 </table><br>
 
-<b>Security Reminder:</b><br>
-INFOFISCUS masks sensitive credentials. Always:<br>
-• Use minimally privileged tokens.<br>
-• Rotate tokens regularly.<br>
-• Apply catalog-level access controls.<br>
-• Follow enterprise data protection standards.<br><br>
+<b>Advanced Tips:</b><br>
+• Use Unity Catalog for centralized governance.<br>
+• Scale SQL Warehouses dynamically for performance and cost efficiency.<br><br>
 
-<i>Use this guide to securely configure Databricks connections for 
-enterprise-scale validation, analytics, and reporting workflows.</i>
+<b>Security Reminder:</b><br>
+INFOFISCUS masks access tokens and enforces unique names for secure Databricks configurations.<br><br>
+
+<i>Use this help section to set up, test, and manage Databricks connections efficiently and securely.</i>
             """
         },
 

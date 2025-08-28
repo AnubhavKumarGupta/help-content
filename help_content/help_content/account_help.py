@@ -3,6 +3,8 @@
 def get_account_content():
     """Account management help content - focused only on user account operations"""
     return {
+
+# -----------------------------        Change Password      --------------------------------------
         "Change Password": {
             "title": "🔒 Change Password",
             "description": """
@@ -27,6 +29,10 @@ This section guides you through the process to securely change your password.<br
             """
         },
 
+
+
+# ---------------------------------------     Logout      ------------------------------------------------
+ 
         "Logout": {
             "title": "🚪 Logout – Help Guide",
             "description": """

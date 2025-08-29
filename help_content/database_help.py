@@ -287,7 +287,7 @@ INFOFISCUS masks passwords and enforces unique names for secure MySQL configurat
 <b>PostgreSQL Database Connection - Help Guide</b><br><br>
 
 <b>Overview</b><br>
-The PostgreSQL Database Connection module allows secure integration with 
+This PostgreSQL Database Connection module allows secure integration with 
 <b>PostgreSQL databases</b> for data validation, reporting, and analytics in the 
 INFOFISCUS Data Validation Tool.<br><br>
 
@@ -471,7 +471,7 @@ Warehouse and role selection help control cost and security.<br><br>
 <b>StarRocks Database Connection – Help Guide</b><br><br>
 
 <b>Overview</b><br>
-The StarRocks connection module enables fast, secure integration with the StarRocks analytical 
+This StarRocks connection module enables fast, secure integration with the StarRocks analytical 
 database platform for real-time data validation, reporting, and analytics within the 
 <b>INFOFISCUS Data Validation Tool</b>. StarRocks is designed for high-performance analytical workloads 
 and interactive query scenarios.<br><br>
@@ -550,12 +550,12 @@ Use secure credential management and restrict user privileges as per best practi
 "Google BigQuery": {
     "title": "Google BigQuery Database Connection",
     "description": """
-<b>Google BigQuery Database Connection – Help Guide</b><br><br>
+<b>Google BigQuery Connection – Help Guide</b><br><br>
 
 <b>Overview</b><br>
-The Google BigQuery connection module enables secure and scalable access to 
+This Google BigQuery connection module enables secure and scalable access to 
 <b>Google’s serverless data warehouse service</b> for enterprise-grade data validation, 
-analytics, and reporting in the INFOFISCUS Data Validation Tool.<br>
+analytics, and reporting in the INFOFISCUS Data Validation Tool.<br> <br>
 Connections can be configured as:<br>
 • <b>Standard (Without TARGET):</b> Direct BigQuery connection.<br>
 • <b>With TARGET:</b> Extended with <b>Google Cloud Storage (GCS)</b> integration 
@@ -673,10 +673,10 @@ with or without Google Cloud Storage integration.</i>
 "Amazon RedShift": {
     "title": "Amazon Redshift Database Connection",
     "description": """
-<b>Amazon Redshift Database Connection - Help Guide</b><br><br>
+<b>Amazon Redshift Connection - Help Guide</b><br><br>
 
 <b>Overview</b><br>
-The Amazon Redshift connection module enables secure integration with 
+This Amazon Redshift connection module enables secure integration with 
 <b>AWS's cloud data warehouse</b> for high-performance analytics, reporting, 
 and data validation in the INFOFISCUS Data Validation Tool.<br><br>
 Connections can be:<br>
@@ -826,8 +826,8 @@ and advanced S3-integrated workflows at enterprise scale.</i>
     "description": """
 <b>Azure Synapse Analytics Connection – Help Guide</b><br><br>
 
-<b>Overview</b><br>
-The Azure Synapse Analytics connection module enables secure and seamless integration with 
+
+This Azure Synapse Analytics connection module enables secure and seamless integration with 
 <b>Microsoft's cloud-scale analytics platform</b> for data validation, transformation, and reporting 
 within the INFOFISCUS Data Validation Tool.<br><br>
 Connections can be configured in two ways:<br>
@@ -969,7 +969,8 @@ for secure, enterprise-scale data validation workflows.</i>
             "description": """
 <b>Databricks Connection - Help Guide</b><br><br>
 
-This module enables seamless and secure integration with <b>Databricks' Unified Data and AI Platform</b> for 
+<b>Overview</b><br>
+This Databricks connection module enables seamless and secure integration with <b>Databricks' Unified Data and AI Platform</b> for 
 <b>data validation, analytics, and reporting</b> within the INFOFISCUS Data Validation Tool.<br><br>
 
 <b>How to Navigate:</b><br>

@@ -3,44 +3,179 @@
 def get_testcase_content():
     """Test case related help content - focused only on test case operations"""
     return {
-        "Create Test Case": {
-            "title": "📝 Create Test Case – Help Guide",
-            "description": """
-<b>Create Test Case - Help Guide</b><br><br>
 
-This section guides you through creating a new test case with the following fields:<br><br>
+# ---------------------------   Create Test Cases   ---------------------
 
-<b>Form Fields:</b><br>
-• <b>Test Case Name:</b> Enter a descriptive name for the test case.<br>
-• <b>Source Connection:</b> Select the source database connection from the dropdown.<br>
-• <b>Fetch Source Table:</b> Click this button to fetch available tables from the selected connection.<br>
-• <b>Validation Types:</b> Choose one of the following options based on what you want to validate:<br>
-&nbsp;&nbsp;&nbsp;&nbsp; • Schema Validation<br>
-&nbsp;&nbsp;&nbsp;&nbsp; • Row Count Validation<br>
-&nbsp;&nbsp;&nbsp;&nbsp; • Schema Validation + Row Count Validation<br>
-&nbsp;&nbsp;&nbsp;&nbsp; • Column Data Validation<br><br>
+"Create Test Case": {
+    "title": "📝 Create Test Case",
+    "description": """
+<b>Create Test Case – Help Guide</b><br>
 
-<b>Table Mapping:</b><br>
-This screen lets you map your source tables to target tables in the selected connection. 
-Mappings enable data synchronization and integration between systems.<br><br>
+This feature allows you to configure, map, and prepare <b>data validation scenarios</b> (test cases) comparing source and target tables/columns across your connected databases.<br>
+Follow the steps below to ensure correct, repeatable, and robust test cases.<br><br>
 
-<b>How to Use Table Mapping:</b><br>
-• Choose a <b>Target Connection</b> from the top dropdown to select where data will be mapped.<br>
-• Click <b>Fetch Target Table</b> to load the available tables from the selected connection.<br>
-• The <b>Source Table Name</b> panel (left) lists your source tables.<br>
-• The <b>Target Tables</b> panel (right) shows the tables available in your target connection and their current mappings (see "Mapped Tables").<br>
-• Mapped pairs appear in the <b>Mapped Tables</b> column. You can only map each target table to one source table.<br>
-• To remove an existing mapping, click the <b>Unmap</b> button in the Action column.<br>
-• Use <b>Previous</b> to go back, or <b>Next</b> to continue to the next step when all desired mappings are done.<br><br>
+<b>Step 1: Test Case Setup</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px; border:1px solid #334155;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Action</th>
+<th style="padding:8px; border:1px solid #334155;">Details</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Access Create Test Case Panel</td><td style="padding:6px; border:1px solid #334155;">From the left menu, click <b>Create Test Case</b>.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Enter Test Case Name</td><td style="padding:6px; border:1px solid #334155;">Input a unique name.<br><b>Best Practice:</b> Use underscores (e.g., Customer_Validation_2025). Spaces may cause failures.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Select Source Connection</td><td style="padding:6px; border:1px solid #334155;">Choose the source DB connection (Databricks, Snowflake, etc.) from the dropdown.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Fetch Source Tables</td><td style="padding:6px; border:1px solid #334155;">Click <b>Fetch Source Table</b>. Select the table(s) to validate.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Choose Validation Type</td><td style="padding:6px; border:1px solid #334155;">Select Row Count, Column Data, Schema Validation, etc.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Proceed</td><td style="padding:6px; border:1px solid #334155;">Click <b>Next</b> to go to table mapping.</td></tr>
+</table><br>
 
-<b>Next Steps:</b><br>
-After filling all required details and selecting the appropriate validation type, 
-click <b>Save</b> to create and store the test case.<br><br>
+<b>Step 2: Target Table Selection and Mapping</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px; border:1px solid #334155;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Action</th>
+<th style="padding:8px; border:1px solid #334155;">Details</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Select Target Connection</td><td style="padding:6px; border:1px solid #334155;">Pick the target DB connection from dropdown.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Fetch Target Tables</td><td style="padding:6px; border:1px solid #334155;">Click <b>Fetch Target Table</b> to view available tables.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Map Tables</td><td style="padding:6px; border:1px solid #334155;">Auto-mapping suggested; if not, drag & drop manually.<br>Mapped tables appear under <b>Mapped Tables</b>.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Unmap Function</td><td style="padding:6px; border:1px solid #334155;">Click <b>Unmap</b> to remove mapping.<br>Click <b>Next</b> for column mapping.</td></tr>
+</table><br>
 
-<i>Tip: Use clear and descriptive names for your test cases to make them easier to identify later. Review mappings carefully to avoid misalignment between source and target tables.</i>
-            """
-        }
+<b>Step 3: Column Mapping and Filtering</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px; border:1px solid #334155;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Action</th>
+<th style="padding:8px; border:1px solid #334155;">Details</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Review Columns</td><td style="padding:6px; border:1px solid #334155;">Source & Target columns shown side-by-side.<br>Auto-mapped if names match.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Set Primary Key</td><td style="padding:6px; border:1px solid #334155;">Required for Column Data Validation.<br>Auto-selected if present; else select manually.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Apply Filters</td><td style="padding:6px; border:1px solid #334155;">Add filter conditions (column, operator, value).<br>Supports multiple filters.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Save Mapping</td><td style="padding:6px; border:1px solid #334155;">Click <b>Save</b> to save mappings.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Execute</td><td style="padding:6px; border:1px solid #334155;">Click <b>Execute</b> to run test case.<br>Choose location to save Excel result file.</td></tr>
+</table><br>
+
+<b>Tips & Notes:</b><br>
+• Use underscores in test case names.<br>
+• Primary Key is mandatory for Column Data Validation.<br>
+• Drag & drop for manual mappings.<br>
+• Filters support flexible conditions.<br>
+• Results exported as Excel.<br>
+• Use <b>Previous</b> to revise selections.<br><br>
+
+<b>Typical Workflow Diagram:</b><br>
+<pre>
+[Create Test Case]
+   |
+   v
+[Enter Name] --> [Select Source Connection] --> [Fetch Source Table]
+      |                  |
+      v                  v
+[Select Validation Type] [Select Source Table(s)]
+   |
+   v
+[Next → Target Selection]
+   |
+   v
+[Select Target Connection] --> [Fetch Target Table]
+   |
+   v
+[Auto/Manual Table Mapping]
+   |
+   v
+[Next → Column Mapping]
+   |
+   v
+[Auto/Manual Column Map] — [Primary Key] — [Set Filters]
+   |
+   v
+[Save Mapping]
+   |
+   v
+[Execute] --> [Choose Excel Save Path]
+</pre><br>
+
+<i>Following this guide ensures your test cases are created accurately, mapped correctly, and ready for automated/manual execution in InfoFiscus Data Validation Tool.</i>
+"""
+}
+
+
+# "Create Test Case": {
+#     "title": "📝 Create Test Case",
+#     "description": """
+# <b>Create Test Case – Help Guide</b><br><br>
+
+# <b>Overview:</b><br>
+# The Create Test Case feature allows you to configure, map, and prepare data validation scenarios (test cases) comparing source and target tables/columns across your connected databases. Follow the steps below to ensure correct, repeatable, and robust test cases for scheduled validation.<br><br>
+
+# <b>Step 1: Test Case Setup</b><br>
+# 1. <b>Access the Create Test Case Panel:</b> From the left menu, click <b>Create Test Case</b>.<br>
+# 2. <b>Enter a Test Case Name:</b> Input a unique name for the test case.<br>
+# <b>Best Practice:</b> Do not use spaces – use underscores instead (e.g., Customer_Validation_2025). Test cases with spaces in the name may fail during scheduling/execution.<br><br>
+
+# 3. <b>Select Source Connection:</b> Click the Select Connection dropdown. Choose the source database connection (e.g., Databricks, Snowflake, etc.).<br>
+# 4. <b>Fetch Source Tables:</b> Click <b>Fetch Source Table</b>. All tables available in your selected source connection will appear. Select the table(s) you want to use as the data source.<br>
+# 5. <b>Choose Validation Type:</b> From the validation type dropdown, choose the kind of comparison or data check you want to perform (e.g., row count, column data, etc.). Select relevant tables for validation.<br>
+# 6. <b>Proceed to the Next Step:</b> Click <b>Next</b> to move to table mapping.<br><br>
+
+# <b>Step 2: Target Table Selection and Mapping</b><br>
+# 7. <b>Select Target Connection:</b> Use the Target Connection dropdown to pick the database where your target tables are located.<br>
+# 8. <b>Fetch Target Tables:</b> Click <b>Fetch Target Table</b>. Target tables will be displayed in a list.<br>
+# 9. <b>Map Tables:</b> The system will attempt to automatically map source tables to matching target tables. If not automatically mapped, drag and drop tables from the left (source) to the right (target) to define the mapping. Mapped tables will be displayed in the "Mapped Tables" column.<br>
+# 10. <b>Unmap Functionality:</b> You can "unmap" any table if you wish to remove a pairing. Click <b>Next</b> to move to column mapping.<br><br>
+
+# <b>Step 3: Column Mapping and Filtering</b><br>
+# 11. <b>Review Source and Target Columns:</b> You’ll see columns from the source and target tables shown side-by-side. The system auto-maps columns with matching names (case-insensitive). Manual mapping can be done by dragging and dropping if necessary.<br>
+# 12. <b>Set Primary Key (Column Data Validation only):</b> For column data validation scenarios, primary keys must be set before mapping can be saved. If the primary key is defined in the table it will be auto-selected; if not, manually select the primary key column(s) by checking the corresponding boxes.<br>
+# 13. <b>Apply Filters (Optional):</b> Click the Filter button to add filtering conditions. In the popup, choose the column, operator (e.g., >, <, =, !=, LIKE), and value. Click Add to add more filter conditions, then Save.<br>
+# 14. <b>Save Mapping:</b> Once satisfied with table and column mappings (and filters), click <b>Save</b>. The mapping configuration saves your test case logic.<br>
+# 15. <b>Execute Test Case:</b> Click <b>Execute</b> to run the test validation immediately. The system will prompt you to select a path to save the executed Excel result file.<br><br>
+
+# <b>Tips & Important Notes:</b><br>
+# • Unique Test Case Names: Use only underscores, avoid spaces for compatibility with scheduling/execution.<br>
+# • Primary Key Required: For column data validation, primary keys must always be set (auto or manual).<br>
+# • Drag-and-Drop: Use for manual mapping where auto-matching fails or for custom mapping scenarios.<br>
+# • Filter Logic: Supports multi-condition, flexible filtering for focused test scenarios.<br>
+# • Excel Export: After execution, results are exported as Excel files for reporting/audit.<br>
+# • Navigation: Use the Previous button to step back and revise source/target selections if needed.<br><br>
+
+# <b>Typical Workflow Diagram:</b><br>
+# <pre>
+# [Create Test Case]
+# |
+# v
+# [Enter Name] --> [Select Source Connection] --> [Fetch Source Table]
+# |                               |
+# v                               v
+# [Select Validation Type]         [Select Source Table(s)]==|
+# |
+# v
+# [Next → Target Selection]
+# |
+# v
+# [Select Target Connection] --> [Fetch Target Table]
+# |
+# v
+# [Auto/Manual Table Mapping]
+# |
+# v
+# [Next → Column Mapping]
+# |
+# v
+# [Auto/Manual Column Map] — [Primary Key] — [Set Filters]
+# |
+# v
+# [Save Mapping]
+# |
+# v
+# [Execute] --> [Choose Excel Save Path]
+# </pre><br>
+
+# <i>Following this step-by-step guide ensures your test cases are created accurately, mapped correctly, and ready for robust automated or manual execution within InfoFiscus Data Validation Tool.</i>
+# """
+# }
+
 ,
+
+# -----------------------------------   Show test cases   -------------------------
 
 "Show Test Case": {
     "title": "📋 Show Test Case",

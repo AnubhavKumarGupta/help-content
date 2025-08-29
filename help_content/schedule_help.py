@@ -89,115 +89,77 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 },
 
 
-# ------------------------------------          Show Scheduled Jobs          -------------------------- 
+# ------------------------------------          Show Schedule        -------------------------- 
 
-        "Show Scheduled Jobs": {
-            "title": "📋 Show Scheduled Jobs",
-            "description": """
-<b>Show Scheduled Jobs - Help Guide</b><br><br>
+"Show Scheduled Jobs": {
+    "title": "📋 Show Scheduled Jobs",
+    "description": """
+<b>Show Schedule Jobs – Help Guide</b><br><br>
 
-This page displays all saved schedules in a <b>tabular format</b>. 
-It allows you to review, edit, delete, or generate reports for scheduled jobs.<br><br>
+<b>Overview:</b><br>
+The Show Schedule Jobs page provides a comprehensive view and control of all scheduled test case jobs in INFOFISCUS Data Validation Tool. Users can review, search, edit, delete, or re-generate test executions quickly and efficiently.<br><br>
 
-<b>Table Columns (UI Reference):</b><br>
-• <b>Select:</b> Checkbox to pick a schedule for action.<br>
-• <b>User ID:</b> Creator of the schedule.<br>
-• <b>Test Case:</b> Name of the scheduled test case.<br>
-• <b>Schedule Name:</b> Auto-generated name of the schedule.<br>
-• <b>Start Time:</b> Exact execution time.<br>
-• <b>Start Date / End Date:</b> Duration of schedule validity.<br>
-• <b>Frequency:</b> Once / Hourly / Daily / Weekly / Monthly / Custom.<br>
-• <b>Last Run:</b> Timestamp of last execution.<br>
-• <b>Status:</b> Shows execution status (Success / Failed).<br>
-• <b>Platform:</b> Execution environment (Airflow Local / Astronomer).<br><br>
+<b>Key Functionalities:</b><br>
 
-<b>Actions (Buttons Below):</b><br>
-• <b>Edit:</b> Modify selected schedule (opens Edit window).<br>
-• <b>Delete:</b> Remove a schedule permanently.<br>
-• <b>Generate Report:</b> Export report for selected schedule(s).<br><br>
+1. <b>Edit Scheduled Job</b><br>
+<b>Purpose:</b> Edit allows users to reschedule an already existing job—updating its timing, frequency, or timezone without recreating it from scratch.<br>
+<b>How to Use:</b> Select the desired scheduled job from the table by clicking its row (radio button). Click <b>Edit</b> (blue button). Navigate to the scheduling form. Change Timezone, Start Date, End Date, Frequency (Once, Hourly, Daily, Weekly, Monthly, Custom), and Start Time as needed. Click <b>Schedule</b> to save and re-schedule the test case.<br>
+<b>Tips:</b> Rescheduling is ideal for routine test validations or to shift tests to a new window (e.g., after business hour changes).<br><br>
+
+2. <b>Delete Scheduled Job</b><br>
+<b>Purpose:</b> Removes old, unwanted, or no-longer-needed scheduled test cases. Keeps the UI organized and prevents accidental execution.<br>
+<b>How to Use:</b> Select the test case job by radio button. Click <b>Delete</b> (red button). Confirm deletion if prompted.<br>
+<b>Use Case:</b> Optimize by removing clutter and obsolete test jobs.<br><br>
+
+3. <b>Generate Test Case Output</b><br>
+<b>Purpose:</b> Instantly regenerates the result file for a previously scheduled test case job, without rerunning or re-scheduling the whole process.<br>
+<b>How to Use:</b> Select the scheduled job of interest. Click <b>Generate</b> (green button). Choose a save path; results are exported (typically as Excel).<br>
+<b>Tips:</b> Use for audit, historical analysis, or if the previous file was misplaced.<br><br>
+
+<b>Additional Features:</b><br>
+• <b>Search Bar:</b> Quickly locate scheduled jobs by User, Test Case, Schedule Name, or other columns.<br>
+• <b>User Dropdown:</b> Filter scheduled jobs by user for multi-user management.<br>
+• <b>Refresh:</b> Keep the job list up to date with latest changes.<br><br>
+
+<b>Typical Workflow – Flowchart:</b><br>
+<pre>
++-----------------------------+
+| Show Schedule Jobs          |
++-----------------------------+
+          |
++---------+---------+---------+
+|         |         |         |
+[Edit]   [Delete]  [Generate]
+|         |         |
+Select Job Select Job Select Job
+|         |         |
+Edit timing Confirm  Generate/export
+and schedule delete job Excel results file
+|         |         |
+SCHEDULE done  UI cleans up Save Excel
+</pre><br>
+
+Or in "steps arrows" visual form:<br>
+<pre>
+[Select Test Case]
+|
++---------+---------+---------+
+|         |         |         |
+Edit     Delete    Generate   Search/Filter
+|         |         | 
+Edit form Remove    Download   Find job fast
+|         |
+Reschedule Clean   Excel file
+</pre><br>
 
 <b>Best Practices:</b><br>
-• Always refresh the table to get latest status updates.<br>
-• Use search bar for quick filtering.<br>
-• Check status column to track success/failures.<br><br>
-
-<i>This section gives you full visibility and control over your scheduled tasks.</i>
-            """
-        },
-
-
-# ------------------------------------           Show Schedule               ---------------------------
-
-
-        "Edit Schedule": {
-            "title": "✏️ Edit Schedule",
-            "description": """
-<b>Edit Schedule - Help Guide</b><br><br>
-
-This option allows modification of an already created schedule.<br><br>
-
-<b>Steps:</b><br>
-1. Select a schedule from the job table.<br>
-2. Click <b>Edit</b> button.<br>
-3. Update required fields (time, frequency, dates, platform, etc.).<br>
-4. Save changes.<br><br>
-
-<b>Notes:</b><br>
-• Only valid schedules can be edited.<br>
-• End Date cannot be earlier than Start Date.<br>
-• Editing may overwrite previous configurations.<br>
-• Updated schedules appear instantly in the job table.<br>
-            """
-        },
-
-
-        "Delete Schedule": {
-            "title": "🗑 Delete Schedule",
-            "description": """
-<b>Delete Schedule - Help Guide</b><br><br>
-
-Use this option to permanently remove schedules from the system.<br><br>
-
-<b>Steps:</b><br>
-1. Select one or more schedules from the job table.<br>
-2. Click <b>Delete</b> button.<br>
-3. Confirm deletion in popup.<br><br>
-
-<b>Important:</b><br>
-• Deleted schedules cannot be recovered.<br>
-• Ensure you export a report if data is required before deletion.<br>
-            """
-        },
-
-
-        "Generate Report": {
-            "title": "📊 Generate Report",
-            "description": """
-<b>Generate Report - Help Guide</b><br><br>
-
-This feature exports detailed information of selected schedules into a report format.<br><br>
-
-<b>Steps:</b><br>
-1. Select one or more schedules from the job table.<br>
-2. Click <b>Generate Report</b> button.<br>
-3. System generates a report (PDF/Excel) with full details.<br><br>
-
-<b>Report Contains:</b><br>
-• User ID<br>
-• Test Case Name<br>
-• Schedule Name<br>
-• Frequency<br>
-• Start/End Dates<br>
-• Last Run<br>
-• Status<br>
-• Platform<br><br>
-
-<b>Use Cases:</b><br>
-• Audit of scheduled jobs.<br>
-• Sharing execution details with team.<br>
-• Record keeping for compliance.<br><br>
-
-<i>Reports provide a structured view of scheduling history for analysis and documentation.</i>
-            """
-        }
+• <b>Housekeeping:</b> Regularly delete unwanted or expired scheduled jobs to keep the environment fast, secure, and clutter-free.<br>
+• <b>Quick Edits:</b> Use Edit instead of deleting/recreating jobs when only times/frequencies change.<br>
+• <b>Audit Ready:</b> Use Generate to export or re-create historical results for compliance or review.<br>
+• <b>Search Proactively:</b> Use the search bar to filter and act on jobs rapidly, especially in busy environments.
+"""
+}
+    
+    
+    
     }

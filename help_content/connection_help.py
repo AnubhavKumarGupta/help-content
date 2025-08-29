@@ -7,7 +7,7 @@ def get_connection_content():
 # ----------------------------------------         Connection          ---------------------------------  
 
 "Connection": {
-            "title": "Connection – Help Guide",
+            "title": "Connection",
             "description": """
 <b>Connection – Help Guide</b><br><br>
 
@@ -29,7 +29,7 @@ manage, and select the correct linkage for <b>validation, analysis, or ETL workf
 # -----------------------------------------      Create Connection          ---------------------------
 
 "Create Connection": {
-            "title": "Create Connection – Help Guide",
+            "title": "Create Connection",
             "description": """
 <b>Create Connection – Help Guide</b><br><br>
 
@@ -102,7 +102,7 @@ Edit Database keeps transitions smooth and auditable.<br><br>
 
 # --------------------------------------------    Edit Database ------------------------------
 
-        "Edit Database": {
+"Edit Database": {
             "title": "Edit Database Connection Parameters",
             "description": """
 <b>Modify Database-Specific Connection Settings</b>

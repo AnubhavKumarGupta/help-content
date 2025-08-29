@@ -3,8 +3,10 @@
 def get_admin_content():
     """Admin panel help content - fully enhanced with detailed points & UI references"""
     return {
-        "Admin": {
-            "title": "⚙️ Administration Panel",
+
+# --------------------------         Admin Panel     -----------------
+"Admin": {
+            "title": "Administration Panel",
             "description": """
 <b>System Administration & User Management</b><br><br>
 
@@ -29,8 +31,11 @@ reset their passwords, update logout sessions, and ensure smooth & secure operat
 """
         },
 
-        "Create New User": {
-            "title": "👤 Create New User Account",
+
+# --------------------------      Admin - Create New User   ------------------------
+
+"Create New User": {
+            "title": "Create New User Account",
             "description": """
 <b>Create New User - Help Guide</b><br><br>
 This option allows you to create new user accounts using a dedicated form.<br><br>
@@ -52,8 +57,11 @@ This option allows you to create new user accounts using a dedicated form.<br><b
             """
         },
 
-        "Edit User": {
-            "title": "✏️ Edit User Account",
+
+# ----------------------------        Edit Admin Panel        ---------------------  
+
+"Edit User": {
+            "title": "Edit User Account",
             "description": """
 <b>Edit User - Help Guide</b><br><br>
 This section lists all users in a <b>tabular format</b> for quick overview & management.<br><br>
@@ -94,8 +102,12 @@ This section lists all users in a <b>tabular format</b> for quick overview & man
 """
         },
 
-        "Update Logout Time": {
-            "title": "⏱️ Update Logout Time",
+
+# ---------------------------------   Admin Update Logout  -------------------------
+
+
+"Update Logout Time": {
+            "title": "Update Logout Time",
             "description": """
 <b>Update Logout Time - Help Guide</b><br><br>
 This option is used when a user session did not log out correctly. It helps to fix inaccurate session details.<br><br>
@@ -112,8 +124,11 @@ This option is used when a user session did not log out correctly. It helps to f
             """
         },
 
-        "Password Reset": {
-            "title": "🔐 Password Reset Management",
+
+# ------------------------------------------    Password Reset   --------------------------------
+
+"Password Reset": {
+            "title": "Password Reset Management",
             "description": """
 <b>Password Reset - Help Guide</b><br><br>
 This feature allows secure password reset for users via the reset form in UI.<br><br>

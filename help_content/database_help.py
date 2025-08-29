@@ -4,7 +4,7 @@ def get_database_content():
     """Database-specific help content for all supported database types"""
     return {
 
-# ----------------- Connection -> Create Connection -> Database -----------------
+# -----------------------      Connection -> Create Connection -> Database     -----------------
 
 "Database": {
     "title": "Database Platform Selection",

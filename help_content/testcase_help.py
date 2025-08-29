@@ -7,7 +7,7 @@ def get_testcase_content():
 # ---------------------------   Create Test Cases   ---------------------
 
 "Create Test Case": {
-    "title": "📝 Create Test Case",
+    "title": "Create Test Case",
     "description": """
 <b>Create Test Case – Help Guide</b><br>
 
@@ -99,7 +99,7 @@ Follow the steps below to ensure correct, repeatable, and robust test cases.<br>
 
 
 # "Create Test Case": {
-#     "title": "📝 Create Test Case",
+#     "title": "Create Test Case",
 #     "description": """
 # <b>Create Test Case – Help Guide</b><br><br>
 
@@ -178,7 +178,7 @@ Follow the steps below to ensure correct, repeatable, and robust test cases.<br>
 # -----------------------------------   Show test cases   -------------------------
 
 "Show Test Case": {
-    "title": "📋 Show Test Case",
+    "title": "Show Test Case",
     "description": """
 <b>Show Test Case – Help Guide</b><br><br>
 
@@ -266,12 +266,11 @@ Show Test Case puts lifecycle management at your fingertips:<br>
 },
 
 
-
 # -------------------------------      Show Test Result  ---------------------------
 
 
 "Show Test Results": {
-    "title": "📊 Show Test Results",
+    "title": "Show Test Results",
     "description": """
 <b>Show Test Results – Help Guide</b><br><br>
 

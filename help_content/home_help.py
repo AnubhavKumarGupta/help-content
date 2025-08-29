@@ -5,7 +5,7 @@ def get_home_content():
 # ---------------------------------       Home      ------------------------------
 
 "Home": {
-    "title": "🔥 Welcome to INFOFISCUS Data Validation Tool",
+    "title": "Welcome to INFOFISCUS Data Validation Tool",
     "description": """
 <b>Home – Help Guide</b><br><br>
 

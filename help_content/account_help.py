@@ -6,7 +6,7 @@ def get_account_content():
 
 # -----------------------------        Change Password      --------------------------------------
         "Change Password": {
-            "title": "🔒 Change Password",
+            "title": "Change Password",
             "description": """
 <b>Change Password - Help Guide</b><br><br>
 
@@ -34,7 +34,7 @@ This section guides you through the process to securely change your password.<br
 # ---------------------------------------     Logout      ------------------------------------------------
  
         "Logout": {
-            "title": "🚪 Logout",
+            "title": "Logout",
             "description": """
 <b>Secure Session Logout</b><br><br>
 

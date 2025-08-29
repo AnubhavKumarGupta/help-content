@@ -3,77 +3,52 @@
 def get_connection_content():
     """Connection management help content - focused only on connection operations"""
     return {
-        "Connection": {
-            "title": "Database Connection Management",
+
+# ----------------------------------------         Connection          ---------------------------------  
+
+"Connection": {
+            "title": "Connection – Help Guide",
             "description": """
-<b>Manage Database Connections for Data Validation</b>
+<b>Connection – Help Guide</b><br><br>
 
-This section provides comprehensive tools for managing database connections across your organization.
+<b>Purpose:</b><br>
+The Connection section is your central hub for managing all data source integrations within <b>INFOFISCUS</b>. 
+It provides an overview of every database and platform connection currently configured, allowing users to view, 
+manage, and select the correct linkage for <b>validation, analysis, or ETL workflows</b>.<br><br>
 
-<b>Key Features:</b>
-• <b>Multi-Database Support:</b> Connect to 10+ database types
-• <b>Connection Testing:</b> Verify connectivity before saving
-• <b>Secure Storage:</b> Encrypted credential management
-• <b>Connection Pooling:</b> Optimized performance for multiple tests
-
-<b>Available Operations:</b>
-• <b>Create Connection:</b> Set up new database connections
-• <b>Edit Connection:</b> Modify existing connection parameters
-• <b>Delete Connection:</b> Remove unused connections
-• <b>Test Connection:</b> Validate connection parameters
-
-<b>Supported Database Types:</b>
-• Traditional: Oracle, SQL Server, MySQL, PostgreSQL
-• Cloud: Snowflake, Google BigQuery, Amazon RedShift
-• Modern: StarRocks, Databricks, Azure Synapse
-
-<b>Security Features:</b>
-• Password encryption at rest
-• Connection string obfuscation
-• Role-based access control
-• Audit logging for all operations
-
-Select a specific database type from the submenu to see detailed connection instructions and requirements.
+<b>Key Points:</b><br>
+• Lists all active connections for each environment and project.<br>
+• Enables quick access to connection details and health/status.<br>
+• Facilitates edits and deletion to keep integrations secure and up-to-date.<br>
+• Supports audit, compliance, and operational transparency by centralizing management of all data access points.<br>
             """,
         },
 
-        "Create Connection": {
-            "title": "Create New Database Connection",
+
+
+# -----------------------------------------      Create Connection          ---------------------------
+
+"Create Connection": {
+            "title": "Create Connection – Help Guide",
             "description": """
-<b>Set Up New Database Connection</b>
+<b>Create Connection – Help Guide</b><br><br>
 
-Create secure, reliable connections to your data sources for validation testing.
+<b>Purpose:</b><br>
+The Create Connection section guides users through the process of securely establishing a new integration 
+between <b>INFOFISCUS</b> and an external database or data platform. It ensures that users provide all required 
+parameters and credentials, supporting both connectivity and compliance with organizational policies.<br><br>
 
-<b>Setup Process:</b>
-1. <b>Select Database Type:</b> Choose from supported database platforms
-2. <b>Enter Connection Details:</b> Provide server, port, credentials
-3. <b>Test Connection:</b> Verify connectivity before saving
-4. <b>Save Configuration:</b> Store encrypted connection details
-
-<b>Required Information:</b>
-• <b>Connection Name:</b> Unique identifier for this connection
-• <b>Server/Host:</b> Database server address or hostname
-• <b>Port:</b> Database service port (auto-filled for common types)
-• <b>Database/Schema:</b> Target database or schema name
-• <b>Credentials:</b> Username and password (encrypted storage)
-
-<b>Best Practices:</b>
-• Use descriptive connection names (e.g., "PROD_HR_Oracle")
-• Create separate connections for different environments
-• Test connections before creating validation test cases
-• Use service accounts with minimal required permissions
-
-<b>Advanced Options:</b>
-• Connection timeout settings
-• SSL/TLS encryption options
-• Connection pooling parameters
-• Custom connection string modifications
-
-Choose your database type from the Database submenu to see platform-specific setup instructions.
+<b>Key Points:</b><br>
+• Prompts for platform, hostname, authentication, and any special parameters.<br>
+• Step-by-step workflow ensures no essential configuration is missed.<br>
+• Allows designation of connection names for easy identification.<br>
+• Enables secure onboarding of new data sources without affecting existing workflows.<br>
+• Foundation for subsequent data validation, scheduling, and analytics tasks.<br>
             """,
         },
 
-# ----------------------            Edit Connection              --------------------------  
+
+# ------------------------------------------      Edit Connection            --------------------------  
 
 
 "Edit Connection": {
@@ -125,9 +100,7 @@ Edit Database keeps transitions smooth and auditable.<br><br>
 },
 
 
-
-
-
+# --------------------------------------------    Edit Database ------------------------------
 
         "Edit Database": {
             "title": "Edit Database Connection Parameters",
@@ -169,7 +142,7 @@ Update database connection parameters with platform-specific optimizations.
             """,
         },
 
-# ----------------------------            Connection -> Delete Connection          ----------------
+# -----------------------------            Connection -> Delete Connection          ----------------
 
 "Delete Connection": {
     "title": "Delete Database Connection",
@@ -232,7 +205,6 @@ All deletes are logged for accountability.<br><br>
 <i>Use the Delete Connection feature to keep your INFOFISCUS workspace organized, secure, and optimized for efficient, error-free data validation operations.</i>
 """
 },
-
 
         
     }

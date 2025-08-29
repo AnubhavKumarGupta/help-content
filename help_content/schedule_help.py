@@ -96,32 +96,46 @@ Select your desired platform from the Platform dropdown menu at the top of the S
     "description": """
 <b>Show Schedule Jobs – Help Guide</b><br><br>
 
-<b>Overview:</b><br>
+<b>Overview</b><br>
 The Show Schedule Jobs page provides a comprehensive view and control of all scheduled test case jobs in INFOFISCUS Data Validation Tool. Users can review, search, edit, delete, or re-generate test executions quickly and efficiently.<br><br>
 
-<b>Key Functionalities:</b><br>
+<b>Key Functionalities</b><br>
 
 1. <b>Edit Scheduled Job</b><br>
-<b>Purpose:</b> Edit allows users to reschedule an already existing job—updating its timing, frequency, or timezone without recreating it from scratch.<br>
-<b>How to Use:</b> Select the desired scheduled job from the table by clicking its row (radio button). Click <b>Edit</b> (blue button). Navigate to the scheduling form. Change Timezone, Start Date, End Date, Frequency (Once, Hourly, Daily, Weekly, Monthly, Custom), and Start Time as needed. Click <b>Schedule</b> to save and re-schedule the test case.<br>
-<b>Tips:</b> Rescheduling is ideal for routine test validations or to shift tests to a new window (e.g., after business hour changes).<br><br>
+<b>Purpose:</b><br>
+Edit allows users to reschedule an already existing job—updating its timing, frequency, or timezone without recreating it from scratch.<br>
+<b>How to Use:</b><br>
+• Select the desired scheduled job from the table by clicking its row (radio button).<br>
+• Click <b>Edit</b> (blue button).<br>
+• You’ll navigate to the scheduling form (see 2nd screenshot).<br>
+• Change the Timezone, Start Date, End Date, Frequency (Once, Hourly, Daily, Weekly, Monthly, Custom), and Start Time as needed.<br>
+• Click <b>Schedule</b> to save and re-schedule the test case.<br>
+<b>Tips:</b> Rescheduling is ideal for routine test validations that need an updated execution window. Use this to shift tests to a new window (e.g., after a business hour change or to avoid overlaps).<br><br>
 
 2. <b>Delete Scheduled Job</b><br>
-<b>Purpose:</b> Removes old, unwanted, or no-longer-needed scheduled test cases. Keeps the UI organized and prevents accidental execution.<br>
-<b>How to Use:</b> Select the test case job by radio button. Click <b>Delete</b> (red button). Confirm deletion if prompted.<br>
-<b>Use Case:</b> Optimize by removing clutter and obsolete test jobs.<br><br>
+<b>Purpose:</b><br>
+Removes old, unwanted, or no-longer-needed scheduled test cases. Keeps the UI organized and prevents accidental execution.<br>
+<b>How to Use:</b><br>
+• Select the test case job you wish to remove by radio button.<br>
+• Click the <b>Delete</b> (red button).<br>
+• Confirm deletion if prompted.<br>
+<b>Use Case:</b> Optimize by removing clutter and test jobs that are obsolete or redundant.<br><br>
 
 3. <b>Generate Test Case Output</b><br>
-<b>Purpose:</b> Instantly regenerates the result file for a previously scheduled test case job, without rerunning or re-scheduling the whole process.<br>
-<b>How to Use:</b> Select the scheduled job of interest. Click <b>Generate</b> (green button). Choose a save path; results are exported (typically as Excel).<br>
-<b>Tips:</b> Use for audit, historical analysis, or if the previous file was misplaced.<br><br>
+<b>Purpose:</b><br>
+Instantly regenerates the result file for a previously scheduled test case job, without rerunning or re-scheduling the whole process.<br>
+<b>How to Use:</b><br>
+• Select the scheduled job of interest.<br>
+• Click the <b>Generate</b> (green button).<br>
+• The system will prompt you to choose a save path and will export the results (typically as an Excel file).<br>
+<b>Tips:</b> Leverage this for audit, historical analysis, or if the previous file was misplaced.<br><br>
 
-<b>Additional Features:</b><br>
-• <b>Search Bar:</b> Quickly locate scheduled jobs by User, Test Case, Schedule Name, or other columns.<br>
-• <b>User Dropdown:</b> Filter scheduled jobs by user for multi-user management.<br>
-• <b>Refresh:</b> Keep the job list up to date with latest changes.<br><br>
+<b>Additional Features</b><br>
+• <b>Search Bar:</b> Instantly search by User, Test Case, Schedule Name, or any other column to quickly locate any scheduled job—especially helpful in large environments.<br>
+• <b>User Dropdown:</b> Admins can filter scheduled jobs by user, making management in multi-user environments faster.<br>
+• <b>Refresh:</b> Keeps your job list up to date with latest changes.<br><br>
 
-<b>Typical Workflow – Flowchart:</b><br>
+<b>Typical Workflow – Flowchart</b><br>
 <pre>
 +-----------------------------+
 | Show Schedule Jobs          |
@@ -133,33 +147,32 @@ The Show Schedule Jobs page provides a comprehensive view and control of all sch
 |         |         |
 Select Job Select Job Select Job
 |         |         |
-Edit timing Confirm  Generate/export
-and schedule delete job Excel results file
-|         |         |
-SCHEDULE done  UI cleans up Save Excel
+Edit timing, freq,  Confirm and  Generate/export
+and schedule        delete job   Excel results file
+|                                |
+SCHEDULE and done   UI cleans up Save Excel
 </pre><br>
 
 Or in "steps arrows" visual form:<br>
 <pre>
 [Select Test Case]
 |
-+---------+---------+---------+
++---------+---------+---------+---------+
+|         |         |         |         |
+Edit     Delete   Generate   Search/Filter
 |         |         |         |
-Edit     Delete    Generate   Search/Filter
-|         |         | 
-Edit form Remove    Download   Find job fast
+Edit form Remove   Download   Find job fast
 |         |
 Reschedule Clean   Excel file
 </pre><br>
 
-<b>Best Practices:</b><br>
-• <b>Housekeeping:</b> Regularly delete unwanted or expired scheduled jobs to keep the environment fast, secure, and clutter-free.<br>
+<b>Best Practices</b><br>
+• <b>Housekeeping:</b> Regularly delete unwanted or expired scheduled jobs—keeps the environment fast, secure, and clutter-free.<br>
 • <b>Quick Edits:</b> Use Edit instead of deleting/recreating jobs when only times/frequencies change.<br>
-• <b>Audit Ready:</b> Use Generate to export or re-create historical results for compliance or review.<br>
+• <b>Audit Ready:</b> Use Generate to quickly export or re-create historical results for compliance or review.<br>
 • <b>Search Proactively:</b> Use the search bar to filter and act on jobs rapidly, especially in busy environments.
 """
 }
-    
-    
+
     
     }

@@ -34,7 +34,7 @@ This section guides you through the process to securely change your password.<br
 # ---------------------------------------     Logout      ------------------------------------------------
  
         "Logout": {
-            "title": "🚪 Logout – Help Guide",
+            "title": "🚪 Logout",
             "description": """
 <b>Secure Session Logout</b><br><br>
 

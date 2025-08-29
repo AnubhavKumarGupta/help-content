@@ -180,73 +180,161 @@ Follow the steps below to ensure correct, repeatable, and robust test cases.<br>
 "Show Test Case": {
     "title": "📋 Show Test Case",
     "description": """
-<b>Show Test Case - Help Guide</b><br><br>
+<b>Show Test Case – Help Guide</b><br><br>
 
-This page displays a list of all <b>test cases created by the user</b>. 
-From here, you can search, review, edit, or delete existing test cases.<br><br>
+<b>Overview</b><br>
+The Show Test Case feature is your command center for test case lifecycle management. Here you can review, update (Edit), or remove (Delete) existing test cases, ensuring your validation suite stays organized, accurate, and agile as your data and business rules evolve.<br><br>
 
-<b>Search & Filter:</b><br>
-• <b>Search Box:</b> Quickly filter test cases by name or keyword.<br><br>
+<b>Main Functionalities</b><br>
 
-<b>Columns Displayed:</b><br>
-• <b>Name:</b> The test case name.<br>
-• <b>Source / Target:</b> Systems involved in validation.<br>
-• <b>Validation Type:</b> Type of check (Schema or Column Data).<br>
-• <b>User ID:</b> Creator of the test case.<br>
-• <b>Created Date:</b> When the test case was added.<br><br>
+1. <b>Edit Test Case</b><br>
+<b>Purpose:</b> Modify any previously created test case to adapt to changing requirements, data sources, or validation logic without starting from scratch.<br>
+<b>When to Use:</b><br>
+• Business requirements change<br>
+• New columns/tables need validation<br>
+• Validation type needs to be updated<br>
+• Table or column mappings need adjustment<br>
+• To add/remove filters, or reset the primary key for column validation<br><br>
 
-<b>Actions:</b><br>
-• <b>Edit:</b> Select a test case and click Edit to update its details.<br>
-• <b>Delete:</b> Select a test case and click Delete to remove it permanently.<br><br>
+2. <b>Delete Test Case</b><br>
+<b>Purpose:</b> Permanently remove obsolete, irrelevant, or duplicate test cases to keep your UI clean and ensure only relevant jobs are retained.<br><br>
 
-<b>User-Specific View:</b><br>
-• Only test cases created by you will be displayed here.<br><br>
+<b>How to Use – Step-by-Step Workflow</b><br>
 
-<b>Tips:</b><br>
-• Use search and filters for quick access.<br>
-• Keep test cases updated to ensure accurate validation.<br>
-• Review execution status regularly to track test health.<br><br>
+A. <u>Finding and Selecting a Test Case</u><br>
+• <b>Search:</b> Use the search bar to find test cases by name, connection, or partial keyword. This is especially helpful in large environments.<br>
+• <b>Select:</b> Choose the desired test case by clicking the corresponding row/radio button in the list.<br><br>
 
-<i>Managing test cases effectively ensures accurate and reliable validations.</i>
-    """
+B. <u>Edit Workflow</u><br>
+• <b>Click Edit:</b> After selecting a test case, click the Edit button.<br>
+• This opens the editing interface (similar to <b>Create Test Case</b> wizard).<br>
+• <b>Adjust Configuration:</b><br>
+  – Change validation type (Schema, Row Count, Column Data, or combinations).<br>
+  – Select/deselect tables as required.<br>
+• <b>Table Mapping:</b> Click <b>Table Mapping</b> to map or unmap source/target tables (drag-and-drop or auto-mapping).<br>
+• <b>Column Mapping:</b> Click <b>Column Mapping</b> to pair columns, update primary keys (mandatory for column data validation), and define filters.<br>
+• <b>Save & Execute:</b> Save to update the case. Optionally, execute immediately to validate with new settings and download results.<br>
+<i>Note:</i> Only validation, logic, and mappings can be edited—test case name and source connection usually stay fixed.<br><br>
+
+C. <u>Delete Workflow</u><br>
+• <b>Select & Delete:</b> Choose an unwanted case and click Delete.<br>
+• <b>Confirm:</b> Approve the prompt to remove it permanently.<br>
+• The case is removed from the list, keeping your UI clean.<br><br>
+
+<b>Visual Workflow Diagram</b><br>
+<pre>
+[Show Test Case Page]
+|
++---------------------+
+|        |            |
+[Edit]  [Delete]
+|        |
+[Load Editable   [Confirm deletion]
+Test Case UI]     |
+|                 [Case removed]
+|
+[Adjust settings, mappings]
+|
+[Table Mapping] → [Column Mapping]
+|
+[Save]/[Execute]
+</pre><br>
+
+<b>Feature Comparison Table</b><br>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr><th>Function</th><th>Purpose</th><th>Main Actions</th><th>When to Use</th></tr>
+<tr><td><b>Edit</b></td><td>Update an existing test case</td><td>Modify validation, mapping, logic</td><td>When requirements/data change or optimization is needed</td></tr>
+<tr><td><b>Delete</b></td><td>Remove test case</td><td>Select & confirm deletion</td><td>When case is obsolete, duplicated, or no longer needed</td></tr>
+</table><br><br>
+
+<b>Best Practices & Tips</b><br>
+• Edit instead of recreate when possible—this preserves links, history, and supporting data.<br>
+• Always review mappings and primary key selections after schema or column changes.<br>
+• Use search to quickly locate and act on test cases.<br>
+• Delete test cases regularly to avoid clutter.<br>
+• After deleting, check for downstream dependencies that may rely on the removed test case.<br>
+• All validations, mapping requirements, and filter logic from <b>Create Test Case</b> guidance still apply.<br><br>
+
+<b>Summary</b><br>
+Show Test Case puts lifecycle management at your fingertips:<br>
+• Adapt tests as your data grows<br>
+• Remove anything redundant<br>
+• Update instantly while keeping auditability and quality intact<br><br>
+
+<i>For detailed help on column mapping, validation requirements, and filters, see the “Create Test Case – Help Guide”.</i>
+"""
 },
+
+
+
+# -------------------------------      Show Test Result  ---------------------------
+
 
 "Show Test Results": {
     "title": "📊 Show Test Results",
     "description": """
-<b>Show Test Results - Help Guide</b><br><br>
+<b>Show Test Results – Help Guide</b><br><br>
 
-This table displays all executed test cases and their results. 
-It provides details about the test configuration, validation type, execution status, and performance metrics.<br><br>
+<b>Overview</b><br>
+The Show Test Results section is your dashboard for reviewing all completed test case executions. It provides detailed insights into tests that succeeded or failed, enabling you to understand the health of your data pipelines and validation efforts.<br><br>
 
-<b>Table Columns:</b><br>
-• <b>S. No.:</b> Sequential number of each test case in the list.<br>
-• <b>Select:</b> Radio button to choose a test case for generating a report.<br>
-• <b>Client ID:</b> Identifier of the client for which the test case was executed.<br>
-• <b>User ID:</b> Identifier of the user who initiated or owns the test case.<br>
-• <b>Test Case Name:</b> The descriptive name of the test case.<br>
-• <b>Source DB:</b> The source database against which the test case was executed.<br>
-• <b>Target DB:</b> The target database for comparison or validation.<br>
-• <b>Validation Type:</b> Specifies the type of validation performed:<br>
-&nbsp;&nbsp;&nbsp;&nbsp; • Row Count Validation<br>
-&nbsp;&nbsp;&nbsp;&nbsp; • Schema Validation<br>
-&nbsp;&nbsp;&nbsp;&nbsp; • Column Data Validation<br>
-• <b>Status:</b> Current state of execution (Passed, Failed, In Progress).<br>
-• <b>Execution Time:</b> Duration taken for the test case execution.<br>
-• <b>Source Name:</b> The specific source system or connection name used.<br>
-• <b>Target Name:</b> The specific target system or connection name used.<br><br>
+<b>Key Features and Usage</b><br>
+• <b>View All Results:</b> Lists all test runs created by the current user, showing status (pass/fail), execution time, associated test case, and summary info.<br>
+• <b>Status Indicators:</b> Quickly identify failures or successes to prioritize troubleshooting.<br>
+• <b>Regenerate Reports:</b> Select prior test executions and regenerate Excel reports without re-running tests—useful for sharing or archiving.<br>
+• <b>Search and Filter:</b> Use the search bar and filters to find specific executions by name, date, or status.<br><br>
 
-<b>User Actions:</b><br>
-• Review results and analyze failures.<br>
-• Monitor performance metrics of each execution.<br>
-• Select a test case to inspect in detail or generate reports.<br><br>
+<b>Typical Workflow</b><br>
+1. Navigate to <b>Show Test Results</b> from the main menu.<br>
+2. Browse or search for the relevant test executions.<br>
+3. Review status and execution metadata.<br>
+4. Select one or more results to regenerate reports.<br>
+5. Click <b>Regenerate</b> to export Excel files for auditing or sharing.<br><br>
 
-<b>Tips:</b><br>
-• Use filters and sorting to quickly locate specific test results.<br>
-• Execution details provide insights into data consistency and validation coverage.<br>
-• Regular review ensures data accuracy, system reliability, and compliance with standards.<br><br>
+<b>Benefits</b><br>
+• Centralized access to all validation results.<br>
+• Simplifies compliance with easy report re-generation.<br>
+• Saves time by avoiding re-execution for report generation.<br>
+• Focuses attention on failing tests for faster resolution.<br><br>
 
-<i>Analyzing test results regularly helps maintain high-quality validation and system trustworthiness.</i>
-    """
+<b>Best Practices</b><br>
+• Regularly review results post-execution to catch issues early.<br>
+• Use search and filters to efficiently manage large volumes.<br>
+• Maintain consistent, descriptive test case naming for ease of use.<br>
+• Regenerate reports as needed for stakeholders or compliance.<br><br>
+
+<b>Diagram: Flowchart of User Actions</b><br>
+<pre>
+[Show Test Results Screen]
+|
++-----+--------+-----------+
+|     |        |           |
+[Search] [Select Test] [View List]
+  |         |         |
+  |     +---+----+    |
+  |     |        |    |
+[Filter] [View Details] [Status (Pass/Fail)]
+|
++-----+-----+
+|           |
+[Regenerate] [Close]
+|
+[Export Excel Report]
+</pre><br>
+
+<b>Task Summary Table</b><br>
+<table border="1" cellpadding="5" cellspacing="0">
+<tr><th>Step</th><th>Description</th><th>User Action</th></tr>
+<tr><td><b>Open Results</b></td><td>Access Show Test Results page</td><td>Navigate via main menu</td></tr>
+<tr><td><b>Search / Filter</b></td><td>Narrow down results by criteria</td><td>Use search bar and filters</td></tr>
+<tr><td><b>Select Test Run</b></td><td>Highlight one or multiple test executions</td><td>Click row(s)</td></tr>
+<tr><td><b>Review Status</b></td><td>Check pass/fail or in-progress indicators</td><td>View status icons</td></tr>
+<tr><td><b>Regenerate Report</b></td><td>Export latest or prior test execution reports</td><td>Click Regenerate button</td></tr>
+<tr><td><b>Use Reports</b></td><td>Download and share Excel files</td><td>Save to local storage</td></tr>
+</table><br><br>
+
+<b>Summary</b><br>
+The Show Test Results page provides an essential interface for monitoring and leveraging your data validation outcomes. Through seamless search, detailed status views, and easy report regeneration, it supports ongoing data quality assurance and regulatory compliance in your organization.
+"""
 }
     }

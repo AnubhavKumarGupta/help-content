@@ -1,30 +1,63 @@
 def get_home_content():
     """Home page help content with clean, modern, and minimal styling (empty version)"""
     return {
-        "Home": {
-            "title": "🔥 Welcome to INFOFISCUS Data Validation Tool",
-            "description": """
-<div style="background: #0f172a; border-radius: 16px; padding: 30px; 
-            border: 1px solid #334155; box-shadow: 0 6px 18px rgba(0,0,0,0.4); 
-            margin: 20px auto; max-width: 1000px; text-align: center;">
 
-    <!-- Header -->
-    <h1 style="color: #38bdf8; font-size: 2.2em; font-weight: 700; margin-bottom: 10px;">
-        INFOFISCUS DATA VALIDATION TOOL
-    </h1>
-    <p style="color: #94a3b8; font-size: 1.1em; margin-bottom: 20px;">
-        🚀 A clean and powerful platform for data validation & testing
-    </p>
+# ---------------------------------       Home      ------------------------------
 
-    <!-- Placeholder Section -->
-    <div style="margin-top: 40px; padding: 40px; background: #1e293b; 
-                border-radius: 12px; border: 1px solid #334155;">
-        <p style="color: #64748b; font-size: 1.1em;">
-            ✨ Content will appear here soon ✨
-        </p>
-    </div>
+"Home": {
+    "title": "🔥 Welcome to INFOFISCUS Data Validation Tool",
+    "description": """
+<b>Home – Help Guide</b><br><br>
 
-</div>
-            """
-        }
+The <b>Home Section</b> is the starting point of the INFOFISCUS Data Validation Tool.  
+It provides an overview of all features, modules, and guidance resources available to users.<br><br>
+
+<b>Purpose:</b><br>
+• Offer a central knowledge hub for all INFOFISCUS functionalities.<br>
+• Streamline onboarding for new users with quick navigation.<br>
+• Provide troubleshooting, FAQs, and best practices.<br><br>
+
+<b>What You’ll Find Here:</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Section</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Module-Specific Guides</td><td style="padding:6px; border:1px solid #334155;">Detailed help for connections, test cases, scheduling, results, and reports.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Visual Aids</td><td style="padding:6px; border:1px solid #334155;">Screenshots, diagrams, and flowcharts for easier learning.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Terminology</td><td style="padding:6px; border:1px solid #334155;">Definitions of technical terms and concepts.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Best Practices</td><td style="padding:6px; border:1px solid #334155;">Tips for improving accuracy, security, and performance.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Troubleshooting</td><td style="padding:6px; border:1px solid #334155;">Common issues and step-by-step resolutions.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">FAQs</td><td style="padding:6px; border:1px solid #334155;">Quick answers and related links for deeper learning.</td></tr>
+</table><br>
+
+<b>Getting Started:</b><br>
+1. Use the <b>sidebar menu</b> to navigate by feature (Connections, Test Cases, etc.).<br>
+2. Click on <b>highlighted links</b> inside help articles to explore related topics.<br>
+3. Use the <b>search bar</b> to quickly find relevant help content.<br>
+4. Start with <b>Getting Started, Create Connection, and Test Case Creation</b> guides.<br><br>
+
+<b>Your Role in Maximizing Help:</b><br>
+• Share feedback on documentation clarity.<br>
+• Suggest missing topics to enhance coverage.<br>
+• Contribute best practices for the user community.<br><br>
+
+<b>Example Use Case:</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Scenario</th>
+<th style="padding:8px; border:1px solid #334155;">How Home Help Supports</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">New User</td><td style="padding:6px; border:1px solid #334155;">Follows onboarding steps and basic guides.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Tester</td><td style="padding:6px; border:1px solid #334155;">Quickly finds info on connections, test cases, and validation rules.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Admin</td><td style="padding:6px; border:1px solid #334155;">Leverages troubleshooting tips and best practices for governance.</td></tr>
+</table><br>
+
+<b>Closing Note:</b><br>
+Exploring the <b>Home Help</b> section is the first step towards mastering INFOFISCUS and  
+transforming into a data validation expert.<br><br>
+
+<i>This is your central hub for learning, troubleshooting, and best practices within INFOFISCUS.</i>
+    """
+}
     }

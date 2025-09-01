@@ -268,6 +268,75 @@ Show Test Case puts lifecycle management at your fingertips:<br>
 
 # -------------------------------      Show Test Result  ---------------------------
 
+# "Show Test Results": {
+#     "title": "Show Test Results",
+#     "description": """
+# <b>Show Test Results – Help Guide</b><br><br>
+
+# <b>Overview</b><br>
+# The Show Test Results section is your dashboard for reviewing all completed test case executions. It provides detailed insights into tests that succeeded or failed, enabling you to understand the health of your data pipelines and validation efforts.<br><br>
+
+# <b>Key Features and Usage</b><br>
+# • <b>View All Results:</b> Lists all test runs created by the current user, showing status (pass/fail), execution time, associated test case, and summary info.<br>
+# • <b>Status Indicators:</b> Quickly identify failures or successes to prioritize troubleshooting.<br>
+# • <b>Regenerate Reports:</b> Select prior test executions and regenerate Excel reports without re-running tests—useful for sharing or archiving.<br>
+# • <b>Search and Filter:</b> Use the search bar and filters to find specific executions by name, date, or status.<br><br>
+
+# <b>Typical Workflow</b><br>
+# 1. Navigate to <b>Show Test Results</b> from the main menu.<br>
+# 2. Browse or search for the relevant test executions.<br>
+# 3. Review status and execution metadata.<br>
+# 4. Select one or more results to regenerate reports.<br>
+# 5. Click <b>Regenerate</b> to export Excel files for auditing or sharing.<br><br>
+
+# <b>Benefits</b><br>
+# • Centralized access to all validation results.<br>
+# • Simplifies compliance with easy report re-generation.<br>
+# • Saves time by avoiding re-execution for report generation.<br>
+# • Focuses attention on failing tests for faster resolution.<br><br>
+
+# <b>Best Practices</b><br>
+# • Regularly review results post-execution to catch issues early.<br>
+# • Use search and filters to efficiently manage large volumes.<br>
+# • Maintain consistent, descriptive test case naming for ease of use.<br>
+# • Regenerate reports as needed for stakeholders or compliance.<br><br>
+
+# <b>Diagram: Flowchart of User Actions</b><br>
+# <pre>
+# [Show Test Results Screen]
+# |
+# +-----+--------+-----------+
+# |     |        |           |
+# [Search] [Select Test] [View List]
+#   |         |         |
+#   |     +---+----+    |
+#   |     |        |    |
+# [Filter] [View Details] [Status (Pass/Fail)]
+# |
+# +-----+-----+
+# |           |
+# [Regenerate] [Close]
+# |
+# [Export Excel Report]
+# </pre><br>
+
+# <b>Task Summary Table</b><br>
+# <table border="1" cellpadding="5" cellspacing="0">
+# <tr><th>Step</th><th>Description</th><th>User Action</th></tr>
+# <tr><td><b>Open Results</b></td><td>Access Show Test Results page</td><td>Navigate via main menu</td></tr>
+# <tr><td><b>Search / Filter</b></td><td>Narrow down results by criteria</td><td>Use search bar and filters</td></tr>
+# <tr><td><b>Select Test Run</b></td><td>Highlight one or multiple test executions</td><td>Click row(s)</td></tr>
+# <tr><td><b>Review Status</b></td><td>Check pass/fail or in-progress indicators</td><td>View status icons</td></tr>
+# <tr><td><b>Regenerate Report</b></td><td>Export latest or prior test execution reports</td><td>Click Regenerate button</td></tr>
+# <tr><td><b>Use Reports</b></td><td>Download and share Excel files</td><td>Save to local storage</td></tr>
+# </table><br><br>
+
+# <b>Summary</b><br>
+# The Show Test Results page provides an essential interface for monitoring and leveraging your data validation outcomes. Through seamless search, detailed status views, and easy report regeneration, it supports ongoing data quality assurance and regulatory compliance in your organization.
+# """
+# }
+#     }
+
 "Show Test Results": {
     "title": "Show Test Results",
     "description": """
@@ -301,24 +370,8 @@ The Show Test Results section is your dashboard for reviewing all completed test
 • Maintain consistent, descriptive test case naming for ease of use.<br>
 • Regenerate reports as needed for stakeholders or compliance.<br><br>
 
-<b>Diagram: Flowchart of User Actions</b><br>
-<pre>
-[Show Test Results Screen]
-|
-+-----+--------+-----------+
-|     |        |           |
-[Search] [Select Test] [View List]
-  |         |         |
-  |     +---+----+    |
-  |     |        |    |
-[Filter] [View Details] [Status (Pass/Fail)]
-|
-+-----+-----+
-|           |
-[Regenerate] [Close]
-|
-[Export Excel Report]
-</pre><br>
+<b>Diagram</b><br>
+<img src="icons/show_test_result.png" alt="Show Test Results Diagram" style="max-width:100%; height:auto;"><br><br>
 
 <b>Task Summary Table</b><br>
 <table border="1" cellpadding="5" cellspacing="0">

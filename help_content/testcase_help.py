@@ -61,117 +61,12 @@ Follow the steps below to ensure correct, repeatable, and robust test cases.<br>
 • Results exported as Excel.<br>
 • Use <b>Previous</b> to revise selections.<br><br>
 
-<b>Typical Workflow Diagram:</b><br>
-<pre>
-[Create Test Case]
-   |
-   v
-[Enter Name] --> [Select Source Connection] --> [Fetch Source Table]
-      |                  |
-      v                  v
-[Select Validation Type] [Select Source Table(s)]
-   |
-   v
-[Next → Target Selection]
-   |
-   v
-[Select Target Connection] --> [Fetch Target Table]
-   |
-   v
-[Auto/Manual Table Mapping]
-   |
-   v
-[Next → Column Mapping]
-   |
-   v
-[Auto/Manual Column Map] — [Primary Key] — [Set Filters]
-   |
-   v
-[Save Mapping]
-   |
-   v
-[Execute] --> [Choose Excel Save Path]
-</pre><br>
+<b>Workflow Diagram</b><br>
+<img src="flowcharts/create_test_case2.jpg" alt="Create Test Case Diagram" style="max-width:100%; height:auto;"><br><br>
 
 <i>Following this guide ensures your test cases are created accurately, mapped correctly, and ready for automated/manual execution in InfoFiscus Data Validation Tool.</i>
 """
 }
-
-
-# "Create Test Case": {
-#     "title": "Create Test Case",
-#     "description": """
-# <b>Create Test Case – Help Guide</b><br><br>
-
-# <b>Overview:</b><br>
-# The Create Test Case feature allows you to configure, map, and prepare data validation scenarios (test cases) comparing source and target tables/columns across your connected databases. Follow the steps below to ensure correct, repeatable, and robust test cases for scheduled validation.<br><br>
-
-# <b>Step 1: Test Case Setup</b><br>
-# 1. <b>Access the Create Test Case Panel:</b> From the left menu, click <b>Create Test Case</b>.<br>
-# 2. <b>Enter a Test Case Name:</b> Input a unique name for the test case.<br>
-# <b>Best Practice:</b> Do not use spaces – use underscores instead (e.g., Customer_Validation_2025). Test cases with spaces in the name may fail during scheduling/execution.<br><br>
-
-# 3. <b>Select Source Connection:</b> Click the Select Connection dropdown. Choose the source database connection (e.g., Databricks, Snowflake, etc.).<br>
-# 4. <b>Fetch Source Tables:</b> Click <b>Fetch Source Table</b>. All tables available in your selected source connection will appear. Select the table(s) you want to use as the data source.<br>
-# 5. <b>Choose Validation Type:</b> From the validation type dropdown, choose the kind of comparison or data check you want to perform (e.g., row count, column data, etc.). Select relevant tables for validation.<br>
-# 6. <b>Proceed to the Next Step:</b> Click <b>Next</b> to move to table mapping.<br><br>
-
-# <b>Step 2: Target Table Selection and Mapping</b><br>
-# 7. <b>Select Target Connection:</b> Use the Target Connection dropdown to pick the database where your target tables are located.<br>
-# 8. <b>Fetch Target Tables:</b> Click <b>Fetch Target Table</b>. Target tables will be displayed in a list.<br>
-# 9. <b>Map Tables:</b> The system will attempt to automatically map source tables to matching target tables. If not automatically mapped, drag and drop tables from the left (source) to the right (target) to define the mapping. Mapped tables will be displayed in the "Mapped Tables" column.<br>
-# 10. <b>Unmap Functionality:</b> You can "unmap" any table if you wish to remove a pairing. Click <b>Next</b> to move to column mapping.<br><br>
-
-# <b>Step 3: Column Mapping and Filtering</b><br>
-# 11. <b>Review Source and Target Columns:</b> You’ll see columns from the source and target tables shown side-by-side. The system auto-maps columns with matching names (case-insensitive). Manual mapping can be done by dragging and dropping if necessary.<br>
-# 12. <b>Set Primary Key (Column Data Validation only):</b> For column data validation scenarios, primary keys must be set before mapping can be saved. If the primary key is defined in the table it will be auto-selected; if not, manually select the primary key column(s) by checking the corresponding boxes.<br>
-# 13. <b>Apply Filters (Optional):</b> Click the Filter button to add filtering conditions. In the popup, choose the column, operator (e.g., >, <, =, !=, LIKE), and value. Click Add to add more filter conditions, then Save.<br>
-# 14. <b>Save Mapping:</b> Once satisfied with table and column mappings (and filters), click <b>Save</b>. The mapping configuration saves your test case logic.<br>
-# 15. <b>Execute Test Case:</b> Click <b>Execute</b> to run the test validation immediately. The system will prompt you to select a path to save the executed Excel result file.<br><br>
-
-# <b>Tips & Important Notes:</b><br>
-# • Unique Test Case Names: Use only underscores, avoid spaces for compatibility with scheduling/execution.<br>
-# • Primary Key Required: For column data validation, primary keys must always be set (auto or manual).<br>
-# • Drag-and-Drop: Use for manual mapping where auto-matching fails or for custom mapping scenarios.<br>
-# • Filter Logic: Supports multi-condition, flexible filtering for focused test scenarios.<br>
-# • Excel Export: After execution, results are exported as Excel files for reporting/audit.<br>
-# • Navigation: Use the Previous button to step back and revise source/target selections if needed.<br><br>
-
-# <b>Typical Workflow Diagram:</b><br>
-# <pre>
-# [Create Test Case]
-# |
-# v
-# [Enter Name] --> [Select Source Connection] --> [Fetch Source Table]
-# |                               |
-# v                               v
-# [Select Validation Type]         [Select Source Table(s)]==|
-# |
-# v
-# [Next → Target Selection]
-# |
-# v
-# [Select Target Connection] --> [Fetch Target Table]
-# |
-# v
-# [Auto/Manual Table Mapping]
-# |
-# v
-# [Next → Column Mapping]
-# |
-# v
-# [Auto/Manual Column Map] — [Primary Key] — [Set Filters]
-# |
-# v
-# [Save Mapping]
-# |
-# v
-# [Execute] --> [Choose Excel Save Path]
-# </pre><br>
-
-# <i>Following this step-by-step guide ensures your test cases are created accurately, mapped correctly, and ready for robust automated or manual execution within InfoFiscus Data Validation Tool.</i>
-# """
-# }
 
 ,
 
@@ -222,29 +117,28 @@ C. <u>Delete Workflow</u><br>
 • The case is removed from the list, keeping your UI clean.<br><br>
 
 <b>Visual Workflow Diagram</b><br>
-<pre>
-[Show Test Case Page]
-|
-+---------------------+
-|        |            |
-[Edit]  [Delete]
-|        |
-[Load Editable   [Confirm deletion]
-Test Case UI]     |
-|                 [Case removed]
-|
-[Adjust settings, mappings]
-|
-[Table Mapping] → [Column Mapping]
-|
-[Save]/[Execute]
-</pre><br>
+<img src="flowcharts/show_test_case2.jpg" alt="Show Test Case Diagram" style="max-width:100%; height:auto;"><br><br>
 
 <b>Feature Comparison Table</b><br>
-<table border="1" cellpadding="5" cellspacing="0">
-<tr><th>Function</th><th>Purpose</th><th>Main Actions</th><th>When to Use</th></tr>
-<tr><td><b>Edit</b></td><td>Update an existing test case</td><td>Modify validation, mapping, logic</td><td>When requirements/data change or optimization is needed</td></tr>
-<tr><td><b>Delete</b></td><td>Remove test case</td><td>Select & confirm deletion</td><td>When case is obsolete, duplicated, or no longer needed</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-top:10px;">
+<tr style="background-color:#1e293b; color:#38bdf8; text-align:left;">
+  <th style="padding:6px; border:1px solid #334155;">Function</th>
+  <th style="padding:6px; border:1px solid #334155;">Purpose</th>
+  <th style="padding:6px; border:1px solid #334155;">Main Actions</th>
+  <th style="padding:6px; border:1px solid #334155;">When to Use</th>
+</tr>
+<tr>
+  <td style="padding:6px; border:1px solid #334155;"><b>Edit</b></td>
+  <td style="padding:6px; border:1px solid #334155;">Update an existing test case</td>
+  <td style="padding:6px; border:1px solid #334155;">Modify validation, mapping, logic</td>
+  <td style="padding:6px; border:1px solid #334155;">When requirements/data change or optimization is needed</td>
+</tr>
+<tr>
+  <td style="padding:6px; border:1px solid #334155;"><b>Delete</b></td>
+  <td style="padding:6px; border:1px solid #334155;">Remove test case</td>
+  <td style="padding:6px; border:1px solid #334155;">Select & confirm deletion</td>
+  <td style="padding:6px; border:1px solid #334155;">When case is obsolete, duplicated, or no longer needed</td>
+</tr>
 </table><br><br>
 
 <b>Best Practices & Tips</b><br>
@@ -267,75 +161,6 @@ Show Test Case puts lifecycle management at your fingertips:<br>
 
 
 # -------------------------------      Show Test Result  ---------------------------
-
-# "Show Test Results": {
-#     "title": "Show Test Results",
-#     "description": """
-# <b>Show Test Results – Help Guide</b><br><br>
-
-# <b>Overview</b><br>
-# The Show Test Results section is your dashboard for reviewing all completed test case executions. It provides detailed insights into tests that succeeded or failed, enabling you to understand the health of your data pipelines and validation efforts.<br><br>
-
-# <b>Key Features and Usage</b><br>
-# • <b>View All Results:</b> Lists all test runs created by the current user, showing status (pass/fail), execution time, associated test case, and summary info.<br>
-# • <b>Status Indicators:</b> Quickly identify failures or successes to prioritize troubleshooting.<br>
-# • <b>Regenerate Reports:</b> Select prior test executions and regenerate Excel reports without re-running tests—useful for sharing or archiving.<br>
-# • <b>Search and Filter:</b> Use the search bar and filters to find specific executions by name, date, or status.<br><br>
-
-# <b>Typical Workflow</b><br>
-# 1. Navigate to <b>Show Test Results</b> from the main menu.<br>
-# 2. Browse or search for the relevant test executions.<br>
-# 3. Review status and execution metadata.<br>
-# 4. Select one or more results to regenerate reports.<br>
-# 5. Click <b>Regenerate</b> to export Excel files for auditing or sharing.<br><br>
-
-# <b>Benefits</b><br>
-# • Centralized access to all validation results.<br>
-# • Simplifies compliance with easy report re-generation.<br>
-# • Saves time by avoiding re-execution for report generation.<br>
-# • Focuses attention on failing tests for faster resolution.<br><br>
-
-# <b>Best Practices</b><br>
-# • Regularly review results post-execution to catch issues early.<br>
-# • Use search and filters to efficiently manage large volumes.<br>
-# • Maintain consistent, descriptive test case naming for ease of use.<br>
-# • Regenerate reports as needed for stakeholders or compliance.<br><br>
-
-# <b>Diagram: Flowchart of User Actions</b><br>
-# <pre>
-# [Show Test Results Screen]
-# |
-# +-----+--------+-----------+
-# |     |        |           |
-# [Search] [Select Test] [View List]
-#   |         |         |
-#   |     +---+----+    |
-#   |     |        |    |
-# [Filter] [View Details] [Status (Pass/Fail)]
-# |
-# +-----+-----+
-# |           |
-# [Regenerate] [Close]
-# |
-# [Export Excel Report]
-# </pre><br>
-
-# <b>Task Summary Table</b><br>
-# <table border="1" cellpadding="5" cellspacing="0">
-# <tr><th>Step</th><th>Description</th><th>User Action</th></tr>
-# <tr><td><b>Open Results</b></td><td>Access Show Test Results page</td><td>Navigate via main menu</td></tr>
-# <tr><td><b>Search / Filter</b></td><td>Narrow down results by criteria</td><td>Use search bar and filters</td></tr>
-# <tr><td><b>Select Test Run</b></td><td>Highlight one or multiple test executions</td><td>Click row(s)</td></tr>
-# <tr><td><b>Review Status</b></td><td>Check pass/fail or in-progress indicators</td><td>View status icons</td></tr>
-# <tr><td><b>Regenerate Report</b></td><td>Export latest or prior test execution reports</td><td>Click Regenerate button</td></tr>
-# <tr><td><b>Use Reports</b></td><td>Download and share Excel files</td><td>Save to local storage</td></tr>
-# </table><br><br>
-
-# <b>Summary</b><br>
-# The Show Test Results page provides an essential interface for monitoring and leveraging your data validation outcomes. Through seamless search, detailed status views, and easy report regeneration, it supports ongoing data quality assurance and regulatory compliance in your organization.
-# """
-# }
-#     }
 
 "Show Test Results": {
     "title": "Show Test Results",
@@ -370,22 +195,29 @@ The Show Test Results section is your dashboard for reviewing all completed test
 • Maintain consistent, descriptive test case naming for ease of use.<br>
 • Regenerate reports as needed for stakeholders or compliance.<br><br>
 
-<b>Diagram</b><br>
-<img src="icons/show_test_result.png" alt="Show Test Results Diagram" style="max-width:100%; height:auto;"><br><br>
+<b>Visual Workflow Diagram</b><br>
+<img src="flowcharts/show_test_result.png" alt="Show Test Results Diagram" style="max-width:100%; height:auto;"><br><br>
 
 <b>Task Summary Table</b><br>
-<table border="1" cellpadding="5" cellspacing="0">
-<tr><th>Step</th><th>Description</th><th>User Action</th></tr>
-<tr><td><b>Open Results</b></td><td>Access Show Test Results page</td><td>Navigate via main menu</td></tr>
-<tr><td><b>Search / Filter</b></td><td>Narrow down results by criteria</td><td>Use search bar and filters</td></tr>
-<tr><td><b>Select Test Run</b></td><td>Highlight one or multiple test executions</td><td>Click row(s)</td></tr>
-<tr><td><b>Review Status</b></td><td>Check pass/fail or in-progress indicators</td><td>View status icons</td></tr>
-<tr><td><b>Regenerate Report</b></td><td>Export latest or prior test execution reports</td><td>Click Regenerate button</td></tr>
-<tr><td><b>Use Reports</b></td><td>Download and share Excel files</td><td>Save to local storage</td></tr>
+<table style="width:100%; border-collapse: collapse; margin-top:10px;">
+<tr style="background-color:#1e293b; color:#38bdf8; text-align:left;">
+  <th style="padding:6px; border:1px solid #334155;">Step</th>
+  <th style="padding:6px; border:1px solid #334155;">Description</th>
+  <th style="padding:6px; border:1px solid #334155;">User Action</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Open Results</td><td style="padding:6px; border:1px solid #334155;">Access Show Test Results page</td><td style="padding:6px; border:1px solid #334155;">Navigate via main menu</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Search / Filter</td><td style="padding:6px; border:1px solid #334155;">Narrow down results by criteria</td><td style="padding:6px; border:1px solid #334155;">Use search bar and filters</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Select Test Run</td><td style="padding:6px; border:1px solid #334155;">Highlight one or multiple test executions</td><td style="padding:6px; border:1px solid #334155;">Click row(s)</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Review Status</td><td style="padding:6px; border:1px solid #334155;">Check pass/fail or in-progress indicators</td><td style="padding:6px; border:1px solid #334155;">View status icons</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Regenerate Report</td><td style="padding:6px; border:1px solid #334155;">Export latest or prior test execution reports</td><td style="padding:6px; border:1px solid #334155;">Click Regenerate button</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Use Reports</td><td style="padding:6px; border:1px solid #334155;">Download and share Excel files</td><td style="padding:6px; border:1px solid #334155;">Save to local storage</td></tr>
 </table><br><br>
 
 <b>Summary</b><br>
-The Show Test Results page provides an essential interface for monitoring and leveraging your data validation outcomes. Through seamless search, detailed status views, and easy report regeneration, it supports ongoing data quality assurance and regulatory compliance in your organization.
+The Show Test Results page provides an essential interface for monitoring and leveraging your data validation outcomes. Through seamless search, detailed status views, and easy report regeneration, it supports ongoing data quality assurance and regulatory compliance in your organization. <br>
 """
 }
-    }
+
+    
+}
+

@@ -79,12 +79,12 @@ This module enables seamless and secure integration with <b>Oracle Databases</b>
 <tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">Database server port (default: 1521).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Database name or SID of the Oracle instance.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">Schema name to access Oracle tables.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Service Name</td><td style="padding:6px; border:1px solid #334155;">Oracle Service Name (used for RAC or multi-tenant setups).</td><td style="padding:6px; border:1px solid #334155;">No</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Service Name</td><td style="padding:6px; border:1px solid #334155;">Oracle Service Name (used for RAC or multi-tenant setups).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>
 1. <b>Enter Connection Name:</b> Example → Finance_Oracle_Prod_2025.<br>
-2. <b>Fill Credentials:</b> Enter Username, Password, Host, Port, Database, Schema, Service Name (if applicable).<br>
+2. <b>Fill Credentials:</b> Enter Username, Password, Host, Port, Database, Schema, Service Name.<br>
 3. <b>Test Connection:</b> Click <b>Test</b> to verify. If it fails, check inputs or contact DBA.<br>
 4. <b>Save:</b> Once successful, click <b>Save</b> to register the connection.<br><br>
 
@@ -97,7 +97,7 @@ This module enables seamless and secure integration with <b>Oracle Databases</b>
 • <b>Duplicate Name:</b> Change the connection name.<br>
 • <b>Auth Errors:</b> Verify credentials and privileges.<br>
 • <b>Network Issues:</b> Confirm host/port with IT.<br>
-• <b>Schema/Service Name Issues:</b> Ensure they are valid in RAC/multi-tenant setups.<br><br>
+• <b>Schema/Service Name Issues:</b> Ensure they are valid names.<br><br>
 
 <b>Example:</b><br>
 <table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
@@ -400,7 +400,7 @@ and reporting within the INFOFISCUS Data Validation Tool.<br><br>
 <tr><td style="padding:6px; border:1px solid #334155;">Warehouse</td><td style="padding:6px; border:1px solid #334155;">Name of the compute warehouse to use for query execution.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Target Snowflake database name.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">Database schema to access tables within Snowflake.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Role</td><td style="padding:6px; border:1px solid #334155;">Role to use for permissions and access control.</td><td style="padding:6px; border:1px solid #334155;">No</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Role</td><td style="padding:6px; border:1px solid #334155;">Role to use for permissions and access control.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>
@@ -506,6 +506,7 @@ and interactive query scenarios.<br><br>
 6. <b>Save:</b> Once successful, click <b>Save</b> to register the connection.<br><br>
 
 <b>Important Notes:</b><br>
+• The StarRocks database must be Enabled in the user system before connecting/validating.<br>
 • The host must point to a StarRocks Frontend (FE) node, not backend or other services.<br>
 • The port is typically 9030, do not use MySQL default port 3306 or PostgreSQL's 5432.<br>
 • Make sure your network/firewall allows communication over port 9030 to the FE host.<br><br>

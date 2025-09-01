@@ -15,7 +15,7 @@ It provides an overview of all features, modules, and guidance resources availab
 <b>Purpose:</b><br>
 • Offer a central knowledge hub for all INFOFISCUS functionalities.<br>
 • Streamline onboarding for new users with quick navigation.<br>
-• Provide troubleshooting, FAQs, and best practices.<br><br>
+• Provide troubleshooting, resources, and best practices.<br><br>
 
 <b>What You’ll Find Here:</b><br>
 <table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
@@ -28,14 +28,12 @@ It provides an overview of all features, modules, and guidance resources availab
 <tr><td style="padding:6px; border:1px solid #334155;">Terminology</td><td style="padding:6px; border:1px solid #334155;">Definitions of technical terms and concepts.</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Best Practices</td><td style="padding:6px; border:1px solid #334155;">Tips for improving accuracy, security, and performance.</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Troubleshooting</td><td style="padding:6px; border:1px solid #334155;">Common issues and step-by-step resolutions.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">FAQs</td><td style="padding:6px; border:1px solid #334155;">Quick answers and related links for deeper learning.</td></tr>
 </table><br>
 
 <b>Getting Started:</b><br>
 1. Use the <b>sidebar menu</b> to navigate by feature (Connections, Test Cases, etc.).<br>
-2. Click on <b>highlighted links</b> inside help articles to explore related topics.<br>
-3. Use the <b>search bar</b> to quickly find relevant help content.<br>
-4. Start with <b>Getting Started, Create Connection, and Test Case Creation</b> guides.<br><br>
+2. Use the <b>search bar</b> to quickly find relevant help content.<br>
+3. Start with <b>Getting Started, Create Connection, and Test Case Creation</b> guides.<br><br>
 
 <b>Your Role in Maximizing Help:</b><br>
 • Share feedback on documentation clarity.<br>

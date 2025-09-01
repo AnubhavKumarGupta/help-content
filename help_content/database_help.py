@@ -591,7 +591,7 @@ for staging and file-based workflows.<br><br>
 <tr><td style="padding:6px; border:1px solid #334155;">Bucket Name</td><td style="padding:6px; border:1px solid #334155;">GCS bucket used for staging/exporting data files.</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Folder Path</td><td style="padding:6px; border:1px solid #334155;">GCS folder path (e.g., exports/2025/).</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Service Account Json</td><td style="padding:6px; border:1px solid #334155;">JSON key file with permissions to access GCS.</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Endpoint Url</td><td style="padding:6px; border:1px solid #334155;">Optional custom/private GCS endpoint URL.</td><td style="padding:6px; border:1px solid #334155;">No</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Endpoint Url</td><td style="padding:6px; border:1px solid #334155;">Optional custom/private GCS endpoint URL.</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>

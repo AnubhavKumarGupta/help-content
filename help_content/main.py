@@ -135,6 +135,8 @@ class HelpContentWidget(QWidget):
         self.content_widget = QWidget()
         self.content_layout = QVBoxLayout(self.content_widget)
         self.content_layout.setSpacing(15)
+        self.content_widget.setStyleSheet("background-color: #182334; color: white;")
+
         
         # Title label
         self.title_label = QLabel()
@@ -154,12 +156,13 @@ class HelpContentWidget(QWidget):
         desc_font.setPointSize(12)
         self.description_label.setFont(desc_font)
         self.description_label.setStyleSheet("""
-            color: white; 
-            line-height: 1.6;
-            padding: 10px;
-            background-color: rgba(255,255,255,0.05);
-            border-radius: 8px;
-        """)
+                color: white;
+                line-height: 1.6;
+                padding: 10px;
+                background-color: #182334;
+                border-radius: 0;
+            """)
+
         
         # Add labels to content layout
         self.content_layout.addWidget(self.title_label)
@@ -231,6 +234,8 @@ class MainWindow(QMainWindow):
 
         self.sidebar = self.create_sidebar()
         self.help_widget = HelpContentWidget()
+        # In apply_custom_theme or directly on your help_widget/content widget:
+        self.help_widget.setStyleSheet("background-color: #182334; color: white;")
 
         # Set initial help content (Home page)
         home_content = self.help_manager.get_help_content("Home")
@@ -368,31 +373,33 @@ class MainWindow(QMainWindow):
                 color: white;
             }
             QTreeWidget {
-                background-color: #141d2b;
+                background-color: #182334;
                 border-right: 1px solid #333;
                 color: white;
-                font-size: 14px;
+                font-size: 16px;
+                font-family: 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif
             }
+
             QScrollArea {
-                background-color: #1e2936;
+                background-color: #182334;
                 border: 1px solid #333;
                 border-radius: 8px;
             }
             QScrollArea > QWidget > QWidget {
-                background-color: #1e2936;
+                background-color: #182334;
             }
             QScrollBar:vertical {
-                background-color: #2a3441;
+                background-color: #182334;
                 width: 12px;
                 border-radius: 6px;
             }
             QScrollBar::handle:vertical {
-                background-color: #068293;
+                background-color: #182334;
                 border-radius: 6px;
                 min-height: 20px;
             }
             QScrollBar::handle:vertical:hover {
-                background-color: #0a9fb5;
+                background-color: #182334;
             }
             QTreeWidget::item {
                 padding: 5px;
@@ -419,5 +426,3 @@ if __name__ == "__main__":
     
     window.show()
     run_app(app)
-
-    

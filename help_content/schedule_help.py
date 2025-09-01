@@ -46,9 +46,9 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 &nbsp;&nbsp; • <b>Timezones:</b> Select or start typing your timezone. The dropdown supports search for convenience.<br>
 &nbsp;&nbsp; • <b>Start Date & End Date:</b> Set the period during which you want the test case to run.<br>
 &nbsp;&nbsp; • <b>Frequency of Scheduling:</b><br>
-&nbsp;&nbsp;&nbsp;&nbsp;• Once (default) • runs just one time<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• Hourly, Daily, Weekly, Monthly – regular intervals<br>
-&nbsp;&nbsp;&nbsp;&nbsp;• Custom – set your own frequency rules<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Once (default) • runs just one time<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Hourly, Daily, Weekly, Monthly – regular intervals<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; • Custom – set your own frequency rules<br>
 &nbsp;&nbsp; • <b>Start Time:</b> Set the exact time when the test should begin on the chosen days.<br><br>
 
 5. <b>Schedule the Test Case:</b><br>

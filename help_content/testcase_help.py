@@ -108,13 +108,13 @@ B. <u>Edit Workflow</u><br>
   – Select/deselect tables as required.<br>
 • <b>Table Mapping:</b> Click <b>Table Mapping</b> to map or unmap source/target tables (drag-and-drop or auto-mapping).<br>
 • <b>Column Mapping:</b> Click <b>Column Mapping</b> to pair columns, update primary keys (mandatory for column data validation), and define filters.<br>
-• <b>Save & Execute:</b> Save to update the case. Optionally, execute immediately to validate with new settings and download results.<br>
+• <b>Save & Execute:</b> Save to update the test case. Optionally, execute immediately to validate with new settings and download results.<br>
 <i>Note:</i> Only validation, logic, and mappings can be edited—test case name and source connection usually stay fixed.<br><br>
 
 C. <u>Delete Workflow</u><br>
-• <b>Select & Delete:</b> Choose an unwanted case and click Delete.<br>
+• <b>Select & Delete:</b> Choose an unwanted test case and click Delete.<br>
 • <b>Confirm:</b> Approve the prompt to remove it permanently.<br>
-• The case is removed from the list, keeping your UI clean.<br><br>
+• The test case is removed from the list, keeping your UI clean.<br><br>
 
 <b>Visual Workflow Diagram</b><br>
 <img src="flowcharts/show_test_case2.jpg" alt="Show Test Case Diagram" style="max-width:100%; height:auto;"><br><br>
@@ -137,7 +137,7 @@ C. <u>Delete Workflow</u><br>
   <td style="padding:6px; border:1px solid #334155;"><b>Delete</b></td>
   <td style="padding:6px; border:1px solid #334155;">Remove test case</td>
   <td style="padding:6px; border:1px solid #334155;">Select & confirm deletion</td>
-  <td style="padding:6px; border:1px solid #334155;">When case is obsolete, duplicated, or no longer needed</td>
+  <td style="padding:6px; border:1px solid #334155;">When test case is obsolete, duplicated, or no longer needed</td>
 </tr>
 </table><br><br>
 
@@ -218,6 +218,6 @@ The Show Test Results page provides an essential interface for monitoring and le
 """
 }
 
-    
+       
 }
 

@@ -105,7 +105,6 @@ This section lists all users in a <b>tabular format</b> for quick overview & man
 
 # ---------------------------------   Admin Update Logout  -------------------------
 
-
 "Update Logout Time": {
             "title": "Update Logout Time",
             "description": """

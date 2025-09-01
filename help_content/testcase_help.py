@@ -21,7 +21,7 @@ Follow the steps below to ensure correct, repeatable, and robust test cases.<br>
 <th style="padding:8px; border:1px solid #334155;">Details</th>
 </tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Access Create Test Case Panel</td><td style="padding:6px; border:1px solid #334155;">From the left menu, click <b>Create Test Case</b>.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Enter Test Case Name</td><td style="padding:6px; border:1px solid #334155;">Input a unique name.<br><b>Best Practice:</b> Use underscores (e.g., Customer_Validation_2025). Spaces may cause failures.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Enter Test Case Name</td><td style="padding:6px; border:1px solid #334155;">• Input a unique name.<br><b> • Best Practice:</b> Use underscores (e.g., Customer_Validation_2025). Spaces may cause failures.</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Select Source Connection</td><td style="padding:6px; border:1px solid #334155;">Choose the source DB connection (Databricks, Snowflake, etc.) from the dropdown.</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Fetch Source Tables</td><td style="padding:6px; border:1px solid #334155;">Click <b>Fetch Source Table</b>. Select the table(s) to validate.</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Choose Validation Type</td><td style="padding:6px; border:1px solid #334155;">Select Row Count, Column Data, Schema Validation, etc.</td></tr>
@@ -36,8 +36,8 @@ Follow the steps below to ensure correct, repeatable, and robust test cases.<br>
 </tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Select Target Connection</td><td style="padding:6px; border:1px solid #334155;">Pick the target DB connection from dropdown.</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Fetch Target Tables</td><td style="padding:6px; border:1px solid #334155;">Click <b>Fetch Target Table</b> to view available tables.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Map Tables</td><td style="padding:6px; border:1px solid #334155;">Auto-mapping suggested; if not, drag & drop manually.<br>Mapped tables appear under <b>Mapped Tables</b>.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Unmap Function</td><td style="padding:6px; border:1px solid #334155;">Click <b>Unmap</b> to remove mapping.<br>Click <b>Next</b> for column mapping.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Map Tables</td><td style="padding:6px; border:1px solid #334155;">• Auto-mapping suggested; if not, drag & drop manually.<br> • Mapped tables appear under <b>Mapped Tables</b>.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Unmap Function</td><td style="padding:6px; border:1px solid #334155;"> • Click <b>Unmap</b> to remove mapping(if required).<br>• Click <b>Next</b> for column mapping.</td></tr>
 </table><br>
 
 <b>Step 3: Column Mapping and Filtering</b><br>
@@ -46,11 +46,11 @@ Follow the steps below to ensure correct, repeatable, and robust test cases.<br>
 <th style="padding:8px; border:1px solid #334155;">Action</th>
 <th style="padding:8px; border:1px solid #334155;">Details</th>
 </tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Review Columns</td><td style="padding:6px; border:1px solid #334155;">Source & Target columns shown side-by-side.<br>Auto-mapped if names match.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Set Primary Key</td><td style="padding:6px; border:1px solid #334155;">Required for Column Data Validation.<br>Auto-selected if present; else select manually.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Apply Filters</td><td style="padding:6px; border:1px solid #334155;">Add filter conditions (column, operator, value).<br>Supports multiple filters.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Review Columns</td><td style="padding:6px; border:1px solid #334155;"> • Source & Target columns shown side-by-side.<br> • Auto-mapped if names match.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Set Primary Key</td><td style="padding:6px; border:1px solid #334155;">• Required for Column Data Validation.<br> • Auto-selected if present; else select manually.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Apply Filters</td><td style="padding:6px; border:1px solid #334155;"> • Add filter conditions (column, operator, value).<br> • Supports multiple filters.</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Save Mapping</td><td style="padding:6px; border:1px solid #334155;">Click <b>Save</b> to save mappings.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Execute</td><td style="padding:6px; border:1px solid #334155;">Click <b>Execute</b> to run test case.<br>Choose location to save Excel result file.</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Execute</td><td style="padding:6px; border:1px solid #334155;"> • Click <b>Execute</b> to run test case.<br> • Choose location to save Excel result file.</td></tr>
 </table><br>
 
 <b>Tips & Notes:</b><br>

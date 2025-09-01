@@ -196,7 +196,7 @@ The Show Test Results section is your dashboard for reviewing all completed test
 • Regenerate reports as needed for stakeholders or compliance.<br><br>
 
 <b>Visual Workflow Diagram</b><br>
-<img src="flowcharts/show_test_result.png" alt="Show Test Results Diagram" style="max-width:100%; height:auto;"><br><br>
+<img src="flowcharts/show_test_result.jpg" alt="Show Test Results Diagram" style="max-width:100%; height:auto;"><br><br>
 
 <b>Task Summary Table</b><br>
 <table style="width:100%; border-collapse: collapse; margin-top:10px;">
@@ -214,7 +214,7 @@ The Show Test Results section is your dashboard for reviewing all completed test
 </table><br><br>
 
 <b>Summary</b><br>
-The Show Test Results page provides an essential interface for monitoring and leveraging your data validation outcomes. Through seamless search, detailed status views, and easy report regeneration, it supports ongoing data quality assurance and regulatory compliance in your organization. <br>
+The Show Test Results page provides an essential interface for monitoring and leveraging your data validation outcomes. Through seamless search, detailed status views, and easy report regeneration, it supports ongoing data quality assurance and regulatory compliance in your organization.
 """
 }
 

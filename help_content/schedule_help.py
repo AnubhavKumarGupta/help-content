@@ -135,36 +135,8 @@ Instantly regenerates the result file for a previously scheduled test case job, 
 • <b>User Dropdown:</b> Admins can filter scheduled jobs by user, making management in multi-user environments faster.<br>
 • <b>Refresh:</b> Keeps your job list up to date with latest changes.<br><br>
 
-<b>Typical Workflow – Flowchart</b><br>
-<pre>
-+-----------------------------+
-| Show Schedule Jobs          |
-+-----------------------------+
-          |
-+---------+---------+---------+
-|         |         |         |
-[Edit]   [Delete]  [Generate]
-|         |         |
-Select Job Select Job Select Job
-|         |         |
-Edit timing, freq,  Confirm and  Generate/export
-and schedule        delete job   Excel results file
-|                                |
-SCHEDULE and done   UI cleans up Save Excel
-</pre><br>
-
-Or in "steps arrows" visual form:<br>
-<pre>
-[Select Test Case]
-|
-+---------+---------+---------+---------+
-|         |         |         |         |
-Edit     Delete   Generate   Search/Filter
-|         |         |         |
-Edit form Remove   Download   Find job fast
-|         |
-Reschedule Clean   Excel file
-</pre><br>
+<b>Visual Workflow Diagram</b><br>
+<img src="flowcharts/show_schedule_jobs.png" alt="Show Scheduled Jobs Diagram" style="max-width:100%; height:auto;"><br><br>
 
 <b>Best Practices</b><br>
 • <b>Housekeeping:</b> Regularly delete unwanted or expired scheduled jobs—keeps the environment fast, secure, and clutter-free.<br>

@@ -723,7 +723,7 @@ Connections can be:<br>
 <tr><td style="padding:6px; border:1px solid #334155;">Folder Path</td><td style="padding:6px; border:1px solid #334155;">S3 folder for files (e.g., exports/2025/).</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Access Key Id</td><td style="padding:6px; border:1px solid #334155;">AWS IAM access key with S3 permissions.</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
 <tr><td style="padding:6px; border:1px solid #334155;">Secret Access Key</td><td style="padding:6px; border:1px solid #334155;">Secret key corresponding to the access key ID.</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155;">Endpoint Url</td><td style="padding:6px; border:1px solid #334155;">Custom endpoint (for VPC/private S3).</td><td style="padding:6px; border:1px solid #334155;">No</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Endpoint Url</td><td style="padding:6px; border:1px solid #334155;">Custom endpoint (for VPC/private S3).</td><td style="padding:6px; border:1px solid #334155;">Yes (if target)</td></tr>
 </table><br>
 
 <b>Step-by-Step Instructions:</b><br>
@@ -735,7 +735,7 @@ Connections can be:<br>
 
 <b>With TARGET:</b><br>
 1. Enable the <b>TARGET</b> option.<br>
-2. Provide S3 details (Bucket, Region, Folder, Keys, Endpoint if needed).<br>
+2. Provide S3 details (Bucket, Region, Folder, Keys, Endpoint).<br>
 3. Click <b>Test</b> – validates both Redshift and S3 credentials.<br>
 4. Click <b>Save</b> to register.<br><br>
 
@@ -887,6 +887,9 @@ Connections can be configured in two ways:<br>
 3. Click <b>Test</b> – validates both Synapse and Blob credentials.<br>
 4. If successful, click <b>Save</b>.<br><br>
 
+<b>Important Notes:</b><br>
+• Ensure that Azure Synapse is resumed before connecting/validating.<br><br>
+
 <b>Why and When to Use TARGET</b><br>
 Target credentials allow Synapse to read from and write to Azure Blob Storage. They are required when:<br>
 • Exporting query results to Blob containers.<br>
@@ -940,6 +943,7 @@ Target credentials allow Synapse to read from and write to Azure Blob Storage. T
 </table><br>
 
 <b>Best Practices</b><br>
+• Pause the Azure Synapse when not in use to reduce billing and usage of resources.<br>
 • Use descriptive, unique names for each connection.<br>
 • Rotate Account Keys periodically and keep them secure.<br>
 • Apply least-privilege access for Blob containers.<br>

@@ -420,9 +420,9 @@ if __name__ == "__main__":
             print(f"  - {issue}")
     
     # Print content statistics (optional debugging)
-    stats = window.get_help_statistics()
-    print(f"Help content loaded: {stats['total_items']} items")
-    print(f"Categories: {dict(stats['categories'])}")
+    # stats = window.get_help_statistics()
+    # print(f"Help content loaded: {stats['total_items']} items")
+    # print(f"Categories: {dict(stats['categories'])}")
     
     window.show()
     run_app(app)

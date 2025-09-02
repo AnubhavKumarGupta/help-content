@@ -25,9 +25,9 @@ reset their passwords, update logout sessions, and ensure smooth & secure operat
 • <b>Admin:</b> Manage user accounts and key settings.<br><br>
 
 <b>Security Features:</b><br>
-• Strong password enforcement<br>
-• Role-based access permissions<br>
-• Session tracking & logout update
+• Strong password enforcement.<br>
+• Role-based access permissions.<br>
+• Session tracking & logout update.
 """
         },
 

@@ -26,6 +26,7 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 &nbsp;&nbsp; • If not installed, simply click the buttons provided in the UI (WSL Install, Install Ubuntu, Airflow Install) and follow prompts - they automate the setup for you.<br>
 &nbsp;&nbsp; • You only need to install these components once per machine.<br><br>
 • <b>For Astronomer:</b><br>
+&nbsp;&nbsp; • First click the Astro Install button from the UI - this ensures Astro CLI is installed in your system (You only need to install this component once per machine). <br>
 &nbsp;&nbsp; • Simply click the Astro Setup button before scheduling - this ensures necessary back-end setup for Astronomer integration.<br><br>
 
 <b>Step-by-Step Guide</b><br>
@@ -35,7 +36,7 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 
 2. <b>Complete Platform Setup (if needed):</b><br>
 &nbsp;&nbsp; • <b>For Airflow Local Server:</b> Ensure WSL, Ubuntu, and Airflow are all installed using the setup buttons.<br>
-&nbsp;&nbsp; • <b>For Astronomer:</b> Click Astro Setup for one-time environment configuration.<br><br>
+&nbsp;&nbsp; • <b>For Astronomer:</b> Ensure Astro CLI is installed using the setup button and then click Astro Setup for one-time environment configuration.<br><br>
 
 3. <b>Select Test Case:</b><br>
 &nbsp;&nbsp; • In Test Case Name, start typing the name or use the search bar to find the test case you want to schedule.<br>
@@ -70,6 +71,7 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 • For all subsequent test case schedules in the same session, just click <b>SCHEDULE</b>.<br><br>
 
 <b>Summary of Process (Astronomer)</b><br>
+• Select or Install Astro (use button if not installed).<br>
 • Click <b>Astro Setup</b> (one-time each session, as prompted).<br>
 • Search/select the test case, set schedule details, and click <b>SCHEDULE</b>.<br><br>
 

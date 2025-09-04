@@ -35,6 +35,12 @@ Each database type includes customized:<br>
 • Security configuration options<br>
 • Data type mapping for test cases<br><br>
 
+<b> Selection Guide:</b><br>
+• <b>On-Premise:</b> Oracle, SQL Server, PostgreSQL, MySQL<br>
+• <b>Cloud-Native:</b> BigQuery, RedShift, Synapse<br>
+• <b>Analytics-Focused:</b> Snowflake, Databricks, StarRocks<br>
+• <b>Hybrid:</b> PostgreSQL, SQL Server (cloud versions available)<br><br>
+
 <i> Click on your specific database type to see detailed 
 connection setup instructions and requirements.</i>
 """
@@ -43,162 +49,80 @@ connection setup instructions and requirements.</i>
 
 # ---------------------------------         Oracle       --------------------------------
 
-# "Oracle": {
-#             "title": "Oracle Database Connection",
-#             "description": """
-# <b>Oracle Database Connection - Help Guide</b><br><br>
+"Oracle": {
+            "title": "Oracle Database Connection",
+            "description": """
+<b>Oracle Database Connection - Help Guide</b><br><br>
 
-# This module enables seamless and secure integration with <b>Oracle Databases</b> for 
-# <b>data validation, analysis</b> within the INFOFISCUS Data Validation Tool.<br><br>
+This module enables seamless and secure integration with <b>Oracle Databases</b> for 
+<b>data validation, reporting, and analysis</b> within the INFOFISCUS Data Validation Tool.<br><br>
 
-# <b>How to Navigate:</b><br>
-# 1. Click <b>Connection</b> on the sidebar.<br>
-# 2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-# 3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
-# 4. Select <b>Oracle</b> from the list of available databases.<br><br>
+<b>How to Navigate:</b><br>
+1. Click <b>Connection</b> on the sidebar.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
+4. Select <b>Oracle</b> from the list of available databases.<br><br>
 
-# <b>Required Fields (UI Reference):</b><br>
-# <table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
-# <tr style="background:#1e293b; color:#38bdf8; text-align:left;">
-# <th style="padding:8px; border:1px solid #334155;">Field Name</th>
-# <th style="padding:8px; border:1px solid #334155;">Description</th>
-# <th style="padding:8px; border:1px solid #334155;">Required</th>
-# </tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique name for this connection. Duplicate names are not allowed.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">Oracle account username for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">Account password (hidden, with option to show).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">Hostname or IP address of the Oracle DB server (e.g., db.example.com).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">Database server port (default: 1521).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Database name or SID of the Oracle instance.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">Schema name to access Oracle tables.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Service Name</td><td style="padding:6px; border:1px solid #334155;">Oracle Service Name (used for RAC or multi-tenant setups).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# </table><br>
+<b>Required Fields (UI Reference):</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field Name</th>
+<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:8px; border:1px solid #334155;">Required</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique name for this connection. Duplicate names are not allowed.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">Oracle account username for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">Account password (hidden, with option to show).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">Hostname or IP address of the Oracle DB server (e.g., db.example.com).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">Database server port (default: 1521).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">Database name or SID of the Oracle instance.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">Schema name to access Oracle tables.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Service Name</td><td style="padding:6px; border:1px solid #334155;">Oracle Service Name (used for RAC or multi-tenant setups).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
+</table><br>
 
-# <b>Step-by-Step Instructions:</b><br>
-# 1. <b>Enter Connection Name:</b> Example → Finance_Oracle_Prod_2025.<br>
-# 2. <b>Fill Credentials:</b> Enter Username, Password, Host, Port, Database, Schema, Service Name.<br>
-# 3. <b>Test Connection:</b> Click <b>Test</b> to verify. If it fails, check inputs or contact DBA.<br>
-# 4. <b>Save:</b> Once successful, click <b>Save</b> to register the connection.<br><br>
+<b>Step-by-Step Instructions:</b><br>
+1. <b>Enter Connection Name:</b> Example → Finance_Oracle_Prod_2025.<br>
+2. <b>Fill Credentials:</b> Enter Username, Password, Host, Port, Database, Schema, Service Name.<br>
+3. <b>Test Connection:</b> Click <b>Test</b> to verify. If it fails, check inputs or contact DBA.<br>
+4. <b>Save:</b> Once successful, click <b>Save</b> to register the connection.<br><br>
 
-# <b>Best Practices:</b><br>
-# • Always use descriptive, unique connection names.<br>
-# • Do not reuse connection names across environments.<br>
-# • Use individual credentials for accountability.<br> <br>
+<b>Best Practices:</b><br>
+• Always use descriptive, unique connection names.<br>
+• Do not reuse connection names across environments.<br>
+• Use individual credentials for accountability.<br> <br>
 
-# <b>Troubleshooting Tips:</b><br>
-# • <b>Duplicate Name:</b> Change the connection name.<br>
-# • <b>Auth Errors:</b> Verify credentials and privileges.<br>
-# • <b>Network Issues:</b> Confirm host/port with IT.<br>
-# • <b>Schema/Service Name Issues:</b> Ensure they are valid names.<br><br>
+<b>Troubleshooting Tips:</b><br>
+• <b>Duplicate Name:</b> Change the connection name.<br>
+• <b>Auth Errors:</b> Verify credentials and privileges.<br>
+• <b>Network Issues:</b> Confirm host/port with IT.<br>
+• <b>Schema/Service Name Issues:</b> Ensure they are valid names.<br><br>
 
-# <b>Example:</b><br>
-# <table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
-# <tr style="background:#1e293b; color:#38bdf8; text-align:left;">
-# <th style="padding:8px; border:1px solid #334155;">Field</th>
-# <th style="padding:8px; border:1px solid #334155;">Example Value</th>
-# </tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Oracle_Prod_FIN2025</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">finance_user</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">oracle-db.company.com</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">1521</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">FINANCE</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">FIN_DATA</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155;">Service Name</td><td style="padding:6px; border:1px solid #334155;">prod_fin_srv</td></tr>
-# </table><br>
+<b>Example:</b><br>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
+<tr style="background:#1e293b; color:#38bdf8; text-align:left;">
+<th style="padding:8px; border:1px solid #334155;">Field</th>
+<th style="padding:8px; border:1px solid #334155;">Example Value</th>
+</tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Oracle_Prod_FIN2025</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Username</td><td style="padding:6px; border:1px solid #334155;">finance_user</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Host</td><td style="padding:6px; border:1px solid #334155;">oracle-db.company.com</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Port</td><td style="padding:6px; border:1px solid #334155;">1521</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Database</td><td style="padding:6px; border:1px solid #334155;">FINANCE</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Schema</td><td style="padding:6px; border:1px solid #334155;">FIN_DATA</td></tr>
+<tr><td style="padding:6px; border:1px solid #334155;">Service Name</td><td style="padding:6px; border:1px solid #334155;">prod_fin_srv</td></tr>
+</table><br>
 
-# <b>Advanced Tips:</b><br>
-# • Use TNS strings or VPN if required (consult DBA).<br>
-# • For multiple schemas, create separate connections.<br><br>
+<b>Advanced Tips:</b><br>
+• Use TNS strings or VPN if required (consult DBA).<br>
+• For multiple schemas, create separate connections.<br><br>
 
-# <b>Security Reminder:</b><br>
-# INFOFISCUS masks passwords and enforces unique names for secure Oracle configurations.<br><br>
+<b>Security Reminder:</b><br>
+INFOFISCUS masks passwords and enforces unique names for secure Oracle configurations.<br><br>
 
-# <i>Use this help section to set up, test, and manage Oracle connections efficiently and securely.</i>
-#             """
-#         },
-
-
-# ---------------------------      Orange Color 
-
-
-# "Oracle": {
-#     "title": "Oracle Database Connection",
-#     "description": """
-# <b>Oracle Database Connection - Help Guide</b><br><br>
-
-# This module enables seamless and secure integration with <b>Oracle Databases</b> for 
-# <b>data validation, analysis</b> within the INFOFISCUS Data Validation Tool.<br><br>
-
-# <b>How to Navigate:</b><br>
-# 1. Click <b>Connection</b> on the sidebar.<br>
-# 2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-# 3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
-# 4. Select <b>Oracle</b> from the list of available databases.<br><br>
-
-# <b>Required Fields (UI Reference):</b><br>
-# <table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
-# <tr style="background:#1e293b; color:#38bdf8; text-align:left;">
-# <th style="padding:8px; border:1px solid #334155;">Field Name</th>
-# <th style="padding:8px; border:1px solid #334155;">Description</th>
-# <th style="padding:8px; border:1px solid #334155;">Required</th>
-# </tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Unique name for this connection. Duplicate names are not allowed.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Username</td><td style="padding:6px; border:1px solid #334155;">Oracle account username for authentication.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Password</td><td style="padding:6px; border:1px solid #334155;">Account password (hidden, with option to show).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Host</td><td style="padding:6px; border:1px solid #334155;">Hostname or IP address of the Oracle DB server (e.g., db.example.com).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Port</td><td style="padding:6px; border:1px solid #334155;">Database server port (default: 1521).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Database</td><td style="padding:6px; border:1px solid #334155;">Database name or SID of the Oracle instance.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Schema</td><td style="padding:6px; border:1px solid #334155;">Schema name to access Oracle tables.</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Service Name</td><td style="padding:6px; border:1px solid #334155;">Oracle Service Name (used for RAC or multi-tenant setups).</td><td style="padding:6px; border:1px solid #334155;">Yes</td></tr>
-# </table><br>
-
-# <b>Step-by-Step Instructions:</b><br>
-# 1. <b>Enter Connection Name:</b> Example → Finance_Oracle_Prod_2025.<br>
-# 2. <b>Fill Credentials:</b> Enter Username, Password, Host, Port, Database, Schema, Service Name.<br>
-# 3. <b>Test Connection:</b> Click <b>Test</b> to verify. If it fails, check inputs or contact DBA.<br>
-# 4. <b>Save:</b> Once successful, click <b>Save</b> to register the connection.<br><br>
-
-# <b>Best Practices:</b><br>
-# • Always use descriptive, unique connection names.<br>
-# • Do not reuse connection names across environments.<br>
-# • Use individual credentials for accountability.<br> <br>
-
-# <b>Troubleshooting Tips:</b><br>
-# • <b>Duplicate Name:</b> Change the connection name.<br>
-# • <b>Auth Errors:</b> Verify credentials and privileges.<br>
-# • <b>Network Issues:</b> Confirm host/port with IT.<br>
-# • <b>Schema/Service Name Issues:</b> Ensure they are valid names.<br><br>
-
-# <b>Example:</b><br>
-# <table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
-# <tr style="background:#1e293b; color:#38bdf8; text-align:left;">
-# <th style="padding:8px; border:1px solid #334155;">Field</th>
-# <th style="padding:8px; border:1px solid #334155;">Example Value</th>
-# </tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Connection Name</td><td style="padding:6px; border:1px solid #334155;">Oracle_Prod_FIN2025</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Username</td><td style="padding:6px; border:1px solid #334155;">finance_user</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Password</td><td style="padding:6px; border:1px solid #334155;">****</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Host</td><td style="padding:6px; border:1px solid #334155;">oracle-db.company.com</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Port</td><td style="padding:6px; border:1px solid #334155;">1521</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Database</td><td style="padding:6px; border:1px solid #334155;">FINANCE</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Schema</td><td style="padding:6px; border:1px solid #334155;">FIN_DATA</td></tr>
-# <tr><td style="padding:6px; border:1px solid #334155; color:orange;">Service Name</td><td style="padding:6px; border:1px solid #334155;">prod_fin_srv</td></tr>
-# </table><br>
-
-# <b>Advanced Tips:</b><br>
-# • Use TNS strings or VPN if required (consult DBA).<br>
-# • For multiple schemas, create separate connections.<br><br>
-
-# <b>Security Reminder:</b><br>
-# INFOFISCUS masks passwords and enforces unique names for secure Oracle configurations.<br><br>
-
-# <i>Use this help section to set up, test, and manage Oracle connections efficiently and securely.</i>
-#     """
-# }
-# ,
-
-
+<i>Use this help section to set up, test, and manage Oracle connections efficiently and securely.</i>
+            """
+        },
 
 
 # ----------------------------------      SQL Server      ------------------------------
@@ -213,8 +137,8 @@ This module enables seamless and secure integration with <b>Microsoft SQL Server
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
 4. Select <b>SQL Server</b> from the list of available databases.<br><br>
 
 <b>Required Fields (UI Reference):</b><br>
@@ -290,8 +214,8 @@ This module allows secure integration with <b>MySQL databases</b> for
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
 4. Select <b>MySQL</b> from the list of available databases.<br><br>
 
 <b>Required Fields (UI Reference):</b><br>
@@ -367,8 +291,8 @@ INFOFISCUS Data Validation Tool.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
 4. Select <b>PostgreSQL</b> from the list of available databases.<br><br>
 
 <b>Required Fields:</b><br>
@@ -456,8 +380,8 @@ and reporting within the INFOFISCUS Data Validation Tool.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
 4. Select <b>Snowflake</b> from the list of available databases.<br><br>
 
 <b>Required Fields:</b><br>
@@ -552,8 +476,8 @@ and interactive query scenarios.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
 4. Select <b>StarRocks</b> from the list of databases.<br><br>
 
 <b>Required Fields (UI Reference):</b><br>
@@ -638,8 +562,8 @@ for staging and file-based workflows.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> in the sidebar.<br>
-2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
 4. Select <b>Google BigQuery</b>.<br><br>
 
 <b>Required Fields – Standard Connection (Without TARGET):</b><br>
@@ -743,7 +667,7 @@ with or without Google Cloud Storage integration.</i>
 },
 
 
-# ---------------------------------------   Amazon Redshift   ----------------------------------------
+# ---------------------------------------   Amazon Redshift   ---------------------------
 
 "Amazon RedShift": {
     "title": "Amazon Redshift Database Connection",
@@ -760,8 +684,8 @@ Connections can be:<br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
 4. Select <b>Amazon Redshift</b> from the list.<br><br>
 
 <b>Required Fields:</b><br>
@@ -894,7 +818,7 @@ and advanced S3-integrated workflows at enterprise scale.</i>
 },
 
 
-# ----------------------------------------       Azure Synapse       ------------------------------------
+# ----------------------------------------    Azure Synapse  --------------------------------
 
 "Azure Synapse": {
     "title": "Azure Synapse Analytics Connection",
@@ -911,8 +835,8 @@ Connections can be configured in two ways:<br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> in the sidebar.<br>
-2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
 4. Select <b>Azure Synapse</b>.<br><br>
 
 <b>Required Fields</b><br>
@@ -1054,8 +978,8 @@ This Databricks connection module enables seamless and secure integration with <
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
-3. Double-click on the name or Single-click on dropdown arrow to see the list of databases.  <b>Database</b>.<br>
+2. Double-click <b>Create Connection</b>.<br>
+3. Double-click <b>Database</b>.<br>
 4. Select <b>Databricks</b> from the list of available databases.<br><br>
 
 <b>Required Fields (UI Reference):</b><br>
@@ -1117,7 +1041,7 @@ INFOFISCUS masks access tokens and enforces unique names for secure Databricks c
         },
 
 
-# -----------------------------------      Edit Databases   -------------------------------
+# -----------------------------------      Edit Databases   ---------------------
 
 "Edit Database": {
     "title": "Edit Database Connection Parameters",

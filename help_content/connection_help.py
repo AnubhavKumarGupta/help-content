@@ -12,12 +12,12 @@ def get_connection_content():
 <b>Connection – Help Guide</b><br><br>
 
 <b>Purpose:</b><br>
-The Connection section is your central hub for managing all data source integrations within <b>INFOFISCUS</b>. 
+The Connection section is your central hub for managing all data source integrations within <b>INFOFISCUS CDWTA</b>. 
 It provides an overview of every database and platform connection currently configured, allowing users to view, 
 manage, and select the correct linkage for <b>validation, analysis, or ETL workflows</b>.<br><br>
 
 <b>Key Points:</b><br>
-• Lists all active connections for each environment and project.<br>
+• Lists all active connections, each with database platform-specific input fields.<br>
 • Enables quick access to connection details and health/status.<br>
 • Facilitates edits and deletion to keep integrations secure and up-to-date.<br>
 • Supports audit, compliance, and operational transparency by centralizing management of all data access points.<br>
@@ -34,7 +34,7 @@ manage, and select the correct linkage for <b>validation, analysis, or ETL workf
 
 <b>Purpose:</b><br>
 The Create Connection section guides users through the process of securely establishing a new integration 
-between <b>INFOFISCUS</b> and an external database or data platform. It ensures that users provide all required 
+between <b>INFOFISCUS CDWTA</b> and an external database or data platform. It ensures that users provide all required 
 parameters and credentials, supporting both connectivity and compliance with organizational policies.<br><br>
 
 <b>Key Points:</b><br>
@@ -150,7 +150,7 @@ Update database connection parameters with platform-specific optimizations.
 
 <b>Overview</b><br>
 The Delete Connection feature enables users (especially admins) to efficiently remove obsolete, duplicate, or invalid database connections from 
-the <b>INFOFISCUS Data Validation Tool</b>. Streamlining your connection list improves clarity, reduces clutter, and helps prevent confusion 
+the <b>INFOFISCUS CDWTA</b>. Streamlining your connection list improves clarity, reduces clutter, and helps prevent confusion 
 or errors during test case management.<br><br>
 
 <b>Why Delete Connections? (Use Cases & Benefits)</b><br>
@@ -201,7 +201,7 @@ integration for your workflows.<br>
 Only users with appropriate permissions (typically admins) can see and act upon all connections. Regular users may only delete their own. 
 All deletes are logged for accountability.<br><br>
 
-<i>Use the Delete Connection feature to keep your INFOFISCUS workspace organized, secure, and optimized for efficient, error-free data validation operations.</i>
+<i>Use the Delete Connection feature to keep your INFOFISCUS CDWTA workspace organized, secure, and optimized for efficient, error-free data validation operations.</i>
 """
 },
 

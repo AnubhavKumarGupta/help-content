@@ -2,18 +2,18 @@ def get_home_content():
     """Home page help content with clean, modern, and minimal styling (empty version)"""
     return {
 
-# ---------------------------------       Home      ------------------------------
+# --------------------------------------        Home          ---------------------------------------
 
 "Home": {
-    "title": "Welcome to INFOFISCUS Data Validation Tool",
+    "title": "Welcome to INFOFISCUS Cloud Data Warehouse Test Automation (CDWTA) Tool",
     "description": """
 <b>Home – Help Guide</b><br><br>
 
-The <b>Home Section</b> is the starting point of the INFOFISCUS Data Validation Tool.  
+The <b>Home Section</b> is the starting point of the INFOFISCUS Cloud Data Warehouse Test Automation Tool (CDWTA).  
 It provides an overview of all features, modules, and guidance resources available to users.<br><br>
 
 <b>Purpose:</b><br>
-• Offer a central knowledge hub for all INFOFISCUS functionalities.<br>
+• Offer a central knowledge hub for all INFOFISCUS CDWTA functionalities.<br>
 • Streamline onboarding for new users with quick navigation.<br>
 • Provide troubleshooting, resources, and best practices.<br><br>
 
@@ -52,10 +52,10 @@ It provides an overview of all features, modules, and guidance resources availab
 </table><br>
 
 <b>Closing Note:</b><br>
-Exploring the <b>Home Help</b> section is the first step towards mastering INFOFISCUS and  
+Exploring the <b>Home Help</b> section is the first step towards mastering INFOFISCUS CDWTA and  
 transforming into a data validation expert.<br><br>
 
-<i>This is your central hub for learning, troubleshooting, and best practices within INFOFISCUS.</i>
+<i>This is your central hub for learning, troubleshooting, and best practices within INFOFISCUS CDWTA.</i>
     """
 }
     }

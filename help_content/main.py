@@ -153,7 +153,7 @@ class HelpContentWidget(QWidget):
         self.description_label.setAlignment(align_left())
         self.description_label.setWordWrap(True)
         desc_font = QFont()
-        desc_font.setPointSize(12)
+        desc_font.setPointSize(12) # font size of content of right side
         self.description_label.setFont(desc_font)
         self.description_label.setStyleSheet("""
                 color: white;
@@ -376,7 +376,7 @@ class MainWindow(QMainWindow):
                 background-color: #182334;
                 border-right: 1px solid #333;
                 color: white;
-                font-size: 16px;
+                font-size: 12px; 
                 font-family: 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif
             }
 

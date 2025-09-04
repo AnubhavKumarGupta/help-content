@@ -62,7 +62,7 @@ Follow the steps below to ensure correct, repeatable, and robust test cases.<br>
 • Use <b>Previous</b> to revise selections.<br><br>
 
 <b>Workflow Diagram</b><br>
-<img src="flowcharts/create_test_case2.jpg" alt="Create Test Case Diagram" style="max-width:100%; height:auto;"><br><br>
+<img src="flowcharts/create_test_case4.jpg" alt="Create Test Case Diagram" style="max-width:100%; height:auto;"><br><br>
 
 <i>Following this guide ensures your test cases are created accurately, mapped correctly, and ready for automated/manual execution in InfoFiscus Data Validation Tool.</i>
 """

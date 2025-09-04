@@ -62,7 +62,7 @@ Follow the steps below to ensure correct, repeatable, and robust test cases.<br>
 • Use <b>Previous</b> to revise selections.<br><br>
 
 <b>Workflow Diagram</b><br>
-<img src="flowcharts/create_test_case4.jpg" alt="Create Test Case Diagram" style="max-width:100%; height:auto;"><br><br>
+<img src="flowcharts/create_test_case1.png" alt="Create Test Case Diagram" style="max-width: 200px; max-height: 100px; width: 100%; height: auto;"><br><br>
 
 <i>Following this guide ensures your test cases are created accurately, mapped correctly, and ready for automated/manual execution in InfoFiscus Data Validation Tool.</i>
 """
@@ -117,7 +117,7 @@ C. <u>Delete Workflow</u><br>
 • The test case is removed from the list, keeping your UI clean.<br><br>
 
 <b>Visual Workflow Diagram</b><br>
-<img src="flowcharts/show_test_case2.jpg" alt="Show Test Case Diagram" style="max-width:100%; height:auto;"><br><br>
+<img src="flowcharts/show_test_case1.png" alt="Show Test Case Diagram" style="max-width: 300px; max-height: 100px; width: 100%; height: auto;"><br><br>
 
 <b>Feature Comparison Table</b><br>
 <table style="width:100%; border-collapse: collapse; margin-top:10px;">
@@ -196,7 +196,8 @@ The Show Test Results section is your dashboard for reviewing all completed test
 • Regenerate reports as needed for stakeholders or compliance.<br><br>
 
 <b>Visual Workflow Diagram</b><br>
-<img src="flowcharts/show_test_result.jpg" alt="Show Test Results Diagram" style="max-width:100%; height:auto;"><br><br>
+
+<img src="flowcharts/show_test_result1.png" alt="Show Test Results Diagram" style="max-width: 400px; max-height: 300px; width: 100%; height: auto;"><br><br>
 
 <b>Task Summary Table</b><br>
 <table style="width:100%; border-collapse: collapse; margin-top:10px;">

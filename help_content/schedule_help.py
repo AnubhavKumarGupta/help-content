@@ -5,10 +5,10 @@ def get_schedule_content():
     return {
 
 # -----------------------------------------      Schedule     -----------------------------------        
-
-"Schedule": {
-    "title": "Schedule",
-    "description": """
+        
+        "Schedule": {
+            "title": "Schedule",
+            "description": """
 <b>Schedule a Test Case – Help Guide</b><br><br>
 
 <b>Overview</b><br>
@@ -40,7 +40,7 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 
 3. <b>Select Test Case:</b><br>
 &nbsp;&nbsp; • In Test Case Name, start typing the name or use the search bar to find the test case you want to schedule.<br>
-&nbsp;&nbsp; • <i>Note: You must create the test case in advance (see the separate “Create Test Case” help guide).</i><br><br>
+&nbsp;&nbsp; • <i>Note: You must create the test case in advance (see the separate "Create Test Case" help guide).</i><br><br>
 
 4. <b>Fill Scheduling Details:</b><br>
 &nbsp;&nbsp; • <b>Task Name:</b> (Optional) Enter a recognizable name for your scheduled task.<br>
@@ -88,14 +88,13 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 
 <i>Using the Schedule feature, you can automate and orchestrate your data validation workflows across platforms-ensuring consistent, policy-driven execution and peace of mind.</i>
 """
-},
-
+        },
 
 # --------------------------------------       Show Schedule        -------------------------- 
 
-"Show Scheduled Jobs": {
-    "title": "Show Scheduled Jobs",
-    "description": """
+        "Show Scheduled Jobs": {
+            "title": "Show Scheduled Jobs",
+            "description": """
 <b>Show Schedule Jobs – Help Guide</b><br><br>
 
 <b>Overview</b><br>
@@ -109,7 +108,7 @@ Edit allows users to reschedule an already existing job—updating its timing, f
 <b>How to Use:</b><br>
 • Select the desired scheduled job from the table by clicking its row (radio button).<br>
 • Click <b>Edit</b> (blue button).<br>
-• You’ll navigate to the scheduling form (see 2nd screenshot).<br>
+• You'll navigate to the scheduling form (see 2nd screenshot).<br>
 • Change the Timezone, Start Date, End Date, Frequency (Once, Hourly, Daily, Weekly, Monthly, Custom), and Start Time as needed.<br>
 • Click <b>Schedule</b> to save and re-schedule the test case.<br>
 <b>Tips:</b> Rescheduling is ideal for routine test validations that need an updated execution window. Use this to shift tests to a new window (e.g., after a business hour change or to avoid overlaps).<br><br>
@@ -137,16 +136,13 @@ Instantly regenerates the result file for a previously scheduled test case job, 
 • <b>User Dropdown:</b> Admins can filter scheduled jobs by user, making management in multi-user environments faster.<br>
 • <b>Refresh:</b> Keeps your job list up to date with latest changes.<br><br>
 
-<b>Visual Workflow Diagram</b><br>
-<img src="flowcharts/show_schedule_jobs.png" alt="Show Scheduled Jobs Diagram" style="max-width:100%; height:auto;"><br><br>
+<b>Visual Workflow Diagram</b><br> 
+<img src="flowcharts/show_schedule_jobs1.png" alt="Show Scheduled Jobs Diagram" style="max-width: 500px; max-height: 300px; width: 100%; height: auto;"><br><br>
 
 <b>Best Practices</b><br>
 • <b>Housekeeping:</b> Regularly delete unwanted or expired scheduled jobs—keeps the environment fast, secure, and clutter-free.<br>
 • <b>Quick Edits:</b> Use Edit instead of deleting/recreating jobs when only times/frequencies change.<br>
 • <b>Audit Ready:</b> Use Generate to quickly export or re-create historical results for compliance or review.<br>
-• <b>Search Proactively:</b> Use the search bar to filter and act on jobs rapidly, especially in busy environments.
-"""
-}
-
-    
+• <b>Search Proactively:</b> Use the search bar to filter and act on jobs rapidly, especially in busy environments."""
+        }
     }

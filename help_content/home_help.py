@@ -12,7 +12,9 @@ def get_home_content():
 The <b>Home Section</b> is the starting point of the INFOFISCUS Cloud Data Warehouse Test Automation Tool (CDWTA).  
 It provides an overview of all features, modules, and guidance resources available to users.<br><br>
 
+
 <b>Purpose:</b><br>
+<br>
 • Offer a central knowledge hub for all INFOFISCUS CDWTA functionalities.<br>
 • Streamline onboarding for new users with quick navigation.<br>
 • Provide troubleshooting, resources, and best practices.<br><br>
@@ -31,11 +33,13 @@ It provides an overview of all features, modules, and guidance resources availab
 </table><br>
 
 <b>Getting Started:</b><br>
+<br>
 1. Use the <b>sidebar menu</b> to navigate by feature (Connections, Test Cases, etc.).<br>
 2. Use the <b>search bar</b> to quickly find relevant help content.<br>
 3. Start with <b>Getting Started, Create Connection, and Test Case Creation</b> guides.<br><br>
 
 <b>Your Role in Maximizing Help:</b><br>
+<br>
 • Share feedback on documentation clarity.<br>
 • Suggest missing topics to enhance coverage.<br>
 • Contribute best practices for the user community.<br><br>
@@ -52,6 +56,7 @@ It provides an overview of all features, modules, and guidance resources availab
 </table><br>
 
 <b>Closing Note:</b><br>
+<br>
 Exploring the <b>Home Help</b> section is the first step towards mastering INFOFISCUS CDWTA and  
 transforming into a data validation expert.<br><br>
 

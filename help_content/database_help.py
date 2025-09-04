@@ -35,11 +35,6 @@ Each database type includes customized:<br>
 • Security configuration options<br>
 • Data type mapping for test cases<br><br>
 
-<b> Selection Guide:</b><br>
-• <b>On-Premise:</b> Oracle, SQL Server, PostgreSQL, MySQL<br>
-• <b>Cloud-Native:</b> BigQuery, RedShift, Synapse<br>
-• <b>Analytics-Focused:</b> Snowflake, Databricks, StarRocks<br>
-• <b>Hybrid:</b> PostgreSQL, SQL Server (cloud versions available)<br><br>
 
 <i> Click on your specific database type to see detailed 
 connection setup instructions and requirements.</i>
@@ -59,8 +54,8 @@ This module enables seamless and secure integration with <b>Oracle Databases</b>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click <b>Create Connection</b>.<br>
-3. Double-click <b>Database</b>.<br>
+2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
+3. Double-click on the name or Single-click on dropdown arrow to see the list of databases. <b>Database</b>.<br>
 4. Select <b>Oracle</b> from the list of available databases.<br><br>
 
 <b>Required Fields (UI Reference):</b><br>
@@ -137,8 +132,8 @@ This module enables seamless and secure integration with <b>Microsoft SQL Server
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click <b>Create Connection</b>.<br>
-3. Double-click <b>Database</b>.<br>
+2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
+3. Double-click on the name or Single-click on dropdown arrow to see the list of databases. <b>Database</b>.<br>
 4. Select <b>SQL Server</b> from the list of available databases.<br><br>
 
 <b>Required Fields (UI Reference):</b><br>
@@ -214,8 +209,8 @@ This module allows secure integration with <b>MySQL databases</b> for
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click <b>Create Connection</b>.<br>
-3. Double-click <b>Database</b>.<br>
+2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
+3. Double-click on the name or Single-click on dropdown arrow to see the list of databases. <b>Database</b>.<br>
 4. Select <b>MySQL</b> from the list of available databases.<br><br>
 
 <b>Required Fields (UI Reference):</b><br>
@@ -291,8 +286,8 @@ INFOFISCUS Data Validation Tool.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click <b>Create Connection</b>.<br>
-3. Double-click <b>Database</b>.<br>
+2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
+3. Double-click on the name or Single-click on dropdown arrow to see the list of databases. <b>Database</b>.<br>
 4. Select <b>PostgreSQL</b> from the list of available databases.<br><br>
 
 <b>Required Fields:</b><br>
@@ -380,8 +375,8 @@ and reporting within the INFOFISCUS Data Validation Tool.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click <b>Create Connection</b>.<br>
-3. Double-click <b>Database</b>.<br>
+2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
+3. Double-click on the name or Single-click on dropdown arrow to see the list of databases. <b>Database</b>.<br>
 4. Select <b>Snowflake</b> from the list of available databases.<br><br>
 
 <b>Required Fields:</b><br>
@@ -468,7 +463,6 @@ Warehouse and role selection help control cost and security.<br><br>
     "description": """
 <b>StarRocks Database Connection – Help Guide</b><br><br>
 
-<b>Overview</b><br>
 This StarRocks connection module enables fast, secure integration with the StarRocks analytical 
 database platform for real-time data validation, reporting, and analytics within the 
 <b>INFOFISCUS Data Validation Tool</b>. StarRocks is designed for high-performance analytical workloads 
@@ -476,8 +470,8 @@ and interactive query scenarios.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click <b>Create Connection</b>.<br>
-3. Double-click <b>Database</b>.<br>
+2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
+3. Double-click on the name or Single-click on dropdown arrow to see the list of databases. <b>Database</b>.<br>
 4. Select <b>StarRocks</b> from the list of databases.<br><br>
 
 <b>Required Fields (UI Reference):</b><br>
@@ -551,7 +545,6 @@ Use secure credential management and restrict user privileges as per best practi
     "description": """
 <b>Google BigQuery Connection – Help Guide</b><br><br>
 
-<b>Overview</b><br>
 This Google BigQuery connection module enables secure and scalable access to 
 <b>Google’s serverless data warehouse service</b> for enterprise-grade data validation, 
 analytics, and reporting in the INFOFISCUS Data Validation Tool.<br> <br>
@@ -562,8 +555,8 @@ for staging and file-based workflows.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> in the sidebar.<br>
-2. Double-click <b>Create Connection</b>.<br>
-3. Double-click <b>Database</b>.<br>
+2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
+3. Double-click on the name or Single-click on dropdown arrow to see the list of databases. <b>Database</b>.<br>
 4. Select <b>Google BigQuery</b>.<br><br>
 
 <b>Required Fields – Standard Connection (Without TARGET):</b><br>
@@ -674,7 +667,6 @@ with or without Google Cloud Storage integration.</i>
     "description": """
 <b>Amazon Redshift Connection - Help Guide</b><br><br>
 
-<b>Overview</b><br>
 This Amazon Redshift connection module enables secure integration with 
 <b>AWS's cloud data warehouse</b> for high-performance analytics, reporting, 
 and data validation in the INFOFISCUS Data Validation Tool.<br><br>
@@ -684,8 +676,8 @@ Connections can be:<br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click <b>Create Connection</b>.<br>
-3. Double-click <b>Database</b>.<br>
+2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
+3. Double-click on the name or Single-click on dropdown arrow to see the list of databases. <b>Database</b>.<br>
 4. Select <b>Amazon Redshift</b> from the list.<br><br>
 
 <b>Required Fields:</b><br>
@@ -835,8 +827,8 @@ Connections can be configured in two ways:<br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> in the sidebar.<br>
-2. Double-click <b>Create Connection</b>.<br>
-3. Double-click <b>Database</b>.<br>
+2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
+3. Double-click on the name or Single-click on dropdown arrow to see the list of databases. <b>Database</b>.<br>
 4. Select <b>Azure Synapse</b>.<br><br>
 
 <b>Required Fields</b><br>
@@ -972,14 +964,13 @@ for secure, enterprise-scale data validation workflows.</i>
             "description": """
 <b>Databricks Connection - Help Guide</b><br><br>
 
-<b>Overview</b><br>
 This Databricks connection module enables seamless and secure integration with <b>Databricks' Unified Data and AI Platform</b> for 
 <b>data validation, analytics, and reporting</b> within the INFOFISCUS Data Validation Tool.<br><br>
 
 <b>How to Navigate:</b><br>
 1. Click <b>Connection</b> on the sidebar.<br>
-2. Double-click <b>Create Connection</b>.<br>
-3. Double-click <b>Database</b>.<br>
+2. Double-click on the name or Single-click on dropdown arrow to see open the dropdown <b>Create Connection</b>.<br>
+3. Double-click on the name or Single-click on dropdown arrow to see the list of databases. <b>Database</b>.<br>
 4. Select <b>Databricks</b> from the list of available databases.<br><br>
 
 <b>Required Fields (UI Reference):</b><br>

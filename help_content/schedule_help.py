@@ -5,6 +5,7 @@ def get_schedule_content():
     return {
 
 # -----------------------------------------      Schedule     -----------------------------------        
+
 "Schedule": {
             "title": "Schedule",
             "description": """
@@ -143,7 +144,8 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 
 
 # --------------------------------------       Show Schedule        -------------------------- 
-        "Show Scheduled Jobs": {
+   
+"Show Scheduled Jobs": {
             "title": "Show Scheduled Jobs",
             "description": """
 <b>Show Schedule Jobs – Help Guide</b><br><br>

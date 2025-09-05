@@ -92,15 +92,7 @@ class HelpContentManager:
                 "description": f"""
 <b>Help for {item_name}</b>
 
-This section is part of the INFOFISCUS Data Validation Tool.
 
-<b>Content Status:</b>
-The detailed help content for '{item_name}' is currently being prepared
-and will be available soon.
-
-<b>Support:</b>
-For immediate assistance with '{item_name}', please contact your
-system administrator or refer to the user documentation.
 
 Current selection: <b>{item_name}</b>
 """

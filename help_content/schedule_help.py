@@ -4,8 +4,8 @@ def get_schedule_content():
     """Schedule and jobs related help content - adjusted with UI references"""
     return {
 
-        # -----------------------------------------      Schedule     -----------------------------------        
-        "Schedule": {
+# -----------------------------------------      Schedule     -----------------------------------        
+"Schedule": {
             "title": "Schedule",
             "description": """
 <b>Schedule a Test Case – Help Guide</b><br><br>
@@ -141,7 +141,8 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 """
         },
 
-        # --------------------------------------       Show Schedule        -------------------------- 
+
+# --------------------------------------       Show Schedule        -------------------------- 
         "Show Scheduled Jobs": {
             "title": "Show Scheduled Jobs",
             "description": """
@@ -151,45 +152,71 @@ Select your desired platform from the Platform dropdown menu at the top of the S
 The Show Schedule Jobs page provides a comprehensive view and control of all scheduled test case jobs in INFOFISCUS 
 Data Validation Tool. Users can review, search, edit, delete, or re-generate test executions quickly and efficiently.<br><br>
 
-<b>Key Functionalities</b><br><br>
+<b>Key Functionalities</b>
 <ol>
   <li><b>Edit Scheduled Job</b>
+    <br>
+    <b>Purpose:</b>
+        <p> Edit allows users to reschedule an already existing job—updating its timing, frequency, or timezone without recreating it from scratch.</p>
+    <b>How to Use: </b>
     <ul>
-      <li>Allows updating job timing, frequency, or timezone.</li>
-      <li>Select a job and click <b>Edit</b>.</li>
-      <li>Change necessary fields and click <b>Schedule</b>.</li>
+      <li>Select the desired scheduled job from the table by clicking its row (radio button).</li>
+      <li>Click <b>Edit</b> (blue button).</li>
+      <li>You'll navigate to the scheduling form</b>.</li>
+      <li>Change the Timezone, Start Date, End Date, Frequency (Once, Hourly, Daily, Weekly, Monthly, Custom), and Start Time as needed. </li>
+      <li> Click <b>Schedule</b> to save and re-schedule the test case.</li>
     </ul>
+    <i> <b>Tips:</b> Rescheduling is ideal for routine test validations that need an updated execution window. Use this to shift tests to a new window (e.g., after a business hour change or to avoid overlaps). </i>
   </li>
+  <br>
+
   <li><b>Delete Scheduled Job</b>
+  <br>
+     <b>Purpose:</b>
+        <p>Removes old, unwanted, or no-longer-needed scheduled test cases. Keeps the UI organized and prevents accidental execution.</p>
+    <b>How to Use: </b>
     <ul>
-      <li>Removes outdated or unnecessary jobs.</li>
-      <li>Select a job and click <b>Delete</b>.</li>
+      <li>Select the test case job you wish to remove by radio button.</li>
+      <li>Click the <b>Delete</b> (red button).</li>
+      <li>Confirm deletion if prompted.</li>
     </ul>
+    <i> <b>Use Cases:</b> Optimize by removing clutter and test jobs that are obsolete or redundant.</i>
   </li>
+  <br>
   <li><b>Generate Test Case Output</b>
+      <br>
+    <b>Purpose:</b>
+        <p> Instantly regenerates the result file for a previously scheduled test case job, without rerunning or re-scheduling the whole process.</p>
+    <b>How to Use: </b>
     <ul>
-      <li>Re-generates result files without rerunning the job.</li>
-      <li>Select a job and click <b>Generate</b>.</li>
+      <li>Select the scheduled job of interest.</li>
+      <li>Click the <b>Generate</b> (green button).</li>
+      <li>The system will prompt you to choose a save path and will export the results (typically as an Excel file).</li>
     </ul>
+    <i> <b>Tips:</b> Leverage this for audit, historical analysis, or if the previous file was misplaced. </i>
   </li>
 </ol>
 
-<b>Additional Features</b><br><br>
+<br>
+
+<b>Additional Features</b>
 <ul>
-  <li><b>Search Bar:</b> Search by user, test case, or schedule name.</li>
-  <li><b>User Dropdown:</b> Admins can filter jobs by user.</li>
-  <li><b>Refresh:</b> Updates job list with the latest changes.</li>
+  <li><b>Search Bar:</b> Instantly search by User, Test Case, Schedule Name, or any other column to quickly locate any scheduled job—especially helpful in large environments.</li>
+  <li><b>User Dropdown:</b> Admins can filter scheduled jobs by user, making management in multi-user environments faster.</li>
+  <li><b>Refresh:</b> Keeps your job list up to date with latest changes.</li>
 </ul>
+
+<br>
 
 <b>Visual Workflow Diagram</b><br>
 <img src="flowcharts/show_schedule_jobs1.png" alt="Show Scheduled Jobs Diagram" style="max-width: 500px; max-height: 300px; width: 100%; height: auto;"><br><br>
 
-<b>Best Practices</b><br><br>
+<b>Best Practices</b>
 <ul>
-  <li>Delete expired jobs to keep the environment clean.</li>
-  <li>Use Edit to update job timing instead of recreating.</li>
-  <li>Use Generate for audits or re-creating lost outputs.</li>
-  <li>Use search to quickly locate jobs in busy environments.</li>
+  <li><b>Housekeeping:</b> Regularly delete unwanted or expired scheduled jobs—keeps the environment fast, secure, and clutter-free.</li>
+  <li><b>Quick Edits:</b> Use Edit instead of deleting/recreating jobs when only times/frequencies change.</li>
+  <li><b>Audit Ready:</b> Use Generate to quickly export or re-create historical results for compliance or review.</li>
+  <li><b>Search Proactively:</b> Use the search bar to filter and act on jobs rapidly, especially in busy environments.</li>
 </ul>
 """
         }

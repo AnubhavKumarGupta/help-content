@@ -394,17 +394,17 @@ It provides an overview of all features, modules, and guidance resources availab
   <li>Provide troubleshooting, resources, and best practices.</li>
 </ul><br>
 
-<b>What You’ll Find Here:</b><br>
+<b>What You'll Find Here:</b><br>
 <table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
 <tr style="background:#1e293b; color:#38bdf8; text-align:left;">
-<th style="padding:8px; border:1px solid #334155;">Section</th>
-<th style="padding:8px; border:1px solid #334155;">Description</th>
+<th style="padding:2px 4px; border:1px solid #334155;">Section</th>
+<th style="padding:2px 4px; border:1px solid #334155;">Description</th>
 </tr>
-<tr><td style="padding:6px; border:1px solid #334155; color:#FFB84D;">Module-Specific Guides</td><td style="padding:6px; border:1px solid #334155;">Detailed help for connections, test cases, scheduling, results, and reports.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155; color:#FFB84D;">Visual Aids</td><td style="padding:6px; border:1px solid #334155;">Screenshots, diagrams, and flowcharts for easier learning.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155; color:#FFB84D;">Terminology</td><td style="padding:6px; border:1px solid #334155;">Definitions of technical terms and concepts.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155; color:#FFB84D;">Best Practices</td><td style="padding:6px; border:1px solid #334155;">Tips for improving accuracy, security, and performance.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155; color:#FFB84D;">Troubleshooting</td><td style="padding:6px; border:1px solid #334155;">Common issues and step-by-step resolutions.</td></tr>
+<tr><td style="padding:2px 4px; border:1px solid #334155; color:#FFB84D;">Module-Specific Guides</td><td style="padding:2px 4px; border:1px solid #334155;">Detailed help for connections, test cases, scheduling, results, and reports.</td></tr>
+<tr><td style="padding:2px 4px; border:1px solid #334155; color:#FFB84D;">Visual Aids</td><td style="padding:2px 4px; border:1px solid #334155;">Screenshots, diagrams, and flowcharts for easier learning.</td></tr>
+<tr><td style="padding:2px 4px; border:1px solid #334155; color:#FFB84D;">Terminology</td><td style="padding:2px 4px; border:1px solid #334155;">Definitions of technical terms and concepts.</td></tr>
+<tr><td style="padding:2px 4px; border:1px solid #334155; color:#FFB84D;">Best Practices</td><td style="padding:2px 4px; border:1px solid #334155;">Tips for improving accuracy, security, and performance.</td></tr>
+<tr><td style="padding:2px 4px; border:1px solid #334155; color:#FFB84D;">Troubleshooting</td><td style="padding:2px 4px; border:1px solid #334155;">Common issues and step-by-step resolutions.</td></tr>
 </table><br>
 
 <b>Getting Started:</b>
@@ -424,12 +424,12 @@ It provides an overview of all features, modules, and guidance resources availab
 <b>Example Use Case:</b><br>
 <table style="width:100%; border-collapse: collapse; margin-bottom: 14px;">
 <tr style="background:#1e293b; color:#38bdf8; text-align:left;">
-<th style="padding:8px; border:1px solid #334155;">Scenario</th>
-<th style="padding:8px; border:1px solid #334155;">How Home Help Supports</th>
+<th style="padding:2px 4px; border:1px solid #334155;">Scenario</th>
+<th style="padding:2px 4px; border:1px solid #334155;">How Home Help Supports</th>
 </tr>
-<tr><td style="padding:6px; border:1px solid #334155; color:#FFB84D;">New User</td><td style="padding:6px; border:1px solid #334155;">Follows onboarding steps and basic guides.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155; color:#FFB84D;">Tester</td><td style="padding:6px; border:1px solid #334155;">Quickly finds info on connections, test cases, and validation rules.</td></tr>
-<tr><td style="padding:6px; border:1px solid #334155; color:#FFB84D;">Admin</td><td style="padding:6px; border:1px solid #334155;">Leverages troubleshooting tips and best practices for governance.</td></tr>
+<tr><td style="padding:2px 4px; border:1px solid #334155; color:#FFB84D;">New User</td><td style="padding:2px 4px; border:1px solid #334155;">Follows onboarding steps and basic guides.</td></tr>
+<tr><td style="padding:2px 4px; border:1px solid #334155; color:#FFB84D;">Tester</td><td style="padding:2px 4px; border:1px solid #334155;">Quickly finds info on connections, test cases, and validation rules.</td></tr>
+<tr><td style="padding:2px 4px; border:1px solid #334155; color:#FFB84D;">Admin</td><td style="padding:2px 4px; border:1px solid #334155;">Leverages troubleshooting tips and best practices for governance.</td></tr>
 </table><br>
 
 <b>Closing Note:</b>

@@ -327,7 +327,7 @@ class MainWindow(QMainWindow):
                 border-right: 1px solid #333;
                 color: white;
                 font-size: {GLOBAL_FONT_SIZE}px; 
-                font-family: 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif
+                font-family: 'Roboto'
             }}
             QScrollArea {{
                 background-color: #182334;

@@ -1,3 +1,4 @@
+
 import sys
 import os
 # Add help_content directory to Python path
@@ -29,7 +30,7 @@ except ImportError:
 from help_manager import HelpContentManager
 
 # Global font size constant
-GLOBAL_FONT_SIZE = 12 # -------------     Global FONT SIZE Through out Application
+GLOBAL_FONT_SIZE = 12  # Used for reference, but Tree Widget will use 13px
 
 def align_center():
     return Qt.AlignmentFlag.AlignCenter if PYQT6 else Qt.AlignCenter
@@ -122,17 +123,17 @@ class HelpContentWidget(QWidget):
         self.title_label.setAlignment(align_center())
         self.title_label.setWordWrap(True)
         font = QFont()
-        font.setPointSize(20) # ---------------------  Title FONT SIZE --------------------------
+        font.setPointSize(20)  # Title font size unchanged
         font.setBold(True)
         self.title_label.setFont(font)
         self.title_label.setStyleSheet("color: #068293; margin-bottom: 10px;")
         
-        # Description label - using same font size
+        # Description label - set to 12pt as requested
         self.description_label = QLabel()
         self.description_label.setAlignment(align_left())
         self.description_label.setWordWrap(True)
         desc_font = QFont()
-        desc_font.setPointSize(GLOBAL_FONT_SIZE) # ------------------ Description FONT SIZE --------------
+        desc_font.setPointSizeF(12)  # Set to 12pt
         self.description_label.setFont(desc_font)
         self.description_label.setStyleSheet("""
                 color: white;
@@ -326,8 +327,8 @@ class MainWindow(QMainWindow):
                 background-color: #182334;
                 border-right: 1px solid #333;
                 color: white;
-                font-size: {GLOBAL_FONT_SIZE}px; 
-                font-family: 'Roboto'
+                font-size: 13px;  /* Changed to 13px as requested */
+                font-family: 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif
             }}
             QScrollArea {{
                 background-color: #182334;
